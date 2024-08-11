@@ -24,7 +24,10 @@ namespace VillageRentalsMS.Domain.Managers
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
+        public EquipmentToRent GetEquipmentToRentFromDb()
+        {
 
+        }
 
     }
 }

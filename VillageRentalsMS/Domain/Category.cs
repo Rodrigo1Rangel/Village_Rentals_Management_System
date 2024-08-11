@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using VillageRentalsMS.Interface;
 
 namespace VillageRentalsMS.Domain
 {
-    internal class EquipmentToRent : Equipment
+    internal class Category : IDatasetTable
     {
         // =====================================  INSTANCE FIELDS ======================================
-        private double _daily_rental_cost;
+        private int _category_id;
+        private string _note;
 
         // ========================================  PROPERTIES ========================================
-        public double Daily_rental_cost { get { return _daily_rental_cost; } set { _daily_rental_cost = value; } }
+        public int Category_ID { get { return _category_id; } set { _category_id = value; } }
+        public string Note { get { return _note; } set { _note = value; } }
 
         // =======================================  CONSTRUCTORS =======================================
-        public EquipmentToRent(Equipment parentEquipment, double daily_rental_cost) : base (parentEquipment.Equipment_id, parentEquipment.Category_id, parentEquipment.Description, parentEquipment.Name)
+        public Category (int category_id, string note)
         {
-            Daily_rental_cost = daily_rental_cost;
+            Category_ID = category_id;
+            Note = note;
         }
 
         // ==========================================  METHODS =========================================
@@ -28,7 +32,7 @@ namespace VillageRentalsMS.Domain
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
-        public override void UpdateDataset()
+        public void UpdateDataset()
         {
 
         }
@@ -38,9 +42,10 @@ namespace VillageRentalsMS.Domain
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
-        public EquipmentToRent GetObjectFromDataset(int equipment_id)
+        public Category GetObjectFromDataset(int category_id)
         {
-            return equipmentToRent;
+            return category;
         }
+
     }
 }

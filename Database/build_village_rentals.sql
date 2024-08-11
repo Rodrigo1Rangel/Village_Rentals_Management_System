@@ -71,7 +71,7 @@ CONSTRAINT rentequip_equipment_id_pk PRIMARY KEY (equipment_id));
 CREATE TABLE VR_RENTALEQUIPMENTINFO (
 equipment_id NUMBER CONSTRAINT rentequipinfo_equipment_id_nn NOT NULL,
 rental_id NUMBER CONSTRAINT rentequipinfo_rental_id_nn NOT NULL,
-item_quantity NUMBER DEFAULT 0,
+item_quantity NUMBER DEFAULT 1,
 rent_date DATE CONSTRAINT rentequipinfo_rent_date_nn NOT NULL,
 return_date DATE CONSTRAINT rentequipinfo_return_date_nn NOT NULL,
 rental_cost NUMBER(*,2) CONSTRAINT rentequipinfo_rental_cost_nn NOT NULL,

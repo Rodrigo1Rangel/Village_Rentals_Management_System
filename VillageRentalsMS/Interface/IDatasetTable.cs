@@ -4,19 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VillageRentalsMS.Domain
+namespace VillageRentalsMS.Interface
 {
-    internal class Rental
+    internal interface IDatasetTable
     {
-        // =====================================  INSTANCE FIELDS ======================================
-
-
-        // ========================================  PROPERTIES ========================================
-
-
-        // =======================================  CONSTRUCTORS =======================================
-
-
         // ==========================================  METHODS =========================================
 
         /// <summary>
@@ -24,7 +15,13 @@ namespace VillageRentalsMS.Domain
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
+        void UpdateDataset();
 
-
+        /// <summary>
+        /// Blob.
+        /// </summary>
+        /// <param name="value">Blob.</param>
+        /// <returns>Blob.</returns>
+        void GetObjectFromDataset();
     }
 }

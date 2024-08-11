@@ -7,18 +7,18 @@ using VillageRentalsMS.Interface;
 
 namespace VillageRentalsMS.Domain
 {
-    internal class EquipmentToRent : Equipment
+    internal class EquipmentForSale : Equipment
     {
         // =====================================  INSTANCE FIELDS ======================================
-        private double _daily_rental_cost;
+        private double _price;
 
         // ========================================  PROPERTIES ========================================
-        public double Daily_rental_cost { get { return _daily_rental_cost; } set { _daily_rental_cost = value; } }
+        public double Price { get { return _price; } set { _price = value; } }
 
         // =======================================  CONSTRUCTORS =======================================
-        public EquipmentToRent(Equipment parentEquipment, double daily_rental_cost) : base (parentEquipment.Equipment_id, parentEquipment.Category_id, parentEquipment.Description, parentEquipment.Name)
+        public EquipmentForSale (Equipment parentEquipment, double price) : base(parentEquipment.Equipment_id, parentEquipment.Category_id, parentEquipment.Description, parentEquipment.Name)
         {
-            Daily_rental_cost = daily_rental_cost;
+            Price = price;
         }
 
         // ==========================================  METHODS =========================================
@@ -38,9 +38,9 @@ namespace VillageRentalsMS.Domain
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
-        public EquipmentToRent GetObjectFromDataset(int equipment_id)
+        public EquipmentForSale GetObjectFromDataset(int equipment_id)
         {
-            return equipmentToRent;
+            return equipmentForSale;
         }
     }
 }

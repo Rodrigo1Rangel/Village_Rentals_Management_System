@@ -84,15 +84,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Categories.cs" />
+    <Compile Include="Domain\Category.cs" />
     <Compile Include="Domain\Customer.cs" />
     <Compile Include="Domain\Equipment.cs" />
     <Compile Include="Domain\EquipmentToRent.cs" />
-    <Compile Include="Domain\EquipmentToSell.cs" />
+    <Compile Include="Domain\EquipmentForSale.cs" />
     <Compile Include="Domain\Managers\CustomerManager.cs" />
     <Compile Include="Domain\Managers\InventoryManager.cs" />
     <Compile Include="Domain\Managers\RentalManager.cs" />
-    <Compile Include="Domain\Rental.cs" />
+    <Compile Include="Domain\RentalEquipment.cs" />
     <Compile Include="Domain\ReportGenerator.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -100,6 +100,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IDatasetTable.cs" />
     <Compile Include="Persistance\DatabaseManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,7 +154,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Exceptions\" />
+    <Folder Include="Exception\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
