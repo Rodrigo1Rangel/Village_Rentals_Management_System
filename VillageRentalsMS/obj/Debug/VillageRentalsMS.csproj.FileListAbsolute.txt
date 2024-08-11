@@ -1,0 +1,5 @@
+C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.AssemblyReference.cache
+C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.Form1.resources
+C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.Properties.Resources.resources
+C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.GenerateResource.cache
+C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.CoreCompileInputs.cache
