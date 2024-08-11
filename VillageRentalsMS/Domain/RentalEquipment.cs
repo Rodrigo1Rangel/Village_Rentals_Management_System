@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VillageRentalsMS.Interface;
+using Oracle.ManagedDataAccess.Client;
+using VillageRentalsMS.Utilities;
 
 namespace VillageRentalsMS.Domain
 {
@@ -66,8 +68,10 @@ namespace VillageRentalsMS.Domain
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
-        public RentalEquipment GetObjectFromDataset(int rental_id, int customer_id, int equipment_id) 
+        public RentalEquipment GetObjectFromDataset(int rental_id, int customer_id, int equipment_id)
         {
+            OracleConnection conn = DatabaseSingleton.Connection;
+
             return rentalEquipment;
         }
     }

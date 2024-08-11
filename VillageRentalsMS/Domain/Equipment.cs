@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VillageRentalsMS.Interface;
+using VillageRentalsMS.Utilities;
+using Oracle.ManagedDataAccess.Client;
 
 namespace VillageRentalsMS.Domain
 {
@@ -57,7 +60,13 @@ namespace VillageRentalsMS.Domain
         /// <returns>Blob.</returns>
         public Equipment GetObjectFromDataset(int equipment_id)
         {
+            OracleConnection conn = DatabaseSingleton.Connection;
             return equipment;
+        }
+
+        public void RemoveObjectFromDataset(int equipment_id)
+        {
+
         }
     }
 }
