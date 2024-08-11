@@ -1,0 +1,140 @@
+SQL> 
+SQL> rem Village Rentals Management System
+SQL> 
+SQL> rem
+SQL> rem ============================ DROP TABLES ====================================
+SQL> rem
+SQL> 
+SQL> DROP TABLE VR_EQUIPMENT
+  2  CASCADE CONSTRAINTS;
+
+Table dropped.
+
+SQL> 
+SQL> DROP TABLE VR_CATEGORIES
+  2  CASCADE CONSTRAINTS;
+
+Table dropped.
+
+SQL> 
+SQL> DROP TABLE VR_RENTALEQUIPMENT
+  2  CASCADE CONSTRAINTS;
+
+Table dropped.
+
+SQL> 
+SQL> DROP TABLE VR_EQUIPMENTFORSALE
+  2  CASCADE CONSTRAINTS;
+
+Table dropped.
+
+SQL> 
+SQL> DROP TABLE VR_RENTALEQUIPMENTINFO
+  2  CASCADE CONSTRAINTS;
+
+Table dropped.
+
+SQL> 
+SQL> DROP TABLE VR_RENTALINFO
+  2  CASCADE CONSTRAINTS;
+
+Table dropped.
+
+SQL> 
+SQL> DROP TABLE VR_CUSTOMERINFO
+  2  CASCADE CONSTRAINTS;
+
+Table dropped.
+
+SQL> 
+SQL> 
+SQL> rem
+SQL> rem =========================== CREATE TABLES ===================================
+SQL> rem
+SQL> SET ECHO ON
+SQL> SET FEEDBACK ON
+SQL> 
+SQL> CREATE TABLE VR_CATEGORIES
+  2  (category_id NUMBER CONSTRAINT categories_category_id_nn NOT NULL,
+  3  description VARCHAR2(100) CONSTRAINT category_description_nn NOT NULL,
+  4  CONSTRAINT category_category_id_pk PRIMARY KEY (category_id));
+
+Table created.
+
+SQL> 
+SQL> CREATE TABLE VR_EQUIPMENT
+  2  (equipment_id NUMBER CONSTRAINT equipment_equipment_id_nn NOT NULL,
+  3  category_id NUMBER CONSTRAINT equipment_category_id_nn NOT NULL,
+  4  description VARCHAR2(100), -- NN?
+  5  name VARCHAR2(50) CONSTRAINT category_name_nn NOT NULL,
+  6  CONSTRAINT equipment_category_id_fk FOREIGN KEY (category_id)
+  7  REFERENCES VR_CATEGORIES(category_id),
+  8  CONSTRAINT equipment_equipment_id_pk PRIMARY KEY (equipment_id));
+
+Table created.
+
+SQL> 
+SQL> CREATE TABLE VR_EQUIPMENTFORSALE
+  2  (equipment_id NUMBER CONSTRAINT equipforsale_equipment_id_nn NOT NULL,
+  3  price NUMBER(*,2) CONSTRAINT equipforsale_price_nn NOT NULL,
+  4  CONSTRAINT equipforsale_equipment_id FOREIGN KEY (equipment_id)
+  5  REFERENCES VR_EQUIPMENT(equipment_id),
+  6  CONSTRAINT equipforsale_equipment_id_pk PRIMARY KEY (equipment_id));
+
+Table created.
+
+SQL> 
+SQL> CREATE TABLE VR_RENTALEQUIPMENT
+  2  (equipment_id NUMBER CONSTRAINT rentequip_equipment_id_nn NOT NULL,
+  3  daily_rental_cost NUMBER(*,2) CONSTRAINT rentequip_drc_nn NOT NULL,
+  4  CONSTRAINT rentequip_equipment_id FOREIGN KEY (equipment_id)
+  5  REFERENCES VR_EQUIPMENT(equipment_id),
+  6  CONSTRAINT rentequip_equipment_id_pk PRIMARY KEY (equipment_id));
+
+Table created.
+
+SQL> 
+SQL> CREATE TABLE VR_RENTALEQUIPMENTINFO (
+  2  equipment_id NUMBER CONSTRAINT rentequipinfo_equipment_id_nn NOT NULL,
+  3  rental_id NUMBER CONSTRAINT rentequipinfo_rental_id_nn NOT NULL,
+  4  item_quantity NUMBER DEFAULT 0,
+  5  rent_date DATE CONSTRAINT rentequipinfo_rent_date_nn NOT NULL,
+  6  return_date DATE CONSTRAINT rentequipinfo_return_date_nn NOT NULL,
+  7  rental_cost NUMBER(*,2) CONSTRAINT rentequipinfo_rental_cost_nn NOT NULL,
+  8  CONSTRAINT rentequipinfo_equip_id_fk FOREIGN KEY (equipment_id)
+  9  REFERENCES VR_RENTALEQUIPMENT(equipment_id),
+ 10  CONSTRAINT rentequipinfo_equip_rent_id_pk PRIMARY KEY (equipment_id, rental_id));
+
+Table created.
+
+SQL> 
+SQL> CREATE TABLE VR_CUSTOMERINFO (
+  2  customer_id NUMBER CONSTRAINT customerinfo_customer_id_nn NOT NULL,
+  3  last_name VARCHAR2(50) CONSTRAINT customerinfo_last_name_nn NOT NULL,
+  4  first_name VARCHAR2(50) CONSTRAINT customerinfo_first_name_nn NOT NULL,
+  5  contact_phone VARCHAR2(12) CONSTRAINT customerinfo_contact_phone_nn NOT NULL,
+  6  email VARCHAR2(100) CONSTRAINT customerinfo_email_nn NOT NULL,
+  7  note VARCHAR2(500),
+  8  CONSTRAINT customerinfo_contact_phone_ck CHECK (REGEXP_LIKE (contact_phone, '^\d{3}.\d{3}.\d{4}$')),
+  9  CONSTRAINT customerinfo_email_ck CHECK (REGEXP_LIKE (email, '^\w+@\w+.\w+(.\w+||.\w+.\w+)$')),
+ 10  CONSTRAINT customerinfo_customer_id_pk PRIMARY KEY (customer_id));
+
+Table created.
+
+SQL> 
+SQL> CREATE TABLE VR_RENTALINFO (
+  2  rental_id NUMBER CONSTRAINT rentalinfo_rental_id_nn NOT NULL,
+  3  customer_id NUMBER CONSTRAINT rentalinfo_customer_id NOT NULL,
+  4  equipment_id NUMBER CONSTRAINT rentalinfo_equipment_id NOT NULL,
+  5  CONSTRAINT rentalinfo_rental_id_fk FOREIGN KEY (rental_id, equipment_id)
+  6  REFERENCES VR_RENTALEQUIPMENTINFO (rental_id, equipment_id),
+  7  CONSTRAINT rentalinfo_customer_id_fk FOREIGN KEY (customer_id)
+  8  REFERENCES VR_CUSTOMERINFO (customer_id),
+  9  CONSTRAINT rentalinfo_rentcustequip_id_pk PRIMARY KEY (rental_id, customer_id, equipment_id));
+
+Table created.
+
+SQL> -- should all three be PK or just rental_id and equipment_id?
+SQL> 
+SQL> 
+SQL> spool off

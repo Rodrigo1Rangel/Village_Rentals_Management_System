@@ -56,14 +56,14 @@ CONSTRAINT equipment_equipment_id_pk PRIMARY KEY (equipment_id));
 
 CREATE TABLE VR_EQUIPMENTFORSALE
 (equipment_id NUMBER CONSTRAINT equipforsale_equipment_id_nn NOT NULL, 
-price BINARY_DOUBLE CONSTRAINT equipforsale_price_nn NOT NULL,
+price NUMBER(*,2) CONSTRAINT equipforsale_price_nn NOT NULL,
 CONSTRAINT equipforsale_equipment_id FOREIGN KEY (equipment_id)
 REFERENCES VR_EQUIPMENT(equipment_id),
 CONSTRAINT equipforsale_equipment_id_pk PRIMARY KEY (equipment_id));
 
 CREATE TABLE VR_RENTALEQUIPMENT
 (equipment_id NUMBER CONSTRAINT rentequip_equipment_id_nn NOT NULL, 
-daily_rental_cost BINARY_DOUBLE CONSTRAINT rentequip_drc_nn NOT NULL,
+daily_rental_cost NUMBER(*,2) CONSTRAINT rentequip_drc_nn NOT NULL,
 CONSTRAINT rentequip_equipment_id FOREIGN KEY (equipment_id)
 REFERENCES VR_EQUIPMENT(equipment_id),
 CONSTRAINT rentequip_equipment_id_pk PRIMARY KEY (equipment_id));
@@ -74,10 +74,10 @@ rental_id NUMBER CONSTRAINT rentequipinfo_rental_id_nn NOT NULL,
 item_quantity NUMBER DEFAULT 0,
 rent_date DATE CONSTRAINT rentequipinfo_rent_date_nn NOT NULL,
 return_date DATE CONSTRAINT rentequipinfo_return_date_nn NOT NULL,
-rental_cost BINARY_DOUBLE CONSTRAINT rentequipinfo_rental_cost_nn NOT NULL,
-CONSTRAINT rentequipinfo_rental_cost_fk FOREIGN KEY (equipment_id)
+rental_cost NUMBER(*,2) CONSTRAINT rentequipinfo_rental_cost_nn NOT NULL,
+CONSTRAINT rentequipinfo_equip_id_fk FOREIGN KEY (equipment_id)
 REFERENCES VR_RENTALEQUIPMENT(equipment_id),
-CONSTRAINT rentequipinfo_equipment_id_pk PRIMARY KEY (equipment_id, rental_id));
+CONSTRAINT rentequipinfo_equip_rent_id_pk PRIMARY KEY (equipment_id, rental_id));
 
 CREATE TABLE VR_CUSTOMERINFO (
 customer_id NUMBER CONSTRAINT customerinfo_customer_id_nn NOT NULL,
@@ -98,7 +98,7 @@ CONSTRAINT rentalinfo_rental_id_fk FOREIGN KEY (rental_id, equipment_id)
 REFERENCES VR_RENTALEQUIPMENTINFO (rental_id, equipment_id),
 CONSTRAINT rentalinfo_customer_id_fk FOREIGN KEY (customer_id)
 REFERENCES VR_CUSTOMERINFO (customer_id),
-CONSTRAINT rentalinfo_rental_id_pk PRIMARY KEY (rental_id, customer_id, equipment_id));
+CONSTRAINT rentalinfo_rentcustequip_id_pk PRIMARY KEY (rental_id, customer_id, equipment_id));
 -- should all three be PK or just rental_id and equipment_id?
 
 
