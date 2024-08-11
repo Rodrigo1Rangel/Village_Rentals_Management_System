@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\VillageRentalsMS\\",
+  "WorkspaceRootPath": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\villagerentalsms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\utilities\\databasesingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:utilities\\databasesingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,15 +18,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatabaseSingleton.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Utilities\\DatabaseSingleton.cs",
+              "RelativeDocumentMoniker": "Utilities\\DatabaseSingleton.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Utilities\\DatabaseSingleton.cs",
+              "RelativeToolTip": "Utilities\\DatabaseSingleton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T13:23:19.048Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\VillageRentalsMS\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\VillageRentalsMS\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-10T19:23:45.359Z",
