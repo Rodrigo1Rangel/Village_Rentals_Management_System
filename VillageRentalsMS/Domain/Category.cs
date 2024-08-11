@@ -41,39 +41,6 @@ namespace VillageRentalsMS.Domain
 
         }
 
-        /// <summary>
-        /// Blob.
-        /// </summary>
-        /// <param name="value">Blob.</param>
-        /// <returns>Blob.</returns>
-        public Category GetObjectFromDataset(int category_id)
-        {
-            OracleConnection conn = DatabaseSingleton.Connection;
-            OracleCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT * FROM vr_categories";
-            OracleDataReader reader = cmd.ExecuteReader();
 
-            Category category = null;
-
-            while (reader.Read())
-            {
-                int CATEGORY_ID = reader.GetInt32(0);
-                string NOTE = reader.IsDBNull(1) ? "" : reader.GetString(1);
-
-                if (CATEGORY_ID == category_id)
-                {
-                    category = new Category(CATEGORY_ID, NOTE); 
-                }
-            }
-
-            if (category == null)
-            {
-                throw new CategoryNotFound(category_id);
-            }
-
-            cmd.Dispose();
-
-            return category;
-        }
     }
 }
