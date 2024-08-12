@@ -123,5 +123,40 @@ namespace VillageRentalsMS.Domain.Managers
 
             command.ExecuteNonQuery();   
         }
+
+        public static void RemoveEquipment(string equipment_id)
+        {
+            OracleConnection conn = DatabaseSingleton.Connection;
+
+            // Get equipment name to use at MessageBox.Show()
+
+            string sql_select_name = "SELECT name FROM vr_equipment WHERE equipment_id = (:param1)";
+
+            OracleCommand command1 = new OracleCommand(sql_select_name, conn);
+
+            command1.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = equipment_id;
+
+            OracleDataReader reader = command1.ExecuteReader();
+            reader.Read();
+            string equipment_name = reader.GetString(0);
+
+
+            // Delete equipment
+
+            OracleDataAdapter adapter = new OracleDataAdapter();
+
+            string sql_remove_equipment = "DELETE FROM vr_equipment WHERE equipment_id = (:param1)";
+
+            OracleCommand command2 = new OracleCommand(sql_remove_equipment, conn);
+
+            command2.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = equipment_id;
+
+            adapter.DeleteCommand = command2;
+            adapter.DeleteCommand.ExecuteNonQuery();
+
+            MessageBox.Show($"Equipment update:\n\n{equipment_name} was deleted!");
+
+            adapter.Dispose();
+        }
     }
 }

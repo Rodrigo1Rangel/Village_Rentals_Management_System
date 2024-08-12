@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VillageRentalsMS.Domain.Managers;
+using VillageRentalsMS.Domain;
+using System.Data.OracleClient;
 
 namespace VillageRentalsMS
 {
@@ -53,8 +55,32 @@ namespace VillageRentalsMS
 
             InventoryManager.AddCategory(new_category_description);
             
-            MessageBox.Show($"{new_category_description} category was added!");
+            MessageBox.Show($"Category update:\n\n{new_category_description} category was added!");
         }
         private void txt_AddCategory_TextChanged(object sender, EventArgs e) {}
+
+
+        // ========================================= REMOVE EQUIPMENT =========================================
+        private void datagridEquipment_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnRemoveItem_Click(object sender, EventArgs e)
+        {
+            string equipment_id_to_remove = txt_RemoveEquipmentID.Text;
+            InventoryManager.RemoveEquipment(equipment_id_to_remove);
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

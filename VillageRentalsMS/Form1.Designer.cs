@@ -31,10 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnAddCat = new System.Windows.Forms.Button();
             this.btnRemoveCat = new System.Windows.Forms.Button();
             this.lblCatGrid = new System.Windows.Forms.Label();
             this.datagridCategories = new System.Windows.Forms.DataGridView();
+            this.cATEGORYIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dESCRIPTIONDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vRCATEGORIESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vR_Dataset = new VillageRentalsMS.VR_Dataset();
             this.btnRemoveItem = new System.Windows.Forms.Button();
             this.btnAddEquipment = new System.Windows.Forms.Button();
             this.lblEquipGrid = new System.Windows.Forms.Label();
@@ -44,7 +49,6 @@
             this.dESCRIPTIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vREQUIPMENTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.vR_Dataset = new VillageRentalsMS.VR_Dataset();
             this.lblAddCatBox = new System.Windows.Forms.Label();
             this.txt_AddCategory = new System.Windows.Forms.TextBox();
             this.lblAddCategory = new System.Windows.Forms.Label();
@@ -116,15 +120,15 @@
             this.rENTEQUIPEQUIPMENTIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vR_RENTALEQUIPMENTTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALEQUIPMENTTableAdapter();
             this.vR_CATEGORIESTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_CATEGORIESTableAdapter();
-            this.vRCATEGORIESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cATEGORYIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dESCRIPTIONDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_RemoveEquipmentID = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCustomers)).BeginInit();
@@ -136,7 +140,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -148,11 +151,14 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1293, 880);
+            this.tabControl1.Size = new System.Drawing.Size(1293, 989);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.txt_RemoveEquipmentID);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.btnAddCat);
             this.tabPage1.Controls.Add(this.btnRemoveCat);
             this.tabPage1.Controls.Add(this.lblCatGrid);
@@ -174,11 +180,22 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1285, 847);
+            this.tabPage1.Size = new System.Drawing.Size(1285, 956);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Inventory";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 795);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 20);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Remove Equipment";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnAddCat
             // 
@@ -220,17 +237,45 @@
             this.datagridCategories.Name = "datagridCategories";
             this.datagridCategories.RowHeadersWidth = 62;
             this.datagridCategories.RowTemplate.Height = 28;
+            this.datagridCategories.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridCategories.Size = new System.Drawing.Size(292, 514);
             this.datagridCategories.TabIndex = 14;
             // 
+            // cATEGORYIDDataGridViewTextBoxColumn1
+            // 
+            this.cATEGORYIDDataGridViewTextBoxColumn1.DataPropertyName = "CATEGORY_ID";
+            this.cATEGORYIDDataGridViewTextBoxColumn1.HeaderText = "CATEGORY_ID";
+            this.cATEGORYIDDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.cATEGORYIDDataGridViewTextBoxColumn1.Name = "cATEGORYIDDataGridViewTextBoxColumn1";
+            this.cATEGORYIDDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dESCRIPTIONDataGridViewTextBoxColumn1
+            // 
+            this.dESCRIPTIONDataGridViewTextBoxColumn1.DataPropertyName = "DESCRIPTION";
+            this.dESCRIPTIONDataGridViewTextBoxColumn1.HeaderText = "DESCRIPTION";
+            this.dESCRIPTIONDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dESCRIPTIONDataGridViewTextBoxColumn1.Name = "dESCRIPTIONDataGridViewTextBoxColumn1";
+            this.dESCRIPTIONDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // vRCATEGORIESBindingSource1
+            // 
+            this.vRCATEGORIESBindingSource1.DataMember = "VR_CATEGORIES";
+            this.vRCATEGORIESBindingSource1.DataSource = this.vR_Dataset;
+            // 
+            // vR_Dataset
+            // 
+            this.vR_Dataset.DataSetName = "VR_Dataset";
+            this.vR_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnRemoveItem
             // 
-            this.btnRemoveItem.Location = new System.Drawing.Point(30, 771);
+            this.btnRemoveItem.Location = new System.Drawing.Point(30, 903);
             this.btnRemoveItem.Name = "btnRemoveItem";
             this.btnRemoveItem.Size = new System.Drawing.Size(200, 35);
             this.btnRemoveItem.TabIndex = 13;
             this.btnRemoveItem.Text = "Remove Item";
             this.btnRemoveItem.UseVisualStyleBackColor = true;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
             // btnAddEquipment
             // 
@@ -265,8 +310,10 @@
             this.datagridEquipment.Name = "datagridEquipment";
             this.datagridEquipment.RowHeadersWidth = 62;
             this.datagridEquipment.RowTemplate.Height = 28;
+            this.datagridEquipment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridEquipment.Size = new System.Drawing.Size(666, 514);
             this.datagridEquipment.TabIndex = 10;
+            this.datagridEquipment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridEquipment_CellContentClick);
             // 
             // eQUIPMENTIDDataGridViewTextBoxColumn
             // 
@@ -304,11 +351,6 @@
             // 
             this.vREQUIPMENTBindingSource1.DataMember = "VR_EQUIPMENT";
             this.vREQUIPMENTBindingSource1.DataSource = this.vR_Dataset;
-            // 
-            // vR_Dataset
-            // 
-            this.vR_Dataset.DataSetName = "VR_Dataset";
-            this.vR_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblAddCatBox
             // 
@@ -439,7 +481,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1285, 847);
+            this.tabPage2.Size = new System.Drawing.Size(1285, 956);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Customers";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -697,7 +739,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1285, 847);
+            this.tabPage3.Size = new System.Drawing.Size(1285, 956);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Rentals";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -840,7 +882,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1285, 847);
+            this.tabPage4.Size = new System.Drawing.Size(1285, 956);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Reports";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -959,32 +1001,28 @@
             // 
             this.vR_CATEGORIESTableAdapter.ClearBeforeFill = true;
             // 
-            // vRCATEGORIESBindingSource1
+            // label3
             // 
-            this.vRCATEGORIESBindingSource1.DataMember = "VR_CATEGORIES";
-            this.vRCATEGORIESBindingSource1.DataSource = this.vR_Dataset;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 835);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Equipment ID";
             // 
-            // cATEGORYIDDataGridViewTextBoxColumn1
+            // txt_RemoveEquipmentID
             // 
-            this.cATEGORYIDDataGridViewTextBoxColumn1.DataPropertyName = "CATEGORY_ID";
-            this.cATEGORYIDDataGridViewTextBoxColumn1.HeaderText = "CATEGORY_ID";
-            this.cATEGORYIDDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.cATEGORYIDDataGridViewTextBoxColumn1.Name = "cATEGORYIDDataGridViewTextBoxColumn1";
-            this.cATEGORYIDDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dESCRIPTIONDataGridViewTextBoxColumn1
-            // 
-            this.dESCRIPTIONDataGridViewTextBoxColumn1.DataPropertyName = "DESCRIPTION";
-            this.dESCRIPTIONDataGridViewTextBoxColumn1.HeaderText = "DESCRIPTION";
-            this.dESCRIPTIONDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dESCRIPTIONDataGridViewTextBoxColumn1.Name = "dESCRIPTIONDataGridViewTextBoxColumn1";
-            this.dESCRIPTIONDataGridViewTextBoxColumn1.Width = 150;
+            this.txt_RemoveEquipmentID.Location = new System.Drawing.Point(30, 861);
+            this.txt_RemoveEquipmentID.Name = "txt_RemoveEquipmentID";
+            this.txt_RemoveEquipmentID.Size = new System.Drawing.Size(200, 26);
+            this.txt_RemoveEquipmentID.TabIndex = 19;
+            this.txt_RemoveEquipmentID.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 904);
+            this.ClientSize = new System.Drawing.Size(1317, 1013);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Village Rentals";
@@ -993,9 +1031,10 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -1010,7 +1049,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1107,6 +1145,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cATEGORYIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dESCRIPTIONDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource vRCATEGORIESBindingSource1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_RemoveEquipmentID;
     }
 }
 
