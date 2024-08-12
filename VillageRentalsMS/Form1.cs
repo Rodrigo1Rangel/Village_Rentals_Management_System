@@ -71,6 +71,16 @@ namespace VillageRentalsMS
         private void btnRemoveItem_Click(object sender, EventArgs e)
         {
             string equipment_id_to_remove = txt_RemoveEquipmentID.Text;
+
+            DialogResult res = MessageBox.Show(
+            "Are you sure?",
+            "Confirm",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (res == DialogResult.No)
+                return;
+
             InventoryManager.RemoveEquipment(equipment_id_to_remove);
             Form1_Load(null, null);
         }
@@ -78,6 +88,7 @@ namespace VillageRentalsMS
         private void label2_Click(object sender, EventArgs e) {}
 
         private void textBox3_TextChanged(object sender, EventArgs e) {}
+
 
         // ========================================== REMOVE CATEGORY ==========================================
         private void label5_Click(object sender, EventArgs e) {}
@@ -87,9 +98,20 @@ namespace VillageRentalsMS
         private void btn_RemoveCatategory_Click(object sender, EventArgs e)
         {
             string category_id_to_remove = txt_category_id_to_remove.Text;
+
+            DialogResult res = MessageBox.Show(
+            "Are you sure?",
+            "Confirm",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (res == DialogResult.No)
+                return;
+
             InventoryManager.RemoveCategory(category_id_to_remove);
             Form1_Load(null, null);
         }
+
 
         // ========================================== ADD CUSTOMER ==========================================
         private void txtbxCFirstName_TextChanged(object sender, EventArgs e) {}
@@ -109,11 +131,19 @@ namespace VillageRentalsMS
             Form1_Load(null, null);
         }
 
-        // ========================================== REMOVE CUSTOMER ==========================================
 
-
+        // ========================================== EDIT CUSTOMER ==========================================
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
+            DialogResult res = MessageBox.Show(
+            "Are you sure?",
+            "Confirm",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (res == DialogResult.No)
+                return;
+
             string last_name = txt_EditCustomer_LastName.Text;
             string first_name = txt_EditCustomer_FirstName.Text;
             string contact_phone = txt_EditCustomer_PhoneNumber.Text;
