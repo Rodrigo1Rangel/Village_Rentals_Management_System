@@ -158,5 +158,40 @@ namespace VillageRentalsMS.Domain.Managers
 
             adapter.Dispose();
         }
+
+        public static void RemoveCategory(string equipment_id)
+        {
+            OracleConnection conn = DatabaseSingleton.Connection;
+
+            // Get category name to use at MessageBox.Show()
+
+            string sql_select_name = "SELECT description FROM vr_categories WHERE category_id = (:param1)";
+
+            OracleCommand command1 = new OracleCommand(sql_select_name, conn);
+
+            command1.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = equipment_id;
+
+            OracleDataReader reader = command1.ExecuteReader();
+            reader.Read();
+            string category_description = reader.GetString(0);
+
+
+            // Delete category
+
+            OracleDataAdapter adapter = new OracleDataAdapter();
+
+            string sql_remove_equipment = "DELETE FROM vr_categories WHERE category_id = (:param1)";
+
+            OracleCommand command2 = new OracleCommand(sql_remove_equipment, conn);
+
+            command2.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = equipment_id;
+
+            adapter.DeleteCommand = command2;
+            adapter.DeleteCommand.ExecuteNonQuery();
+
+            MessageBox.Show($"Category update:\n\n{category_description} was deleted!");
+
+            adapter.Dispose();
+        }
     }
 }

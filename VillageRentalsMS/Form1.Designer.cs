@@ -31,9 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_RemoveEquipmentID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddCat = new System.Windows.Forms.Button();
-            this.btnRemoveCat = new System.Windows.Forms.Button();
             this.lblCatGrid = new System.Windows.Forms.Label();
             this.datagridCategories = new System.Windows.Forms.DataGridView();
             this.cATEGORYIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -120,8 +121,10 @@
             this.rENTEQUIPEQUIPMENTIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vR_RENTALEQUIPMENTTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALEQUIPMENTTableAdapter();
             this.vR_CATEGORIESTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_CATEGORIESTableAdapter();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_RemoveEquipmentID = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_category_id_to_remove = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn_RemoveCatategory = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).BeginInit();
@@ -156,11 +159,14 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.txt_category_id_to_remove);
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.txt_RemoveEquipmentID);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.btnAddCat);
-            this.tabPage1.Controls.Add(this.btnRemoveCat);
+            this.tabPage1.Controls.Add(this.btn_RemoveCatategory);
             this.tabPage1.Controls.Add(this.lblCatGrid);
             this.tabPage1.Controls.Add(this.datagridCategories);
             this.tabPage1.Controls.Add(this.btnRemoveItem);
@@ -186,6 +192,23 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 835);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Equipment ID";
+            // 
+            // txt_RemoveEquipmentID
+            // 
+            this.txt_RemoveEquipmentID.Location = new System.Drawing.Point(30, 861);
+            this.txt_RemoveEquipmentID.Name = "txt_RemoveEquipmentID";
+            this.txt_RemoveEquipmentID.Size = new System.Drawing.Size(200, 26);
+            this.txt_RemoveEquipmentID.TabIndex = 19;
+            this.txt_RemoveEquipmentID.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -206,15 +229,6 @@
             this.btnAddCat.Text = "Add Category";
             this.btnAddCat.UseVisualStyleBackColor = true;
             this.btnAddCat.Click += new System.EventHandler(this.btnAddCat_Click);
-            // 
-            // btnRemoveCat
-            // 
-            this.btnRemoveCat.Location = new System.Drawing.Point(867, 771);
-            this.btnRemoveCat.Name = "btnRemoveCat";
-            this.btnRemoveCat.Size = new System.Drawing.Size(200, 35);
-            this.btnRemoveCat.TabIndex = 16;
-            this.btnRemoveCat.Text = "Remove Category";
-            this.btnRemoveCat.UseVisualStyleBackColor = true;
             // 
             // lblCatGrid
             // 
@@ -238,7 +252,7 @@
             this.datagridCategories.RowHeadersWidth = 62;
             this.datagridCategories.RowTemplate.Height = 28;
             this.datagridCategories.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagridCategories.Size = new System.Drawing.Size(292, 514);
+            this.datagridCategories.Size = new System.Drawing.Size(382, 514);
             this.datagridCategories.TabIndex = 14;
             // 
             // cATEGORYIDDataGridViewTextBoxColumn1
@@ -1001,22 +1015,43 @@
             // 
             this.vR_CATEGORIESTableAdapter.ClearBeforeFill = true;
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 835);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 20);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Equipment ID";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(867, 835);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 20);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Category ID";
             // 
-            // txt_RemoveEquipmentID
+            // txt_category_id_to_remove
             // 
-            this.txt_RemoveEquipmentID.Location = new System.Drawing.Point(30, 861);
-            this.txt_RemoveEquipmentID.Name = "txt_RemoveEquipmentID";
-            this.txt_RemoveEquipmentID.Size = new System.Drawing.Size(200, 26);
-            this.txt_RemoveEquipmentID.TabIndex = 19;
-            this.txt_RemoveEquipmentID.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txt_category_id_to_remove.Location = new System.Drawing.Point(867, 861);
+            this.txt_category_id_to_remove.Name = "txt_category_id_to_remove";
+            this.txt_category_id_to_remove.Size = new System.Drawing.Size(200, 26);
+            this.txt_category_id_to_remove.TabIndex = 23;
+            this.txt_category_id_to_remove.TextChanged += new System.EventHandler(this.txt_category_id_to_remove_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(863, 795);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 20);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Remove Category";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // btn_RemoveCatategory
+            // 
+            this.btn_RemoveCatategory.Location = new System.Drawing.Point(867, 903);
+            this.btn_RemoveCatategory.Name = "btn_RemoveCatategory";
+            this.btn_RemoveCatategory.Size = new System.Drawing.Size(200, 35);
+            this.btn_RemoveCatategory.TabIndex = 16;
+            this.btn_RemoveCatategory.Text = "Remove Category";
+            this.btn_RemoveCatategory.UseVisualStyleBackColor = true;
+            this.btn_RemoveCatategory.Click += new System.EventHandler(this.btn_RemoveCatategory_Click);
             // 
             // Form1
             // 
@@ -1073,7 +1108,6 @@
         private System.Windows.Forms.Label lblAddCatBox;
         private System.Windows.Forms.TextBox txt_AddCategory;
         private System.Windows.Forms.Label lblAddCategory;
-        private System.Windows.Forms.Button btnRemoveCat;
         private System.Windows.Forms.Label lblCatGrid;
         private System.Windows.Forms.DataGridView datagridCategories;
         private System.Windows.Forms.Button btnRemoveItem;
@@ -1148,6 +1182,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_RemoveEquipmentID;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_category_id_to_remove;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btn_RemoveCatategory;
     }
 }
 
