@@ -32,10 +32,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_category_id_to_remove = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_RemoveEquipmentID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddCat = new System.Windows.Forms.Button();
             this.btn_RemoveCatategory = new System.Windows.Forms.Button();
@@ -77,6 +75,7 @@
             this.vRCUSTOMERINFOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblCustID = new System.Windows.Forms.Label();
             this.cmbx_EditCustomer_customer_id = new System.Windows.Forms.ComboBox();
+            this.vRCUSTOMERINFOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnEditCustomer = new System.Windows.Forms.Button();
             this.txt_EditCustomer_Note = new System.Windows.Forms.TextBox();
             this.lblCNoteEdit = new System.Windows.Forms.Label();
@@ -133,7 +132,10 @@
             this.vR_RENTALEQUIPMENTTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALEQUIPMENTTableAdapter();
             this.vR_CATEGORIESTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_CATEGORIESTableAdapter();
             this.vR_CUSTOMERINFOTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_CUSTOMERINFOTableAdapter();
-            this.vRCUSTOMERINFOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmb_RemoveEquipmentID = new System.Windows.Forms.ComboBox();
+            this.vREQUIPMENTBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmb_category_id_to_remove = new System.Windows.Forms.ComboBox();
+            this.vRCATEGORIESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).BeginInit();
@@ -145,6 +147,7 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource1)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -153,7 +156,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -170,11 +174,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cmb_category_id_to_remove);
+            this.tabPage1.Controls.Add(this.cmb_RemoveEquipmentID);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.txt_category_id_to_remove);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.txt_RemoveEquipmentID);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.btnAddCat);
             this.tabPage1.Controls.Add(this.btn_RemoveCatategory);
@@ -212,14 +216,6 @@
             this.label4.TabIndex = 24;
             this.label4.Text = "Category ID";
             // 
-            // txt_category_id_to_remove
-            // 
-            this.txt_category_id_to_remove.Location = new System.Drawing.Point(867, 861);
-            this.txt_category_id_to_remove.Name = "txt_category_id_to_remove";
-            this.txt_category_id_to_remove.Size = new System.Drawing.Size(200, 26);
-            this.txt_category_id_to_remove.TabIndex = 23;
-            this.txt_category_id_to_remove.TextChanged += new System.EventHandler(this.txt_category_id_to_remove_TextChanged);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -239,14 +235,6 @@
             this.label3.Size = new System.Drawing.Size(107, 20);
             this.label3.TabIndex = 20;
             this.label3.Text = "Equipment ID";
-            // 
-            // txt_RemoveEquipmentID
-            // 
-            this.txt_RemoveEquipmentID.Location = new System.Drawing.Point(30, 861);
-            this.txt_RemoveEquipmentID.Name = "txt_RemoveEquipmentID";
-            this.txt_RemoveEquipmentID.Size = new System.Drawing.Size(200, 26);
-            this.txt_RemoveEquipmentID.TabIndex = 19;
-            this.txt_RemoveEquipmentID.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label2
             // 
@@ -649,6 +637,11 @@
             this.cmbx_EditCustomer_customer_id.Size = new System.Drawing.Size(200, 28);
             this.cmbx_EditCustomer_customer_id.TabIndex = 24;
             this.cmbx_EditCustomer_customer_id.ValueMember = "CUSTOMER_ID";
+            // 
+            // vRCUSTOMERINFOBindingSource1
+            // 
+            this.vRCUSTOMERINFOBindingSource1.DataMember = "VR_CUSTOMERINFO";
+            this.vRCUSTOMERINFOBindingSource1.DataSource = this.vR_Dataset;
             // 
             // btnEditCustomer
             // 
@@ -1136,10 +1129,38 @@
             // 
             this.vR_CUSTOMERINFOTableAdapter.ClearBeforeFill = true;
             // 
-            // vRCUSTOMERINFOBindingSource1
+            // cmb_RemoveEquipmentID
             // 
-            this.vRCUSTOMERINFOBindingSource1.DataMember = "VR_CUSTOMERINFO";
-            this.vRCUSTOMERINFOBindingSource1.DataSource = this.vR_Dataset;
+            this.cmb_RemoveEquipmentID.DataSource = this.vREQUIPMENTBindingSource2;
+            this.cmb_RemoveEquipmentID.DisplayMember = "EQUIPMENT_ID";
+            this.cmb_RemoveEquipmentID.FormattingEnabled = true;
+            this.cmb_RemoveEquipmentID.Location = new System.Drawing.Point(30, 861);
+            this.cmb_RemoveEquipmentID.Name = "cmb_RemoveEquipmentID";
+            this.cmb_RemoveEquipmentID.Size = new System.Drawing.Size(200, 28);
+            this.cmb_RemoveEquipmentID.TabIndex = 25;
+            this.cmb_RemoveEquipmentID.ValueMember = "EQUIPMENT_ID";
+            this.cmb_RemoveEquipmentID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // vREQUIPMENTBindingSource2
+            // 
+            this.vREQUIPMENTBindingSource2.DataMember = "VR_EQUIPMENT";
+            this.vREQUIPMENTBindingSource2.DataSource = this.vR_Dataset;
+            // 
+            // cmb_category_id_to_remove
+            // 
+            this.cmb_category_id_to_remove.DataSource = this.vRCATEGORIESBindingSource2;
+            this.cmb_category_id_to_remove.DisplayMember = "CATEGORY_ID";
+            this.cmb_category_id_to_remove.FormattingEnabled = true;
+            this.cmb_category_id_to_remove.Location = new System.Drawing.Point(867, 861);
+            this.cmb_category_id_to_remove.Name = "cmb_category_id_to_remove";
+            this.cmb_category_id_to_remove.Size = new System.Drawing.Size(200, 28);
+            this.cmb_category_id_to_remove.TabIndex = 26;
+            this.cmb_category_id_to_remove.ValueMember = "CATEGORY_ID";
+            // 
+            // vRCATEGORIESBindingSource2
+            // 
+            this.vRCATEGORIESBindingSource2.DataMember = "VR_CATEGORIES";
+            this.vRCATEGORIESBindingSource2.DataSource = this.vR_Dataset;
             // 
             // Form1
             // 
@@ -1163,6 +1184,7 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -1173,7 +1195,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1271,9 +1294,7 @@
         private System.Windows.Forms.BindingSource vRCATEGORIESBindingSource1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_RemoveEquipmentID;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_category_id_to_remove;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_RemoveCatategory;
         private System.Windows.Forms.BindingSource vRCUSTOMERINFOBindingSource;
@@ -1285,6 +1306,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn eMAILDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOTEDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource vRCUSTOMERINFOBindingSource1;
+        private System.Windows.Forms.ComboBox cmb_RemoveEquipmentID;
+        private System.Windows.Forms.BindingSource vREQUIPMENTBindingSource2;
+        private System.Windows.Forms.ComboBox cmb_category_id_to_remove;
+        private System.Windows.Forms.BindingSource vRCATEGORIESBindingSource2;
     }
 }
 

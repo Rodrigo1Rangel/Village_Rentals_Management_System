@@ -72,7 +72,7 @@ namespace VillageRentalsMS
 
         private void btnRemoveItem_Click(object sender, EventArgs e)
         {
-            string equipment_id_to_remove = txt_RemoveEquipmentID.Text;
+            string equipment_id_to_remove = this.cmb_RemoveEquipmentID.SelectedValue.ToString();
 
             DialogResult res = MessageBox.Show(
             "Are you sure?",
@@ -99,8 +99,8 @@ namespace VillageRentalsMS
 
         private void btn_RemoveCatategory_Click(object sender, EventArgs e)
         {
-            string category_id_to_remove = txt_category_id_to_remove.Text;
-
+            string category_id_to_remove = this.cmb_category_id_to_remove.SelectedValue.ToString();
+            
             // Confirmation request
             DialogResult res = MessageBox.Show(
             "Are you sure?",
@@ -123,11 +123,11 @@ namespace VillageRentalsMS
         {
             try
             {
-                string last_name = txt_AddCustomer_LastName.Text;
+                string last_name = txt_AddCustomer_LastName.Text.Replace("'", "''");
                 CustomerTabValidator.CheckLastNameNN(last_name);
                 CustomerTabValidator.CheckLastName(last_name);
 
-                string first_name = txt_AddCustomer_FirstName.Text;
+                string first_name = txt_AddCustomer_FirstName.Text.Replace("'", "''");
                 CustomerTabValidator.CheckFirstNameNN(first_name);
                 CustomerTabValidator.CheckFirstName(first_name);
 
@@ -135,12 +135,12 @@ namespace VillageRentalsMS
                 CustomerTabValidator.CheckPhoneNumberNN(contact_phone);
                 CustomerTabValidator.CheckPhoneNumber(contact_phone);
 
-                string email = txt_AddCustomer_Email.Text;
+                string email = txt_AddCustomer_Email.Text.Replace("'", "''");
                 CustomerTabValidator.CheckEmailNN(email);
                 CustomerTabValidator.CheckEmailLength(email);
                 CustomerTabValidator.CheckEmailRegex(email);
 
-                string note = txt_AddCustomer_Note.Text;
+                string note = txt_AddCustomer_Note.Text.Replace("'", "''");
                 CustomerTabValidator.CheckNote(note);
 
                 CustomerManager.AddCustomer(last_name, first_name, contact_phone, email, note);
@@ -198,23 +198,21 @@ namespace VillageRentalsMS
         // ========================================== EDIT CUSTOMER ==========================================
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
-
-
             try
             {
-                string last_name = txt_EditCustomer_LastName.Text;
+                string last_name = txt_EditCustomer_LastName.Text.Replace("'", "''");
                 CustomerTabValidator.CheckLastNameNN(last_name);
                 CustomerTabValidator.CheckLastName(last_name);
 
-                string first_name = txt_EditCustomer_FirstName.Text;
+                string first_name = txt_EditCustomer_FirstName.Text.Replace("'", "''");
                 CustomerTabValidator.CheckFirstNameNN(first_name);
                 CustomerTabValidator.CheckFirstName(first_name);
 
-                string contact_phone = txt_EditCustomer_PhoneNumber.Text;
+                string contact_phone = txt_EditCustomer_PhoneNumber.Text.Replace("'", "''");
                 CustomerTabValidator.CheckPhoneNumberNN(contact_phone);
                 CustomerTabValidator.CheckPhoneNumber(contact_phone);
 
-                string email = txt_EditCustomer_Email.Text;
+                string email = txt_EditCustomer_Email.Text.Replace("'", "''");
                 CustomerTabValidator.CheckEmailNN(email);
                 CustomerTabValidator.CheckEmailLength(email);
                 CustomerTabValidator.CheckEmailRegex(email);
@@ -229,7 +227,7 @@ namespace VillageRentalsMS
                 if (res == DialogResult.No)
                     return;
 
-                string note = txt_EditCustomer_Note.Text;
+                string note = txt_EditCustomer_Note.Text.Replace("'", "''");
                 string customer_id = this.cmbx_EditCustomer_customer_id.SelectedValue.ToString();
                 int.TryParse(customer_id, out int int_customer_id);
 
@@ -280,6 +278,11 @@ namespace VillageRentalsMS
             {
                 MessageBox.Show($"{InvalidPhoneNumberNN.Error_message}");
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

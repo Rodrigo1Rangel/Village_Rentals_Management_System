@@ -58,16 +58,31 @@ namespace VillageRentalsMS.Domain.Managers
 
             string sql_to_update =
                 $"UPDATE vr_customerinfo " +
-                $"SET LAST_NAME = ':{new_last_name}', " +
+                $"SET LAST_NAME = '{new_last_name}', " +
                 $"FIRST_NAME = '{new_first_name}', " +
                 $"CONTACT_PHONE = '{new_contact_phone}', " +
                 $"EMAIL = '{new_email}', " +
                 $"NOTE = '{new_note}' " +
                 $"WHERE CUSTOMER_ID = {customer_id}";
 
+            //$"UPDATE vr_customerinfo " +
+            //$"SET LAST_NAME = ':param1', " +
+            //$"FIRST_NAME = ':param2', " +
+            //$"CONTACT_PHONE = ':param3', " +
+            //$"EMAIL = ':param4', " +
+            //$"NOTE = ':param5' " +
+            //$"WHERE CUSTOMER_ID = :param6";
+
             OracleDataAdapter adapter = new OracleDataAdapter(sql_to_update, conn);
 
             OracleCommand command = new OracleCommand(sql_to_update, conn);
+
+            //command.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = new_last_name;
+            //command.Parameters.Add(new OracleParameter("param2", OracleDbType.Varchar2)).Value = new_first_name;
+            //command.Parameters.Add(new OracleParameter("param3", OracleDbType.Varchar2)).Value = new_contact_phone;
+            //command.Parameters.Add(new OracleParameter("param4", OracleDbType.Varchar2)).Value = new_email;
+            //command.Parameters.Add(new OracleParameter("param5", OracleDbType.Varchar2)).Value = new_note;
+            //command.Parameters.Add(new OracleParameter("param6", OracleDbType.Varchar2)).Value = customer_id;
 
             adapter.UpdateCommand = command;
             adapter.UpdateCommand.ExecuteNonQuery();
