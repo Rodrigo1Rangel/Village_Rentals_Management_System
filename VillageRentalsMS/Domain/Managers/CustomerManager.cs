@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 using VillageRentalsMS.Utilities;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace VillageRentalsMS.Domain.Managers
 {
@@ -43,6 +45,34 @@ namespace VillageRentalsMS.Domain.Managers
             command.ExecuteNonQuery();
 
             cmd.Dispose();
+        }
+
+        /// <summary>
+        /// Blob.
+        /// </summary>
+        /// <param name="value">Blob.</param>
+        /// <returns>Blob.</returns>
+        public static void EditCustomer(int customer_id, string new_last_name, string new_first_name, string new_contact_phone, string new_email, string new_note)
+        {
+            OracleConnection conn = DatabaseSingleton.Connection;
+
+            string sql_to_update =
+                $"UPDATE vr_customerinfo " +
+                $"SET LAST_NAME = ':{new_last_name}', " +
+                $"FIRST_NAME = '{new_first_name}', " +
+                $"CONTACT_PHONE = '{new_contact_phone}', " +
+                $"EMAIL = '{new_email}', " +
+                $"NOTE = '{new_note}' " +
+                $"WHERE CUSTOMER_ID = {customer_id}";
+
+            OracleDataAdapter adapter = new OracleDataAdapter(sql_to_update, conn);
+
+            OracleCommand command = new OracleCommand(sql_to_update, conn);
+
+            adapter.UpdateCommand = command;
+            adapter.UpdateCommand.ExecuteNonQuery();
+
+            adapter.Dispose();
         }
     }
 }

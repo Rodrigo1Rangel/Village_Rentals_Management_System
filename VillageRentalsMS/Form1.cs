@@ -108,5 +108,25 @@ namespace VillageRentalsMS
 
             Form1_Load(null, null);
         }
+
+        // ========================================== REMOVE CUSTOMER ==========================================
+
+
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+            string last_name = txt_EditCustomer_LastName.Text;
+            string first_name = txt_EditCustomer_FirstName.Text;
+            string contact_phone = txt_EditCustomer_PhoneNumber.Text;
+            string email = txt_EditCustomer_Email.Text;
+            string note = txt_EditCustomer_Note.Text;
+            string customer_id = this.cmbx_EditCustomer_customer_id.SelectedValue.ToString();
+            int.TryParse(customer_id, out int int_customer_id);
+
+            CustomerManager.EditCustomer(int_customer_id, last_name, first_name, contact_phone, email, note);
+
+            Form1_Load(null, null);
+
+            MessageBox.Show($"Customer update:\n\n{first_name} {last_name}'s information were updated!");
+        }
     }
 }
