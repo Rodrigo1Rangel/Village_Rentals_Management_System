@@ -76,31 +76,27 @@ namespace VillageRentalsMS.Domain.Managers
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
-        public void CreateEquipmentCategory(string description)
+        public static void AddCategory(string new_description)
         {
             OracleConnection conn = DatabaseSingleton.Connection;
             OracleCommand cmd = conn.CreateCommand();
             cmd.CommandText = "SELECT MAX(category_id) FROM vr_categories";
-            int new_category;
+
             OracleDataReader reader = cmd.ExecuteReader();
 
             // A single value will be returned, from which we will read the highest category_id number
             // that was added into the system. We will automatically create a new id based on that one.
             reader.Read();
-            new_category = reader.GetInt32(0) + 10;
+            int new_category = reader.GetInt32(0) + 10;
             
-            string sql = "INSERT INTO vr_categories(category_id, description) VALUES(:param1:, :param2:)";
+            string sql = "INSERT INTO vr_categories(category_id, description) VALUES(:param1, :param2)";
 
             OracleCommand command = new OracleCommand(sql, conn);
             command.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = new_category;
-            command.Parameters.Add(new OracleParameter("param2", OracleDbType.Varchar2)).Value = description;
+            command.Parameters.Add(new OracleParameter("param2", OracleDbType.Varchar2)).Value = new_description;
             
             command.ExecuteNonQuery();
-            MessageBox.Show($"A category {new_category} was created!");
-            
-            // *** reload the forms with the updated data from the database
-            // Form1_Load(null, null);
-           
+                       
             cmd.Dispose();
         }
 
@@ -109,7 +105,7 @@ namespace VillageRentalsMS.Domain.Managers
             OracleConnection conn = DatabaseSingleton.Connection;
             OracleCommand cmd = conn.CreateCommand();
             cmd.CommandText = "SELECT MAX(equipment_id) FROM vr_equipment";
-            int new_category;
+
             OracleDataReader reader = cmd.ExecuteReader();
 
             // A single value will be returned, from which we will read the highest equipment_id number

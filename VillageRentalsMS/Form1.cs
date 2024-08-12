@@ -42,7 +42,19 @@ namespace VillageRentalsMS
 
             InventoryManager.AddEquipment(category_id, equipment_description, equipment_name);
 
-            MessageBox.Show($"New equipment added!");
+            MessageBox.Show($"{equipment_name} equipment was added!");
         }
+
+
+        // ========================================= ADD NEW CATEGORY =========================================
+        private void btnAddCat_Click(object sender, EventArgs e)
+        {
+            string new_category_description = txt_AddCategory.Text;
+
+            InventoryManager.AddCategory(new_category_description);
+            
+            MessageBox.Show($"{new_category_description} category was added!");
+        }
+        private void txt_AddCategory_TextChanged(object sender, EventArgs e) {}
     }
 }
