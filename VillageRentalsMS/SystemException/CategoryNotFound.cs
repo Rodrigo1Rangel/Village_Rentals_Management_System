@@ -13,8 +13,6 @@ namespace VillageRentalsMS.SystemException
         public CategoryNotFound(int category_id)
         {
             string error_message = $"The category identification {category_id} is not registered in the system."; 
-            
-            MessageBox.Show(error_message);
         }
     }
 }

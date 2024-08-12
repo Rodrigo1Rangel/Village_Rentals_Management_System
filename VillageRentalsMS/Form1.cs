@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using VillageRentalsMS.Domain.Managers;
 using VillageRentalsMS.Domain;
 using System.Data.OracleClient;
+using VillageRentalsMS.SystemException;
+
 
 namespace VillageRentalsMS
 {
@@ -99,6 +101,7 @@ namespace VillageRentalsMS
         {
             string category_id_to_remove = txt_category_id_to_remove.Text;
 
+            // Confirmation request
             DialogResult res = MessageBox.Show(
             "Are you sure?",
             "Confirm",
@@ -118,15 +121,75 @@ namespace VillageRentalsMS
 
         private void btbAddCustomer_Click(object sender, EventArgs e)
         {
-            string last_name = txt_AddCustomer_LastName.Text;
-            string first_name = txt_AddCustomer_FirstName.Text;
-            string contact_phone = txt_AddCustomer_PhoneNumber.Text;
-            string email = txt_AddCustomer_Email.Text;
-            string note = txt_AddCustomer_Note.Text;
+            try
+            {
+                string last_name = txt_AddCustomer_LastName.Text;
+                CustomerTabValidator.CheckLastNameNN(last_name);
+                CustomerTabValidator.CheckLastName(last_name);
 
-            CustomerManager.AddCustomer(last_name, first_name, contact_phone, email, note);
+                string first_name = txt_AddCustomer_FirstName.Text;
+                CustomerTabValidator.CheckFirstNameNN(first_name);
+                CustomerTabValidator.CheckFirstName(first_name);
 
-            MessageBox.Show($"Customer update:\n\n{first_name} {last_name} was registered!");
+                string contact_phone = txt_AddCustomer_PhoneNumber.Text;
+                CustomerTabValidator.CheckPhoneNumberNN(contact_phone);
+                CustomerTabValidator.CheckPhoneNumber(contact_phone);
+
+                string email = txt_AddCustomer_Email.Text;
+                CustomerTabValidator.CheckEmailNN(email);
+                CustomerTabValidator.CheckEmailLength(email);
+                CustomerTabValidator.CheckEmailRegex(email);
+
+                string note = txt_AddCustomer_Note.Text;
+                CustomerTabValidator.CheckNote(note);
+
+                CustomerManager.AddCustomer(last_name, first_name, contact_phone, email, note);
+
+                MessageBox.Show($"Customer update:\n\n{first_name} {last_name} was registered!");
+            
+            }
+            catch (InvalidPhoneNumber error_message)
+            {
+                MessageBox.Show($"{InvalidPhoneNumber.Error_message}");
+            }
+            catch (InvalidFirstName error_message)
+            {
+                MessageBox.Show($"{InvalidFirstName.Error_message}");
+            }
+            catch (InvalidLastName error_message)
+            {
+                MessageBox.Show($"{InvalidLastName.Error_message}");
+            }
+            catch (InvalidEmailRegex error_message)
+            {
+                MessageBox.Show($"{InvalidEmailRegex.Error_message}");
+            }
+            catch (InvalidEmailLength error_message)
+            {
+                MessageBox.Show($"{InvalidEmailLength.Error_message}");
+            }
+            catch (InvalidNote error_message)
+            {
+                MessageBox.Show($"{InvalidNote.Error_message}");
+            }
+            catch (InvalidEmailNN error_message)
+            {
+                MessageBox.Show($"{InvalidEmailNN.Error_message}");
+            }
+            catch (InvalidFirstNameNN error_message)
+            {
+                MessageBox.Show($"{InvalidFirstNameNN.Error_message}");
+            }
+            catch (InvalidLastNameNN error_message)
+            {
+                MessageBox.Show($"{InvalidLastNameNN.Error_message}");
+            }
+            catch (InvalidPhoneNumberNN error_message)
+            {
+                MessageBox.Show($"{InvalidPhoneNumberNN.Error_message}");
+            }
+
+
 
             Form1_Load(null, null);
         }
@@ -135,28 +198,88 @@ namespace VillageRentalsMS
         // ========================================== EDIT CUSTOMER ==========================================
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show(
-            "Are you sure?",
-            "Confirm",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question);
 
-            if (res == DialogResult.No)
-                return;
 
-            string last_name = txt_EditCustomer_LastName.Text;
-            string first_name = txt_EditCustomer_FirstName.Text;
-            string contact_phone = txt_EditCustomer_PhoneNumber.Text;
-            string email = txt_EditCustomer_Email.Text;
-            string note = txt_EditCustomer_Note.Text;
-            string customer_id = this.cmbx_EditCustomer_customer_id.SelectedValue.ToString();
-            int.TryParse(customer_id, out int int_customer_id);
+            try
+            {
+                string last_name = txt_EditCustomer_LastName.Text;
+                CustomerTabValidator.CheckLastNameNN(last_name);
+                CustomerTabValidator.CheckLastName(last_name);
 
-            CustomerManager.EditCustomer(int_customer_id, last_name, first_name, contact_phone, email, note);
+                string first_name = txt_EditCustomer_FirstName.Text;
+                CustomerTabValidator.CheckFirstNameNN(first_name);
+                CustomerTabValidator.CheckFirstName(first_name);
 
-            Form1_Load(null, null);
+                string contact_phone = txt_EditCustomer_PhoneNumber.Text;
+                CustomerTabValidator.CheckPhoneNumberNN(contact_phone);
+                CustomerTabValidator.CheckPhoneNumber(contact_phone);
 
-            MessageBox.Show($"Customer update:\n\n{first_name} {last_name}'s information were updated!");
+                string email = txt_EditCustomer_Email.Text;
+                CustomerTabValidator.CheckEmailNN(email);
+                CustomerTabValidator.CheckEmailLength(email);
+                CustomerTabValidator.CheckEmailRegex(email);
+
+                // Confirmation request
+                DialogResult res = MessageBox.Show(
+                "Are you sure?",
+                "Confirm",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+                if (res == DialogResult.No)
+                    return;
+
+                string note = txt_EditCustomer_Note.Text;
+                string customer_id = this.cmbx_EditCustomer_customer_id.SelectedValue.ToString();
+                int.TryParse(customer_id, out int int_customer_id);
+
+                CustomerManager.EditCustomer(int_customer_id, last_name, first_name, contact_phone, email, note);
+
+                Form1_Load(null, null);
+
+                MessageBox.Show($"Customer update:\n\n{first_name} {last_name}'s information were updated!");
+
+            }
+            catch (InvalidPhoneNumber error_message)
+            {
+                MessageBox.Show($"{InvalidPhoneNumber.Error_message}");
+            }
+            catch (InvalidFirstName error_message)
+            {
+                MessageBox.Show($"{InvalidFirstName.Error_message}");
+            }
+            catch (InvalidLastName error_message)
+            {
+                MessageBox.Show($"{InvalidLastName.Error_message}");
+            }
+            catch (InvalidEmailRegex error_message)
+            {
+                MessageBox.Show($"{InvalidEmailRegex.Error_message}");
+            }
+            catch (InvalidEmailLength error_message)
+            {
+                MessageBox.Show($"{InvalidEmailLength.Error_message}");
+            }
+            catch (InvalidNote error_message)
+            {
+                MessageBox.Show($"{InvalidNote.Error_message}");
+            }
+            catch (InvalidEmailNN error_message)
+            {
+                MessageBox.Show($"{InvalidEmailNN.Error_message}");
+            }
+            catch (InvalidFirstNameNN error_message)
+            {
+                MessageBox.Show($"{InvalidFirstNameNN.Error_message}");
+            }
+            catch (InvalidLastNameNN error_message)
+            {
+                MessageBox.Show($"{InvalidLastNameNN.Error_message}");
+            }
+            catch (InvalidPhoneNumberNN error_message)
+            {
+                MessageBox.Show($"{InvalidPhoneNumberNN.Error_message}");
+            }
         }
     }
 }
