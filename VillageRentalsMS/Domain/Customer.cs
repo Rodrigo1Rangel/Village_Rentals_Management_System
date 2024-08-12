@@ -9,7 +9,7 @@ using VillageRentalsMS.Utilities;
 
 namespace VillageRentalsMS.Domain
 {
-    internal class Customer : IDatasetTable
+    internal class Customer// : IDatasetTable
     {
         // =====================================  INSTANCE FIELDS ======================================
         private int _customer_id;
@@ -66,12 +66,12 @@ namespace VillageRentalsMS.Domain
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
-        public Customer GetObjectFromDataset(int customer_id)
-        {
-            OracleConnection conn = DatabaseSingleton.Connection;
+        //public Customer GetObjectFromDataset(int customer_id)
+        //{
+        //    OracleConnection conn = DatabaseSingleton.Connection;
 
-            return customer;
-        }
+        //    return customer;
+        //}
 
     }
 }

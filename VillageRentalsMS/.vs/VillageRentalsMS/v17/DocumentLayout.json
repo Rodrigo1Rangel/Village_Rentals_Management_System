@@ -3,36 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\domain\\managers\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\managers\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\domain\\managers\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\managers\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\utilities\\databasesingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:utilities\\databasesingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\domain\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\systemexception\\categorynotfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:systemexception\\categorynotfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\domain\\rentalequipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\rentalequipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\domain\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\domain\\equipmentforsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\equipmentforsale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\domain\\equipmenttorent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\equipmenttorent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\systemexception\\categorynotfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:systemexception\\categorynotfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\domain\\reportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,46 +83,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InventoryManager.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Managers\\InventoryManager.cs",
-              "RelativeDocumentMoniker": "Domain\\Managers\\InventoryManager.cs",
-              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Managers\\InventoryManager.cs",
-              "RelativeToolTip": "Domain\\Managers\\InventoryManager.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAAAFAAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T13:56:58.122Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAawGYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T21:53:31.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T21:21:47.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -114,36 +90,143 @@
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T19:55:27.949Z",
+              "IsPinned": true,
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T21:21:47.772Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatabaseSingleton.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Utilities\\DatabaseSingleton.cs",
+              "RelativeDocumentMoniker": "Utilities\\DatabaseSingleton.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Utilities\\DatabaseSingleton.cs",
+              "RelativeToolTip": "Utilities\\DatabaseSingleton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T00:53:53.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InventoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Managers\\InventoryManager.cs",
+              "RelativeDocumentMoniker": "Domain\\Managers\\InventoryManager.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Managers\\InventoryManager.cs",
+              "RelativeToolTip": "Domain\\Managers\\InventoryManager.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAAAH8AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T13:56:58.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Equipment.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Equipment.cs",
               "RelativeDocumentMoniker": "Domain\\Equipment.cs",
               "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Equipment.cs",
               "RelativeToolTip": "Domain\\Equipment.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAAAEUAAAAJAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T14:36:15.92Z"
+              "WhenOpened": "2024-08-11T14:36:15.92Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Customer.cs",
+              "RelativeDocumentMoniker": "Domain\\Customer.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Customer.cs",
+              "RelativeToolTip": "Domain\\Customer.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAADwv0kAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T00:15:03.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RentalEquipment.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\RentalEquipment.cs",
+              "RelativeDocumentMoniker": "Domain\\RentalEquipment.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\RentalEquipment.cs",
+              "RelativeToolTip": "Domain\\RentalEquipment.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T00:14:43.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EquipmentForSale.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\EquipmentForSale.cs",
+              "RelativeDocumentMoniker": "Domain\\EquipmentForSale.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\EquipmentForSale.cs",
+              "RelativeToolTip": "Domain\\EquipmentForSale.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T00:15:22.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Category.cs",
               "RelativeDocumentMoniker": "Domain\\Category.cs",
               "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Category.cs",
               "RelativeToolTip": "Domain\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAdAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAawA4AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T13:58:51.764Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
+              "Title": "EquipmentToRent.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\EquipmentToRent.cs",
+              "RelativeDocumentMoniker": "Domain\\EquipmentToRent.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\EquipmentToRent.cs",
+              "RelativeToolTip": "Domain\\EquipmentToRent.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAywDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T13:53:41.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T21:53:31.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CategoryNotFound.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\SystemException\\CategoryNotFound.cs",
               "RelativeDocumentMoniker": "SystemException\\CategoryNotFound.cs",
@@ -155,19 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EquipmentToRent.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\EquipmentToRent.cs",
-              "RelativeDocumentMoniker": "Domain\\EquipmentToRent.cs",
-              "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\EquipmentToRent.cs",
-              "RelativeToolTip": "Domain\\EquipmentToRent.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAYwC0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T13:53:41.104Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "IDatasetTable.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Interface\\IDatasetTable.cs",
               "RelativeDocumentMoniker": "Interface\\IDatasetTable.cs",
@@ -179,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "CustomerManager.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Managers\\CustomerManager.cs",
               "RelativeDocumentMoniker": "Domain\\Managers\\CustomerManager.cs",
@@ -191,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "ReportGenerator.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\ReportGenerator.cs",
               "RelativeDocumentMoniker": "Domain\\ReportGenerator.cs",
@@ -203,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "DatabaseManager.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Persistance\\DatabaseManager.cs",
               "RelativeDocumentMoniker": "Persistance\\DatabaseManager.cs",
@@ -215,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "RentalManager.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Managers\\RentalManager.cs",
               "RelativeDocumentMoniker": "Domain\\Managers\\RentalManager.cs",

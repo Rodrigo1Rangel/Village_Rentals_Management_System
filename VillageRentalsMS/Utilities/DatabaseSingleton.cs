@@ -21,7 +21,7 @@ namespace VillageRentalsMS.Utilities
                 {
                     string connString = "User Id=villagerentals;Password=password;Data Source=localhost:1521/XE";
 
-                    OracleConnection _conn = new OracleConnection(connString);
+                    _conn = new OracleConnection(connString);
 
                     _conn.Open();
                 }

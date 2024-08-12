@@ -40,11 +40,11 @@ namespace VillageRentalsMS.Domain
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
-        public EquipmentForSale GetObjectFromDataset(int equipment_id)
-        {
-            OracleConnection conn = DatabaseSingleton.Connection;
+        //public EquipmentForSale GetObjectFromDataset(int equipment_id)
+        //{
+        //    OracleConnection conn = DatabaseSingleton.Connection;
 
-            return equipmentForSale;
-        }
+        //    return equipmentForSale;
+        //}
     }
 }

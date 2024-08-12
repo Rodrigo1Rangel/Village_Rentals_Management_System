@@ -31,10 +31,10 @@ namespace VillageRentalsMS.Domain.Managers
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
-        public EquipmentToRent DeleteEquipment(int equipment_id)
-        {
-
-        }
+        //public EquipmentToRent DeleteEquipment(int equipment_id)
+        //{
+        //    return;
+        //}
 
         /// <summary>
         /// Blob.
@@ -83,25 +83,49 @@ namespace VillageRentalsMS.Domain.Managers
             cmd.CommandText = "SELECT MAX(category_id) FROM vr_categories";
             int new_category;
             OracleDataReader reader = cmd.ExecuteReader();
-            
-            // A single value will be returned, from which we will read the last category that was
-            // added into the system. We will automatically create a new id based on that one.
+
+            // A single value will be returned, from which we will read the highest category_id number
+            // that was added into the system. We will automatically create a new id based on that one.
             reader.Read();
             new_category = reader.GetInt32(0) + 10;
             
-            string sql = "INSERT INTO vr_categories(category_id, description) VALUES(?, ?)";
+            string sql = "INSERT INTO vr_categories(category_id, description) VALUES(:param1:, :param2:)";
 
             OracleCommand command = new OracleCommand(sql, conn);
-            command.Parameters.Add(new OracleParameter("@param1", OracleDbType.Int32)).Value = new_category;
-            command.Parameters.Add(new OracleParameter("@param2", OracleDbType.Varchar2)).Value = description;
+            command.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = new_category;
+            command.Parameters.Add(new OracleParameter("param2", OracleDbType.Varchar2)).Value = description;
             
             command.ExecuteNonQuery();
             MessageBox.Show($"A category {new_category} was created!");
             
             // *** reload the forms with the updated data from the database
-            Form1_Load(null, null);
+            // Form1_Load(null, null);
            
             cmd.Dispose();
+        }
+
+        public static void AddEquipment(string category_id, string description, string name)
+        {
+            OracleConnection conn = DatabaseSingleton.Connection;
+            OracleCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT MAX(equipment_id) FROM vr_equipment";
+            int new_category;
+            OracleDataReader reader = cmd.ExecuteReader();
+
+            // A single value will be returned, from which we will read the highest equipment_id number
+            // that was added into the system. We will automatically create a new id based on that one.
+            reader.Read();
+            int new_equipment_id = reader.GetInt32(0) + 1;
+
+            string sql = "INSERT INTO vr_equipment(equipment_id, category_id, description, name) VALUES(:param1, :param2, :param3, :param4)";
+
+            OracleCommand command = new OracleCommand(sql, conn);
+            command.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = new_equipment_id;
+            command.Parameters.Add(new OracleParameter("param2", OracleDbType.Varchar2)).Value = category_id;
+            command.Parameters.Add(new OracleParameter("param3", OracleDbType.Varchar2)).Value = description;
+            command.Parameters.Add(new OracleParameter("param4", OracleDbType.Varchar2)).Value = name;
+
+            command.ExecuteNonQuery();   
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnAddCat = new System.Windows.Forms.Button();
@@ -44,25 +45,17 @@
             this.lblEquipName = new System.Windows.Forms.Label();
             this.lblEquipDesc = new System.Windows.Forms.Label();
             this.lblEquipCat = new System.Windows.Forms.Label();
-            this.txtbxEquipName = new System.Windows.Forms.TextBox();
-            this.txtbxEquipDesc = new System.Windows.Forms.TextBox();
-            this.cmbxEquipCat = new System.Windows.Forms.ComboBox();
+            this.txtAddEquip_Name = new System.Windows.Forms.TextBox();
+            this.txt_AddEquipDescription = new System.Windows.Forms.TextBox();
+            this.addEquipment_category_id = new System.Windows.Forms.ComboBox();
+            this.vRCATEGORIESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vR_Dataset = new VillageRentalsMS.VR_Dataset();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.lblAddCustomer = new System.Windows.Forms.Label();
-            this.txtbxCLastName = new System.Windows.Forms.TextBox();
-            this.lblCLastName = new System.Windows.Forms.Label();
-            this.lblCFirstName = new System.Windows.Forms.Label();
-            this.txtbxCFirstName = new System.Windows.Forms.TextBox();
-            this.lblCEmailAddress = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblCPhoneNumber = new System.Windows.Forms.Label();
-            this.txtbxCPhoneNumber = new System.Windows.Forms.TextBox();
-            this.lblCNote = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btbAddCustomer = new System.Windows.Forms.Button();
+            this.lblCustList = new System.Windows.Forms.Label();
+            this.datagridCustomers = new System.Windows.Forms.DataGridView();
+            this.lblCustID = new System.Windows.Forms.Label();
+            this.cmbxCustIDEdit = new System.Windows.Forms.ComboBox();
             this.btnEditCustomer = new System.Windows.Forms.Button();
             this.txtbxCNoteEdit = new System.Windows.Forms.TextBox();
             this.lblCNoteEdit = new System.Windows.Forms.Label();
@@ -75,46 +68,71 @@
             this.lblCLastNameEdit = new System.Windows.Forms.Label();
             this.txtbxCLastNameEdit = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblCustID = new System.Windows.Forms.Label();
-            this.cmbxCustIDEdit = new System.Windows.Forms.ComboBox();
-            this.datagridCustomers = new System.Windows.Forms.DataGridView();
-            this.lblCustList = new System.Windows.Forms.Label();
+            this.btbAddCustomer = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblCNote = new System.Windows.Forms.Label();
+            this.lblCEmailAddress = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblCPhoneNumber = new System.Windows.Forms.Label();
+            this.txtbxCPhoneNumber = new System.Windows.Forms.TextBox();
+            this.lblCFirstName = new System.Windows.Forms.Label();
+            this.txtbxCFirstName = new System.Windows.Forms.TextBox();
+            this.lblCLastName = new System.Windows.Forms.Label();
+            this.txtbxCLastName = new System.Windows.Forms.TextBox();
+            this.lblAddCustomer = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblCurrentRentals = new System.Windows.Forms.Label();
+            this.lblAvailEquip = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtpEquipDateReturn = new System.Windows.Forms.DateTimePicker();
+            this.dtpEquipDateRented = new System.Windows.Forms.DateTimePicker();
+            this.lblEquipIDRent = new System.Windows.Forms.Label();
+            this.cmbxEquipIDRent = new System.Windows.Forms.ComboBox();
             this.btnRentEquip = new System.Windows.Forms.Button();
             this.lblEquipDateReturn = new System.Windows.Forms.Label();
             this.lblEquipDateRented = new System.Windows.Forms.Label();
             this.lblCustIDRent = new System.Windows.Forms.Label();
             this.cmbxCustIDRent = new System.Windows.Forms.ComboBox();
             this.lblRentEquip = new System.Windows.Forms.Label();
-            this.lblEquipIDRent = new System.Windows.Forms.Label();
-            this.cmbxEquipIDRent = new System.Windows.Forms.ComboBox();
-            this.dtpEquipDateRented = new System.Windows.Forms.DateTimePicker();
-            this.dtpEquipDateReturn = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.lblAvailEquip = new System.Windows.Forms.Label();
-            this.lblCurrentRentals = new System.Windows.Forms.Label();
-            this.lblSortSales = new System.Windows.Forms.Label();
-            this.cmbxSortSalesBy = new System.Windows.Forms.ComboBox();
-            this.datagridSalesReport = new System.Windows.Forms.DataGridView();
-            this.datagridEquipmentReport = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnExportEquipment = new System.Windows.Forms.Button();
+            this.btnExportSales = new System.Windows.Forms.Button();
+            this.lblEquipListSort = new System.Windows.Forms.Label();
+            this.lblSalesListSort = new System.Windows.Forms.Label();
             this.cmbxSortEquipBy = new System.Windows.Forms.ComboBox();
             this.lblSortEquipBy = new System.Windows.Forms.Label();
-            this.lblSalesListSort = new System.Windows.Forms.Label();
-            this.lblEquipListSort = new System.Windows.Forms.Label();
-            this.btnExportSales = new System.Windows.Forms.Button();
-            this.btnExportEquipment = new System.Windows.Forms.Button();
+            this.datagridEquipmentReport = new System.Windows.Forms.DataGridView();
+            this.datagridSalesReport = new System.Windows.Forms.DataGridView();
+            this.cmbxSortSalesBy = new System.Windows.Forms.ComboBox();
+            this.lblSortSales = new System.Windows.Forms.Label();
+            this.vREQUIPMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vR_EQUIPMENTTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_EQUIPMENTTableAdapter();
+            this.rENTEQUIPEQUIPMENTIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vR_RENTALEQUIPMENTTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALEQUIPMENTTableAdapter();
+            this.vR_CATEGORIESTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_CATEGORIESTableAdapter();
+            this.vREQUIPMENTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.eQUIPMENTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cATEGORYIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dESCRIPTIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCustomers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipmentReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -145,9 +163,9 @@
             this.tabPage1.Controls.Add(this.lblEquipName);
             this.tabPage1.Controls.Add(this.lblEquipDesc);
             this.tabPage1.Controls.Add(this.lblEquipCat);
-            this.tabPage1.Controls.Add(this.txtbxEquipName);
-            this.tabPage1.Controls.Add(this.txtbxEquipDesc);
-            this.tabPage1.Controls.Add(this.cmbxEquipCat);
+            this.tabPage1.Controls.Add(this.txtAddEquip_Name);
+            this.tabPage1.Controls.Add(this.txt_AddEquipDescription);
+            this.tabPage1.Controls.Add(this.addEquipment_category_id);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
@@ -156,6 +174,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Inventory";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btnAddCat
             // 
@@ -211,6 +230,7 @@
             this.btnAddEquipment.TabIndex = 12;
             this.btnAddEquipment.Text = "Add Equipment";
             this.btnAddEquipment.UseVisualStyleBackColor = true;
+            this.btnAddEquipment.Click += new System.EventHandler(this.btn_AddEquipment);
             // 
             // lblEquipGrid
             // 
@@ -223,7 +243,14 @@
             // 
             // datagridEquipment
             // 
+            this.datagridEquipment.AutoGenerateColumns = false;
             this.datagridEquipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridEquipment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eQUIPMENTIDDataGridViewTextBoxColumn,
+            this.cATEGORYIDDataGridViewTextBoxColumn,
+            this.dESCRIPTIONDataGridViewTextBoxColumn,
+            this.nAMEDataGridViewTextBoxColumn});
+            this.datagridEquipment.DataSource = this.vREQUIPMENTBindingSource1;
             this.datagridEquipment.Location = new System.Drawing.Point(30, 251);
             this.datagridEquipment.Name = "datagridEquipment";
             this.datagridEquipment.RowHeadersWidth = 62;
@@ -284,27 +311,42 @@
             this.lblEquipCat.TabIndex = 4;
             this.lblEquipCat.Text = "Category";
             // 
-            // txtbxEquipName
+            // txtAddEquip_Name
             // 
-            this.txtbxEquipName.Location = new System.Drawing.Point(496, 94);
-            this.txtbxEquipName.Name = "txtbxEquipName";
-            this.txtbxEquipName.Size = new System.Drawing.Size(200, 26);
-            this.txtbxEquipName.TabIndex = 3;
+            this.txtAddEquip_Name.Location = new System.Drawing.Point(496, 94);
+            this.txtAddEquip_Name.Name = "txtAddEquip_Name";
+            this.txtAddEquip_Name.Size = new System.Drawing.Size(200, 26);
+            this.txtAddEquip_Name.TabIndex = 3;
             // 
-            // txtbxEquipDesc
+            // txt_AddEquipDescription
             // 
-            this.txtbxEquipDesc.Location = new System.Drawing.Point(263, 94);
-            this.txtbxEquipDesc.Name = "txtbxEquipDesc";
-            this.txtbxEquipDesc.Size = new System.Drawing.Size(200, 26);
-            this.txtbxEquipDesc.TabIndex = 2;
+            this.txt_AddEquipDescription.Location = new System.Drawing.Point(263, 94);
+            this.txt_AddEquipDescription.Name = "txt_AddEquipDescription";
+            this.txt_AddEquipDescription.Size = new System.Drawing.Size(200, 26);
+            this.txt_AddEquipDescription.TabIndex = 2;
+            this.txt_AddEquipDescription.TextChanged += new System.EventHandler(this.txtbxEquipDesc_TextChanged);
             // 
-            // cmbxEquipCat
+            // addEquipment_category_id
             // 
-            this.cmbxEquipCat.FormattingEnabled = true;
-            this.cmbxEquipCat.Location = new System.Drawing.Point(30, 94);
-            this.cmbxEquipCat.Name = "cmbxEquipCat";
-            this.cmbxEquipCat.Size = new System.Drawing.Size(200, 28);
-            this.cmbxEquipCat.TabIndex = 1;
+            this.addEquipment_category_id.DataSource = this.vRCATEGORIESBindingSource;
+            this.addEquipment_category_id.DisplayMember = "DESCRIPTION";
+            this.addEquipment_category_id.FormattingEnabled = true;
+            this.addEquipment_category_id.Location = new System.Drawing.Point(30, 94);
+            this.addEquipment_category_id.Name = "addEquipment_category_id";
+            this.addEquipment_category_id.Size = new System.Drawing.Size(200, 28);
+            this.addEquipment_category_id.TabIndex = 1;
+            this.addEquipment_category_id.ValueMember = "CATEGORY_ID";
+            this.addEquipment_category_id.SelectedIndexChanged += new System.EventHandler(this.Inventory_AddEquipment);
+            // 
+            // vRCATEGORIESBindingSource
+            // 
+            this.vRCATEGORIESBindingSource.DataMember = "VR_CATEGORIES";
+            this.vRCATEGORIESBindingSource.DataSource = this.vR_Dataset;
+            // 
+            // vR_Dataset
+            // 
+            this.vR_Dataset.DataSetName = "VR_Dataset";
+            this.vR_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -354,148 +396,41 @@
             this.tabPage2.Text = "Customers";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // lblCustList
             // 
-            this.tabPage3.Controls.Add(this.lblCurrentRentals);
-            this.tabPage3.Controls.Add(this.lblAvailEquip);
-            this.tabPage3.Controls.Add(this.dataGridView2);
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Controls.Add(this.dtpEquipDateReturn);
-            this.tabPage3.Controls.Add(this.dtpEquipDateRented);
-            this.tabPage3.Controls.Add(this.lblEquipIDRent);
-            this.tabPage3.Controls.Add(this.cmbxEquipIDRent);
-            this.tabPage3.Controls.Add(this.btnRentEquip);
-            this.tabPage3.Controls.Add(this.lblEquipDateReturn);
-            this.tabPage3.Controls.Add(this.lblEquipDateRented);
-            this.tabPage3.Controls.Add(this.lblCustIDRent);
-            this.tabPage3.Controls.Add(this.cmbxCustIDRent);
-            this.tabPage3.Controls.Add(this.lblRentEquip);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1285, 847);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Rentals";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.lblCustList.AutoSize = true;
+            this.lblCustList.Location = new System.Drawing.Point(26, 338);
+            this.lblCustList.Name = "lblCustList";
+            this.lblCustList.Size = new System.Drawing.Size(107, 20);
+            this.lblCustList.TabIndex = 27;
+            this.lblCustList.Text = "Customer List";
             // 
-            // tabPage4
+            // datagridCustomers
             // 
-            this.tabPage4.Controls.Add(this.btnExportEquipment);
-            this.tabPage4.Controls.Add(this.btnExportSales);
-            this.tabPage4.Controls.Add(this.lblEquipListSort);
-            this.tabPage4.Controls.Add(this.lblSalesListSort);
-            this.tabPage4.Controls.Add(this.cmbxSortEquipBy);
-            this.tabPage4.Controls.Add(this.lblSortEquipBy);
-            this.tabPage4.Controls.Add(this.datagridEquipmentReport);
-            this.tabPage4.Controls.Add(this.datagridSalesReport);
-            this.tabPage4.Controls.Add(this.cmbxSortSalesBy);
-            this.tabPage4.Controls.Add(this.lblSortSales);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1285, 847);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Reports";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.datagridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridCustomers.Location = new System.Drawing.Point(30, 361);
+            this.datagridCustomers.Name = "datagridCustomers";
+            this.datagridCustomers.RowHeadersWidth = 62;
+            this.datagridCustomers.RowTemplate.Height = 28;
+            this.datagridCustomers.Size = new System.Drawing.Size(1218, 461);
+            this.datagridCustomers.TabIndex = 26;
             // 
-            // lblAddCustomer
+            // lblCustID
             // 
-            this.lblAddCustomer.AutoSize = true;
-            this.lblAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddCustomer.Location = new System.Drawing.Point(26, 27);
-            this.lblAddCustomer.Name = "lblAddCustomer";
-            this.lblAddCustomer.Size = new System.Drawing.Size(111, 20);
-            this.lblAddCustomer.TabIndex = 0;
-            this.lblAddCustomer.Text = "Add Customer";
+            this.lblCustID.AutoSize = true;
+            this.lblCustID.Location = new System.Drawing.Point(789, 194);
+            this.lblCustID.Name = "lblCustID";
+            this.lblCustID.Size = new System.Drawing.Size(99, 20);
+            this.lblCustID.TabIndex = 25;
+            this.lblCustID.Text = "Customer ID";
             // 
-            // txtbxCLastName
+            // cmbxCustIDEdit
             // 
-            this.txtbxCLastName.Location = new System.Drawing.Point(30, 91);
-            this.txtbxCLastName.Name = "txtbxCLastName";
-            this.txtbxCLastName.Size = new System.Drawing.Size(200, 26);
-            this.txtbxCLastName.TabIndex = 1;
-            // 
-            // lblCLastName
-            // 
-            this.lblCLastName.AutoSize = true;
-            this.lblCLastName.Location = new System.Drawing.Point(30, 68);
-            this.lblCLastName.Name = "lblCLastName";
-            this.lblCLastName.Size = new System.Drawing.Size(86, 20);
-            this.lblCLastName.TabIndex = 2;
-            this.lblCLastName.Text = "Last Name";
-            // 
-            // lblCFirstName
-            // 
-            this.lblCFirstName.AutoSize = true;
-            this.lblCFirstName.Location = new System.Drawing.Point(261, 68);
-            this.lblCFirstName.Name = "lblCFirstName";
-            this.lblCFirstName.Size = new System.Drawing.Size(86, 20);
-            this.lblCFirstName.TabIndex = 4;
-            this.lblCFirstName.Text = "First Name";
-            // 
-            // txtbxCFirstName
-            // 
-            this.txtbxCFirstName.Location = new System.Drawing.Point(261, 91);
-            this.txtbxCFirstName.Name = "txtbxCFirstName";
-            this.txtbxCFirstName.Size = new System.Drawing.Size(200, 26);
-            this.txtbxCFirstName.TabIndex = 3;
-            // 
-            // lblCEmailAddress
-            // 
-            this.lblCEmailAddress.AutoSize = true;
-            this.lblCEmailAddress.Location = new System.Drawing.Point(261, 134);
-            this.lblCEmailAddress.Name = "lblCEmailAddress";
-            this.lblCEmailAddress.Size = new System.Drawing.Size(111, 20);
-            this.lblCEmailAddress.TabIndex = 8;
-            this.lblCEmailAddress.Text = "Email Address";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(261, 157);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 7;
-            // 
-            // lblCPhoneNumber
-            // 
-            this.lblCPhoneNumber.AutoSize = true;
-            this.lblCPhoneNumber.Location = new System.Drawing.Point(30, 134);
-            this.lblCPhoneNumber.Name = "lblCPhoneNumber";
-            this.lblCPhoneNumber.Size = new System.Drawing.Size(115, 20);
-            this.lblCPhoneNumber.TabIndex = 6;
-            this.lblCPhoneNumber.Text = "Phone Number";
-            // 
-            // txtbxCPhoneNumber
-            // 
-            this.txtbxCPhoneNumber.Location = new System.Drawing.Point(30, 157);
-            this.txtbxCPhoneNumber.Name = "txtbxCPhoneNumber";
-            this.txtbxCPhoneNumber.Size = new System.Drawing.Size(200, 26);
-            this.txtbxCPhoneNumber.TabIndex = 5;
-            // 
-            // lblCNote
-            // 
-            this.lblCNote.AutoSize = true;
-            this.lblCNote.Location = new System.Drawing.Point(26, 199);
-            this.lblCNote.Name = "lblCNote";
-            this.lblCNote.Size = new System.Drawing.Size(43, 20);
-            this.lblCNote.TabIndex = 9;
-            this.lblCNote.Text = "Note";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(30, 222);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 26);
-            this.textBox2.TabIndex = 10;
-            // 
-            // btbAddCustomer
-            // 
-            this.btbAddCustomer.Location = new System.Drawing.Point(30, 279);
-            this.btbAddCustomer.Name = "btbAddCustomer";
-            this.btbAddCustomer.Size = new System.Drawing.Size(200, 35);
-            this.btbAddCustomer.TabIndex = 11;
-            this.btbAddCustomer.Text = "Add Customer";
-            this.btbAddCustomer.UseVisualStyleBackColor = true;
+            this.cmbxCustIDEdit.FormattingEnabled = true;
+            this.cmbxCustIDEdit.Location = new System.Drawing.Point(789, 220);
+            this.cmbxCustIDEdit.Name = "cmbxCustIDEdit";
+            this.cmbxCustIDEdit.Size = new System.Drawing.Size(200, 28);
+            this.cmbxCustIDEdit.TabIndex = 24;
             // 
             // btnEditCustomer
             // 
@@ -596,41 +531,197 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Edit Customer";
             // 
-            // lblCustID
+            // btbAddCustomer
             // 
-            this.lblCustID.AutoSize = true;
-            this.lblCustID.Location = new System.Drawing.Point(789, 194);
-            this.lblCustID.Name = "lblCustID";
-            this.lblCustID.Size = new System.Drawing.Size(99, 20);
-            this.lblCustID.TabIndex = 25;
-            this.lblCustID.Text = "Customer ID";
+            this.btbAddCustomer.Location = new System.Drawing.Point(30, 279);
+            this.btbAddCustomer.Name = "btbAddCustomer";
+            this.btbAddCustomer.Size = new System.Drawing.Size(200, 35);
+            this.btbAddCustomer.TabIndex = 11;
+            this.btbAddCustomer.Text = "Add Customer";
+            this.btbAddCustomer.UseVisualStyleBackColor = true;
             // 
-            // cmbxCustIDEdit
+            // textBox2
             // 
-            this.cmbxCustIDEdit.FormattingEnabled = true;
-            this.cmbxCustIDEdit.Location = new System.Drawing.Point(789, 220);
-            this.cmbxCustIDEdit.Name = "cmbxCustIDEdit";
-            this.cmbxCustIDEdit.Size = new System.Drawing.Size(200, 28);
-            this.cmbxCustIDEdit.TabIndex = 24;
+            this.textBox2.Location = new System.Drawing.Point(30, 222);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(200, 26);
+            this.textBox2.TabIndex = 10;
             // 
-            // datagridCustomers
+            // lblCNote
             // 
-            this.datagridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridCustomers.Location = new System.Drawing.Point(30, 361);
-            this.datagridCustomers.Name = "datagridCustomers";
-            this.datagridCustomers.RowHeadersWidth = 62;
-            this.datagridCustomers.RowTemplate.Height = 28;
-            this.datagridCustomers.Size = new System.Drawing.Size(1218, 461);
-            this.datagridCustomers.TabIndex = 26;
+            this.lblCNote.AutoSize = true;
+            this.lblCNote.Location = new System.Drawing.Point(26, 199);
+            this.lblCNote.Name = "lblCNote";
+            this.lblCNote.Size = new System.Drawing.Size(43, 20);
+            this.lblCNote.TabIndex = 9;
+            this.lblCNote.Text = "Note";
             // 
-            // lblCustList
+            // lblCEmailAddress
             // 
-            this.lblCustList.AutoSize = true;
-            this.lblCustList.Location = new System.Drawing.Point(26, 338);
-            this.lblCustList.Name = "lblCustList";
-            this.lblCustList.Size = new System.Drawing.Size(107, 20);
-            this.lblCustList.TabIndex = 27;
-            this.lblCustList.Text = "Customer List";
+            this.lblCEmailAddress.AutoSize = true;
+            this.lblCEmailAddress.Location = new System.Drawing.Point(261, 134);
+            this.lblCEmailAddress.Name = "lblCEmailAddress";
+            this.lblCEmailAddress.Size = new System.Drawing.Size(111, 20);
+            this.lblCEmailAddress.TabIndex = 8;
+            this.lblCEmailAddress.Text = "Email Address";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(261, 157);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 26);
+            this.textBox1.TabIndex = 7;
+            // 
+            // lblCPhoneNumber
+            // 
+            this.lblCPhoneNumber.AutoSize = true;
+            this.lblCPhoneNumber.Location = new System.Drawing.Point(30, 134);
+            this.lblCPhoneNumber.Name = "lblCPhoneNumber";
+            this.lblCPhoneNumber.Size = new System.Drawing.Size(115, 20);
+            this.lblCPhoneNumber.TabIndex = 6;
+            this.lblCPhoneNumber.Text = "Phone Number";
+            // 
+            // txtbxCPhoneNumber
+            // 
+            this.txtbxCPhoneNumber.Location = new System.Drawing.Point(30, 157);
+            this.txtbxCPhoneNumber.Name = "txtbxCPhoneNumber";
+            this.txtbxCPhoneNumber.Size = new System.Drawing.Size(200, 26);
+            this.txtbxCPhoneNumber.TabIndex = 5;
+            // 
+            // lblCFirstName
+            // 
+            this.lblCFirstName.AutoSize = true;
+            this.lblCFirstName.Location = new System.Drawing.Point(261, 68);
+            this.lblCFirstName.Name = "lblCFirstName";
+            this.lblCFirstName.Size = new System.Drawing.Size(86, 20);
+            this.lblCFirstName.TabIndex = 4;
+            this.lblCFirstName.Text = "First Name";
+            // 
+            // txtbxCFirstName
+            // 
+            this.txtbxCFirstName.Location = new System.Drawing.Point(261, 91);
+            this.txtbxCFirstName.Name = "txtbxCFirstName";
+            this.txtbxCFirstName.Size = new System.Drawing.Size(200, 26);
+            this.txtbxCFirstName.TabIndex = 3;
+            // 
+            // lblCLastName
+            // 
+            this.lblCLastName.AutoSize = true;
+            this.lblCLastName.Location = new System.Drawing.Point(30, 68);
+            this.lblCLastName.Name = "lblCLastName";
+            this.lblCLastName.Size = new System.Drawing.Size(86, 20);
+            this.lblCLastName.TabIndex = 2;
+            this.lblCLastName.Text = "Last Name";
+            // 
+            // txtbxCLastName
+            // 
+            this.txtbxCLastName.Location = new System.Drawing.Point(30, 91);
+            this.txtbxCLastName.Name = "txtbxCLastName";
+            this.txtbxCLastName.Size = new System.Drawing.Size(200, 26);
+            this.txtbxCLastName.TabIndex = 1;
+            // 
+            // lblAddCustomer
+            // 
+            this.lblAddCustomer.AutoSize = true;
+            this.lblAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddCustomer.Location = new System.Drawing.Point(26, 27);
+            this.lblAddCustomer.Name = "lblAddCustomer";
+            this.lblAddCustomer.Size = new System.Drawing.Size(111, 20);
+            this.lblAddCustomer.TabIndex = 0;
+            this.lblAddCustomer.Text = "Add Customer";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.lblCurrentRentals);
+            this.tabPage3.Controls.Add(this.lblAvailEquip);
+            this.tabPage3.Controls.Add(this.dataGridView2);
+            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.dtpEquipDateReturn);
+            this.tabPage3.Controls.Add(this.dtpEquipDateRented);
+            this.tabPage3.Controls.Add(this.lblEquipIDRent);
+            this.tabPage3.Controls.Add(this.cmbxEquipIDRent);
+            this.tabPage3.Controls.Add(this.btnRentEquip);
+            this.tabPage3.Controls.Add(this.lblEquipDateReturn);
+            this.tabPage3.Controls.Add(this.lblEquipDateRented);
+            this.tabPage3.Controls.Add(this.lblCustIDRent);
+            this.tabPage3.Controls.Add(this.cmbxCustIDRent);
+            this.tabPage3.Controls.Add(this.lblRentEquip);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1285, 847);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Rentals";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblCurrentRentals
+            // 
+            this.lblCurrentRentals.AutoSize = true;
+            this.lblCurrentRentals.Location = new System.Drawing.Point(376, 210);
+            this.lblCurrentRentals.Name = "lblCurrentRentals";
+            this.lblCurrentRentals.Size = new System.Drawing.Size(121, 20);
+            this.lblCurrentRentals.TabIndex = 28;
+            this.lblCurrentRentals.Text = "Current Rentals";
+            // 
+            // lblAvailEquip
+            // 
+            this.lblAvailEquip.AutoSize = true;
+            this.lblAvailEquip.Location = new System.Drawing.Point(30, 210);
+            this.lblAvailEquip.Name = "lblAvailEquip";
+            this.lblAvailEquip.Size = new System.Drawing.Size(153, 20);
+            this.lblAvailEquip.TabIndex = 27;
+            this.lblAvailEquip.Text = "Available Equipment";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(380, 233);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(871, 589);
+            this.dataGridView2.TabIndex = 26;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(30, 233);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(295, 589);
+            this.dataGridView1.TabIndex = 25;
+            // 
+            // dtpEquipDateReturn
+            // 
+            this.dtpEquipDateReturn.Location = new System.Drawing.Point(729, 102);
+            this.dtpEquipDateReturn.Name = "dtpEquipDateReturn";
+            this.dtpEquipDateReturn.Size = new System.Drawing.Size(200, 26);
+            this.dtpEquipDateReturn.TabIndex = 24;
+            // 
+            // dtpEquipDateRented
+            // 
+            this.dtpEquipDateRented.Location = new System.Drawing.Point(495, 102);
+            this.dtpEquipDateRented.Name = "dtpEquipDateRented";
+            this.dtpEquipDateRented.Size = new System.Drawing.Size(200, 26);
+            this.dtpEquipDateRented.TabIndex = 23;
+            // 
+            // lblEquipIDRent
+            // 
+            this.lblEquipIDRent.AutoSize = true;
+            this.lblEquipIDRent.Location = new System.Drawing.Point(263, 74);
+            this.lblEquipIDRent.Name = "lblEquipIDRent";
+            this.lblEquipIDRent.Size = new System.Drawing.Size(107, 20);
+            this.lblEquipIDRent.TabIndex = 22;
+            this.lblEquipIDRent.Text = "Equipment ID";
+            // 
+            // cmbxEquipIDRent
+            // 
+            this.cmbxEquipIDRent.FormattingEnabled = true;
+            this.cmbxEquipIDRent.Location = new System.Drawing.Point(263, 100);
+            this.cmbxEquipIDRent.Name = "cmbxEquipIDRent";
+            this.cmbxEquipIDRent.Size = new System.Drawing.Size(200, 28);
+            this.cmbxEquipIDRent.TabIndex = 21;
             // 
             // btnRentEquip
             // 
@@ -686,112 +777,61 @@
             this.lblRentEquip.TabIndex = 13;
             this.lblRentEquip.Text = "Rent Equipment";
             // 
-            // lblEquipIDRent
+            // tabPage4
             // 
-            this.lblEquipIDRent.AutoSize = true;
-            this.lblEquipIDRent.Location = new System.Drawing.Point(263, 74);
-            this.lblEquipIDRent.Name = "lblEquipIDRent";
-            this.lblEquipIDRent.Size = new System.Drawing.Size(107, 20);
-            this.lblEquipIDRent.TabIndex = 22;
-            this.lblEquipIDRent.Text = "Equipment ID";
+            this.tabPage4.Controls.Add(this.btnExportEquipment);
+            this.tabPage4.Controls.Add(this.btnExportSales);
+            this.tabPage4.Controls.Add(this.lblEquipListSort);
+            this.tabPage4.Controls.Add(this.lblSalesListSort);
+            this.tabPage4.Controls.Add(this.cmbxSortEquipBy);
+            this.tabPage4.Controls.Add(this.lblSortEquipBy);
+            this.tabPage4.Controls.Add(this.datagridEquipmentReport);
+            this.tabPage4.Controls.Add(this.datagridSalesReport);
+            this.tabPage4.Controls.Add(this.cmbxSortSalesBy);
+            this.tabPage4.Controls.Add(this.lblSortSales);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1285, 847);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Reports";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // cmbxEquipIDRent
+            // btnExportEquipment
             // 
-            this.cmbxEquipIDRent.FormattingEnabled = true;
-            this.cmbxEquipIDRent.Location = new System.Drawing.Point(263, 100);
-            this.cmbxEquipIDRent.Name = "cmbxEquipIDRent";
-            this.cmbxEquipIDRent.Size = new System.Drawing.Size(200, 28);
-            this.cmbxEquipIDRent.TabIndex = 21;
+            this.btnExportEquipment.Location = new System.Drawing.Point(664, 773);
+            this.btnExportEquipment.Name = "btnExportEquipment";
+            this.btnExportEquipment.Size = new System.Drawing.Size(200, 35);
+            this.btnExportEquipment.TabIndex = 10;
+            this.btnExportEquipment.Text = "Export";
+            this.btnExportEquipment.UseVisualStyleBackColor = true;
             // 
-            // dtpEquipDateRented
+            // btnExportSales
             // 
-            this.dtpEquipDateRented.Location = new System.Drawing.Point(495, 102);
-            this.dtpEquipDateRented.Name = "dtpEquipDateRented";
-            this.dtpEquipDateRented.Size = new System.Drawing.Size(200, 26);
-            this.dtpEquipDateRented.TabIndex = 23;
+            this.btnExportSales.Location = new System.Drawing.Point(30, 773);
+            this.btnExportSales.Name = "btnExportSales";
+            this.btnExportSales.Size = new System.Drawing.Size(200, 35);
+            this.btnExportSales.TabIndex = 9;
+            this.btnExportSales.Text = "Export";
+            this.btnExportSales.UseVisualStyleBackColor = true;
             // 
-            // dtpEquipDateReturn
+            // lblEquipListSort
             // 
-            this.dtpEquipDateReturn.Location = new System.Drawing.Point(729, 102);
-            this.dtpEquipDateReturn.Name = "dtpEquipDateReturn";
-            this.dtpEquipDateReturn.Size = new System.Drawing.Size(200, 26);
-            this.dtpEquipDateReturn.TabIndex = 24;
+            this.lblEquipListSort.AutoSize = true;
+            this.lblEquipListSort.Location = new System.Drawing.Point(664, 114);
+            this.lblEquipListSort.Name = "lblEquipListSort";
+            this.lblEquipListSort.Size = new System.Drawing.Size(86, 20);
+            this.lblEquipListSort.TabIndex = 8;
+            this.lblEquipListSort.Text = "Equipment";
             // 
-            // dataGridView1
+            // lblSalesListSort
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 233);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(295, 589);
-            this.dataGridView1.TabIndex = 25;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(380, 233);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(871, 589);
-            this.dataGridView2.TabIndex = 26;
-            // 
-            // lblAvailEquip
-            // 
-            this.lblAvailEquip.AutoSize = true;
-            this.lblAvailEquip.Location = new System.Drawing.Point(30, 210);
-            this.lblAvailEquip.Name = "lblAvailEquip";
-            this.lblAvailEquip.Size = new System.Drawing.Size(153, 20);
-            this.lblAvailEquip.TabIndex = 27;
-            this.lblAvailEquip.Text = "Available Equipment";
-            // 
-            // lblCurrentRentals
-            // 
-            this.lblCurrentRentals.AutoSize = true;
-            this.lblCurrentRentals.Location = new System.Drawing.Point(376, 210);
-            this.lblCurrentRentals.Name = "lblCurrentRentals";
-            this.lblCurrentRentals.Size = new System.Drawing.Size(121, 20);
-            this.lblCurrentRentals.TabIndex = 28;
-            this.lblCurrentRentals.Text = "Current Rentals";
-            // 
-            // lblSortSales
-            // 
-            this.lblSortSales.AutoSize = true;
-            this.lblSortSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSortSales.Location = new System.Drawing.Point(26, 27);
-            this.lblSortSales.Name = "lblSortSales";
-            this.lblSortSales.Size = new System.Drawing.Size(105, 20);
-            this.lblSortSales.TabIndex = 1;
-            this.lblSortSales.Text = "Sort Sales By";
-            // 
-            // cmbxSortSalesBy
-            // 
-            this.cmbxSortSalesBy.FormattingEnabled = true;
-            this.cmbxSortSalesBy.Location = new System.Drawing.Point(30, 64);
-            this.cmbxSortSalesBy.Name = "cmbxSortSalesBy";
-            this.cmbxSortSalesBy.Size = new System.Drawing.Size(200, 28);
-            this.cmbxSortSalesBy.TabIndex = 2;
-            // 
-            // datagridSalesReport
-            // 
-            this.datagridSalesReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridSalesReport.Location = new System.Drawing.Point(30, 141);
-            this.datagridSalesReport.Name = "datagridSalesReport";
-            this.datagridSalesReport.RowHeadersWidth = 62;
-            this.datagridSalesReport.RowTemplate.Height = 28;
-            this.datagridSalesReport.Size = new System.Drawing.Size(600, 625);
-            this.datagridSalesReport.TabIndex = 3;
-            // 
-            // datagridEquipmentReport
-            // 
-            this.datagridEquipmentReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagridEquipmentReport.Location = new System.Drawing.Point(664, 141);
-            this.datagridEquipmentReport.Name = "datagridEquipmentReport";
-            this.datagridEquipmentReport.RowHeadersWidth = 62;
-            this.datagridEquipmentReport.RowTemplate.Height = 28;
-            this.datagridEquipmentReport.Size = new System.Drawing.Size(600, 625);
-            this.datagridEquipmentReport.TabIndex = 4;
+            this.lblSalesListSort.AutoSize = true;
+            this.lblSalesListSort.Location = new System.Drawing.Point(30, 115);
+            this.lblSalesListSort.Name = "lblSalesListSort";
+            this.lblSalesListSort.Size = new System.Drawing.Size(49, 20);
+            this.lblSalesListSort.TabIndex = 7;
+            this.lblSalesListSort.Text = "Sales";
             // 
             // cmbxSortEquipBy
             // 
@@ -811,41 +851,102 @@
             this.lblSortEquipBy.TabIndex = 5;
             this.lblSortEquipBy.Text = "Sort Equipment By";
             // 
-            // lblSalesListSort
+            // datagridEquipmentReport
             // 
-            this.lblSalesListSort.AutoSize = true;
-            this.lblSalesListSort.Location = new System.Drawing.Point(30, 115);
-            this.lblSalesListSort.Name = "lblSalesListSort";
-            this.lblSalesListSort.Size = new System.Drawing.Size(49, 20);
-            this.lblSalesListSort.TabIndex = 7;
-            this.lblSalesListSort.Text = "Sales";
+            this.datagridEquipmentReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridEquipmentReport.Location = new System.Drawing.Point(664, 141);
+            this.datagridEquipmentReport.Name = "datagridEquipmentReport";
+            this.datagridEquipmentReport.RowHeadersWidth = 62;
+            this.datagridEquipmentReport.RowTemplate.Height = 28;
+            this.datagridEquipmentReport.Size = new System.Drawing.Size(600, 625);
+            this.datagridEquipmentReport.TabIndex = 4;
             // 
-            // lblEquipListSort
+            // datagridSalesReport
             // 
-            this.lblEquipListSort.AutoSize = true;
-            this.lblEquipListSort.Location = new System.Drawing.Point(664, 114);
-            this.lblEquipListSort.Name = "lblEquipListSort";
-            this.lblEquipListSort.Size = new System.Drawing.Size(86, 20);
-            this.lblEquipListSort.TabIndex = 8;
-            this.lblEquipListSort.Text = "Equipment";
+            this.datagridSalesReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridSalesReport.Location = new System.Drawing.Point(30, 141);
+            this.datagridSalesReport.Name = "datagridSalesReport";
+            this.datagridSalesReport.RowHeadersWidth = 62;
+            this.datagridSalesReport.RowTemplate.Height = 28;
+            this.datagridSalesReport.Size = new System.Drawing.Size(600, 625);
+            this.datagridSalesReport.TabIndex = 3;
             // 
-            // btnExportSales
+            // cmbxSortSalesBy
             // 
-            this.btnExportSales.Location = new System.Drawing.Point(30, 773);
-            this.btnExportSales.Name = "btnExportSales";
-            this.btnExportSales.Size = new System.Drawing.Size(200, 35);
-            this.btnExportSales.TabIndex = 9;
-            this.btnExportSales.Text = "Export";
-            this.btnExportSales.UseVisualStyleBackColor = true;
+            this.cmbxSortSalesBy.FormattingEnabled = true;
+            this.cmbxSortSalesBy.Location = new System.Drawing.Point(30, 64);
+            this.cmbxSortSalesBy.Name = "cmbxSortSalesBy";
+            this.cmbxSortSalesBy.Size = new System.Drawing.Size(200, 28);
+            this.cmbxSortSalesBy.TabIndex = 2;
             // 
-            // btnExportEquipment
+            // lblSortSales
             // 
-            this.btnExportEquipment.Location = new System.Drawing.Point(664, 773);
-            this.btnExportEquipment.Name = "btnExportEquipment";
-            this.btnExportEquipment.Size = new System.Drawing.Size(200, 35);
-            this.btnExportEquipment.TabIndex = 10;
-            this.btnExportEquipment.Text = "Export";
-            this.btnExportEquipment.UseVisualStyleBackColor = true;
+            this.lblSortSales.AutoSize = true;
+            this.lblSortSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSortSales.Location = new System.Drawing.Point(26, 27);
+            this.lblSortSales.Name = "lblSortSales";
+            this.lblSortSales.Size = new System.Drawing.Size(105, 20);
+            this.lblSortSales.TabIndex = 1;
+            this.lblSortSales.Text = "Sort Sales By";
+            // 
+            // vREQUIPMENTBindingSource
+            // 
+            this.vREQUIPMENTBindingSource.DataMember = "VR_EQUIPMENT";
+            this.vREQUIPMENTBindingSource.DataSource = this.vR_Dataset;
+            // 
+            // vR_EQUIPMENTTableAdapter
+            // 
+            this.vR_EQUIPMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // rENTEQUIPEQUIPMENTIDBindingSource
+            // 
+            this.rENTEQUIPEQUIPMENTIDBindingSource.DataMember = "RENTEQUIP_EQUIPMENT_ID";
+            this.rENTEQUIPEQUIPMENTIDBindingSource.DataSource = this.vREQUIPMENTBindingSource;
+            // 
+            // vR_RENTALEQUIPMENTTableAdapter
+            // 
+            this.vR_RENTALEQUIPMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // vR_CATEGORIESTableAdapter
+            // 
+            this.vR_CATEGORIESTableAdapter.ClearBeforeFill = true;
+            // 
+            // vREQUIPMENTBindingSource1
+            // 
+            this.vREQUIPMENTBindingSource1.DataMember = "VR_EQUIPMENT";
+            this.vREQUIPMENTBindingSource1.DataSource = this.vR_Dataset;
+            // 
+            // eQUIPMENTIDDataGridViewTextBoxColumn
+            // 
+            this.eQUIPMENTIDDataGridViewTextBoxColumn.DataPropertyName = "EQUIPMENT_ID";
+            this.eQUIPMENTIDDataGridViewTextBoxColumn.HeaderText = "EQUIPMENT_ID";
+            this.eQUIPMENTIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.eQUIPMENTIDDataGridViewTextBoxColumn.Name = "eQUIPMENTIDDataGridViewTextBoxColumn";
+            this.eQUIPMENTIDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // cATEGORYIDDataGridViewTextBoxColumn
+            // 
+            this.cATEGORYIDDataGridViewTextBoxColumn.DataPropertyName = "CATEGORY_ID";
+            this.cATEGORYIDDataGridViewTextBoxColumn.HeaderText = "CATEGORY_ID";
+            this.cATEGORYIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.cATEGORYIDDataGridViewTextBoxColumn.Name = "cATEGORYIDDataGridViewTextBoxColumn";
+            this.cATEGORYIDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dESCRIPTIONDataGridViewTextBoxColumn
+            // 
+            this.dESCRIPTIONDataGridViewTextBoxColumn.DataPropertyName = "DESCRIPTION";
+            this.dESCRIPTIONDataGridViewTextBoxColumn.HeaderText = "DESCRIPTION";
+            this.dESCRIPTIONDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.dESCRIPTIONDataGridViewTextBoxColumn.Name = "dESCRIPTIONDataGridViewTextBoxColumn";
+            this.dESCRIPTIONDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nAMEDataGridViewTextBoxColumn
+            // 
+            this.nAMEDataGridViewTextBoxColumn.DataPropertyName = "NAME";
+            this.nAMEDataGridViewTextBoxColumn.HeaderText = "NAME";
+            this.nAMEDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nAMEDataGridViewTextBoxColumn.Name = "nAMEDataGridViewTextBoxColumn";
+            this.nAMEDataGridViewTextBoxColumn.Width = 150;
             // 
             // Form1
             // 
@@ -855,22 +956,28 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Village Rentals";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridCustomers)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridCustomers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipmentReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -886,9 +993,9 @@
         private System.Windows.Forms.Label lblEquipName;
         private System.Windows.Forms.Label lblEquipDesc;
         private System.Windows.Forms.Label lblEquipCat;
-        private System.Windows.Forms.TextBox txtbxEquipName;
-        private System.Windows.Forms.TextBox txtbxEquipDesc;
-        private System.Windows.Forms.ComboBox cmbxEquipCat;
+        private System.Windows.Forms.TextBox txtAddEquip_Name;
+        private System.Windows.Forms.TextBox txt_AddEquipDescription;
+        private System.Windows.Forms.ComboBox addEquipment_category_id;
         private System.Windows.Forms.Button btnAddEquipment;
         private System.Windows.Forms.Label lblEquipGrid;
         private System.Windows.Forms.DataGridView datagridEquipment;
@@ -952,6 +1059,18 @@
         private System.Windows.Forms.DataGridView datagridEquipmentReport;
         private System.Windows.Forms.DataGridView datagridSalesReport;
         private System.Windows.Forms.ComboBox cmbxSortSalesBy;
+        private VR_Dataset vR_Dataset;
+        private System.Windows.Forms.BindingSource vREQUIPMENTBindingSource;
+        private VR_DatasetTableAdapters.VR_EQUIPMENTTableAdapter vR_EQUIPMENTTableAdapter;
+        private System.Windows.Forms.BindingSource rENTEQUIPEQUIPMENTIDBindingSource;
+        private VR_DatasetTableAdapters.VR_RENTALEQUIPMENTTableAdapter vR_RENTALEQUIPMENTTableAdapter;
+        private System.Windows.Forms.BindingSource vRCATEGORIESBindingSource;
+        private VR_DatasetTableAdapters.VR_CATEGORIESTableAdapter vR_CATEGORIESTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eQUIPMENTIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cATEGORYIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dESCRIPTIONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource vREQUIPMENTBindingSource1;
     }
 }
 

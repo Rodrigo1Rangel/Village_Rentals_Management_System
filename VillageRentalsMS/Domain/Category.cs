@@ -12,7 +12,7 @@ using VillageRentalsMS.SystemException;
 
 namespace VillageRentalsMS.Domain
 {
-    internal class Category : IDatasetTable
+    internal class Category
     {
         // =====================================  INSTANCE FIELDS ======================================
         private int _category_id;

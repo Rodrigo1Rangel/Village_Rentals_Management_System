@@ -10,7 +10,7 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace VillageRentalsMS.Domain
 {
-    internal class Equipment : IDatasetTable
+    internal class Equipment// : IDatasetTable
     {
         // =====================================  INSTANCE FIELDS ======================================
         private int _equipment_id;
@@ -58,11 +58,11 @@ namespace VillageRentalsMS.Domain
         /// </summary>
         /// <param name="value">Blob.</param>
         /// <returns>Blob.</returns>
-        public Equipment GetObjectFromDataset(int equipment_id)
-        {
-            OracleConnection conn = DatabaseSingleton.Connection;
-            return equipment;
-        }
+        //public Equipment GetObjectFromDataset(int equipment_id)
+        //{
+        //    OracleConnection conn = DatabaseSingleton.Connection;
+        //    return equipment;
+        //}
 
         public void RemoveObjectFromDataset(int equipment_id)
         {
