@@ -31,10 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_category_id_to_remove = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_RemoveEquipmentID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddCat = new System.Windows.Forms.Button();
+            this.btn_RemoveCatategory = new System.Windows.Forms.Button();
             this.lblCatGrid = new System.Windows.Forms.Label();
             this.datagridCategories = new System.Windows.Forms.DataGridView();
             this.cATEGORYIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,16 +83,16 @@
             this.txtbxCLastNameEdit = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btbAddCustomer = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_AddCustomer_Note = new System.Windows.Forms.TextBox();
             this.lblCNote = new System.Windows.Forms.Label();
             this.lblCEmailAddress = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_AddCustomer_Email = new System.Windows.Forms.TextBox();
             this.lblCPhoneNumber = new System.Windows.Forms.Label();
-            this.txtbxCPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txt_AddCustomer_PhoneNumber = new System.Windows.Forms.TextBox();
             this.lblCFirstName = new System.Windows.Forms.Label();
-            this.txtbxCFirstName = new System.Windows.Forms.TextBox();
+            this.txt_AddCustomer_FirstName = new System.Windows.Forms.TextBox();
             this.lblCLastName = new System.Windows.Forms.Label();
-            this.txtbxCLastName = new System.Windows.Forms.TextBox();
+            this.txt_AddCustomer_LastName = new System.Windows.Forms.TextBox();
             this.lblAddCustomer = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.lblCurrentRentals = new System.Windows.Forms.Label();
@@ -121,10 +125,14 @@
             this.rENTEQUIPEQUIPMENTIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vR_RENTALEQUIPMENTTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALEQUIPMENTTableAdapter();
             this.vR_CATEGORIESTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_CATEGORIESTableAdapter();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_category_id_to_remove = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btn_RemoveCatategory = new System.Windows.Forms.Button();
+            this.vRCUSTOMERINFOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vR_CUSTOMERINFOTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_CUSTOMERINFOTableAdapter();
+            this.cUSTOMERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lASTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fIRSTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cONTACTPHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).BeginInit();
@@ -143,6 +151,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -192,6 +201,34 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(867, 835);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 20);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Category ID";
+            // 
+            // txt_category_id_to_remove
+            // 
+            this.txt_category_id_to_remove.Location = new System.Drawing.Point(867, 861);
+            this.txt_category_id_to_remove.Name = "txt_category_id_to_remove";
+            this.txt_category_id_to_remove.Size = new System.Drawing.Size(200, 26);
+            this.txt_category_id_to_remove.TabIndex = 23;
+            this.txt_category_id_to_remove.TextChanged += new System.EventHandler(this.txt_category_id_to_remove_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(863, 795);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 20);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Remove Category";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -229,6 +266,16 @@
             this.btnAddCat.Text = "Add Category";
             this.btnAddCat.UseVisualStyleBackColor = true;
             this.btnAddCat.Click += new System.EventHandler(this.btnAddCat_Click);
+            // 
+            // btn_RemoveCatategory
+            // 
+            this.btn_RemoveCatategory.Location = new System.Drawing.Point(867, 903);
+            this.btn_RemoveCatategory.Name = "btn_RemoveCatategory";
+            this.btn_RemoveCatategory.Size = new System.Drawing.Size(200, 35);
+            this.btn_RemoveCatategory.TabIndex = 16;
+            this.btn_RemoveCatategory.Text = "Remove Category";
+            this.btn_RemoveCatategory.UseVisualStyleBackColor = true;
+            this.btn_RemoveCatategory.Click += new System.EventHandler(this.btn_RemoveCatategory_Click);
             // 
             // lblCatGrid
             // 
@@ -481,16 +528,16 @@
             this.tabPage2.Controls.Add(this.txtbxCLastNameEdit);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.btbAddCustomer);
-            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.txt_AddCustomer_Note);
             this.tabPage2.Controls.Add(this.lblCNote);
             this.tabPage2.Controls.Add(this.lblCEmailAddress);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.txt_AddCustomer_Email);
             this.tabPage2.Controls.Add(this.lblCPhoneNumber);
-            this.tabPage2.Controls.Add(this.txtbxCPhoneNumber);
+            this.tabPage2.Controls.Add(this.txt_AddCustomer_PhoneNumber);
             this.tabPage2.Controls.Add(this.lblCFirstName);
-            this.tabPage2.Controls.Add(this.txtbxCFirstName);
+            this.tabPage2.Controls.Add(this.txt_AddCustomer_FirstName);
             this.tabPage2.Controls.Add(this.lblCLastName);
-            this.tabPage2.Controls.Add(this.txtbxCLastName);
+            this.tabPage2.Controls.Add(this.txt_AddCustomer_LastName);
             this.tabPage2.Controls.Add(this.lblAddCustomer);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
@@ -511,7 +558,16 @@
             // 
             // datagridCustomers
             // 
+            this.datagridCustomers.AutoGenerateColumns = false;
             this.datagridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cUSTOMERIDDataGridViewTextBoxColumn,
+            this.lASTNAMEDataGridViewTextBoxColumn,
+            this.fIRSTNAMEDataGridViewTextBoxColumn,
+            this.cONTACTPHONEDataGridViewTextBoxColumn,
+            this.eMAILDataGridViewTextBoxColumn,
+            this.nOTEDataGridViewTextBoxColumn});
+            this.datagridCustomers.DataSource = this.vRCUSTOMERINFOBindingSource;
             this.datagridCustomers.Location = new System.Drawing.Point(30, 361);
             this.datagridCustomers.Name = "datagridCustomers";
             this.datagridCustomers.RowHeadersWidth = 62;
@@ -643,13 +699,14 @@
             this.btbAddCustomer.TabIndex = 11;
             this.btbAddCustomer.Text = "Add Customer";
             this.btbAddCustomer.UseVisualStyleBackColor = true;
+            this.btbAddCustomer.Click += new System.EventHandler(this.btbAddCustomer_Click);
             // 
-            // textBox2
+            // txt_AddCustomer_Note
             // 
-            this.textBox2.Location = new System.Drawing.Point(30, 222);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 26);
-            this.textBox2.TabIndex = 10;
+            this.txt_AddCustomer_Note.Location = new System.Drawing.Point(30, 222);
+            this.txt_AddCustomer_Note.Name = "txt_AddCustomer_Note";
+            this.txt_AddCustomer_Note.Size = new System.Drawing.Size(200, 26);
+            this.txt_AddCustomer_Note.TabIndex = 10;
             // 
             // lblCNote
             // 
@@ -669,12 +726,12 @@
             this.lblCEmailAddress.TabIndex = 8;
             this.lblCEmailAddress.Text = "Email Address";
             // 
-            // textBox1
+            // txt_AddCustomer_Email
             // 
-            this.textBox1.Location = new System.Drawing.Point(261, 157);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 7;
+            this.txt_AddCustomer_Email.Location = new System.Drawing.Point(261, 157);
+            this.txt_AddCustomer_Email.Name = "txt_AddCustomer_Email";
+            this.txt_AddCustomer_Email.Size = new System.Drawing.Size(200, 26);
+            this.txt_AddCustomer_Email.TabIndex = 7;
             // 
             // lblCPhoneNumber
             // 
@@ -685,12 +742,12 @@
             this.lblCPhoneNumber.TabIndex = 6;
             this.lblCPhoneNumber.Text = "Phone Number";
             // 
-            // txtbxCPhoneNumber
+            // txt_AddCustomer_PhoneNumber
             // 
-            this.txtbxCPhoneNumber.Location = new System.Drawing.Point(30, 157);
-            this.txtbxCPhoneNumber.Name = "txtbxCPhoneNumber";
-            this.txtbxCPhoneNumber.Size = new System.Drawing.Size(200, 26);
-            this.txtbxCPhoneNumber.TabIndex = 5;
+            this.txt_AddCustomer_PhoneNumber.Location = new System.Drawing.Point(30, 157);
+            this.txt_AddCustomer_PhoneNumber.Name = "txt_AddCustomer_PhoneNumber";
+            this.txt_AddCustomer_PhoneNumber.Size = new System.Drawing.Size(200, 26);
+            this.txt_AddCustomer_PhoneNumber.TabIndex = 5;
             // 
             // lblCFirstName
             // 
@@ -701,12 +758,13 @@
             this.lblCFirstName.TabIndex = 4;
             this.lblCFirstName.Text = "First Name";
             // 
-            // txtbxCFirstName
+            // txt_AddCustomer__FirstName
             // 
-            this.txtbxCFirstName.Location = new System.Drawing.Point(261, 91);
-            this.txtbxCFirstName.Name = "txtbxCFirstName";
-            this.txtbxCFirstName.Size = new System.Drawing.Size(200, 26);
-            this.txtbxCFirstName.TabIndex = 3;
+            this.txt_AddCustomer_FirstName.Location = new System.Drawing.Point(261, 91);
+            this.txt_AddCustomer_FirstName.Name = "txt_AddCustomer__FirstName";
+            this.txt_AddCustomer_FirstName.Size = new System.Drawing.Size(200, 26);
+            this.txt_AddCustomer_FirstName.TabIndex = 3;
+            this.txt_AddCustomer_FirstName.TextChanged += new System.EventHandler(this.txtbxCFirstName_TextChanged);
             // 
             // lblCLastName
             // 
@@ -717,12 +775,12 @@
             this.lblCLastName.TabIndex = 2;
             this.lblCLastName.Text = "Last Name";
             // 
-            // txtbxCLastName
+            // txt_AddCustomer_LastName
             // 
-            this.txtbxCLastName.Location = new System.Drawing.Point(30, 91);
-            this.txtbxCLastName.Name = "txtbxCLastName";
-            this.txtbxCLastName.Size = new System.Drawing.Size(200, 26);
-            this.txtbxCLastName.TabIndex = 1;
+            this.txt_AddCustomer_LastName.Location = new System.Drawing.Point(30, 91);
+            this.txt_AddCustomer_LastName.Name = "txt_AddCustomer_LastName";
+            this.txt_AddCustomer_LastName.Size = new System.Drawing.Size(200, 26);
+            this.txt_AddCustomer_LastName.TabIndex = 1;
             // 
             // lblAddCustomer
             // 
@@ -1015,43 +1073,62 @@
             // 
             this.vR_CATEGORIESTableAdapter.ClearBeforeFill = true;
             // 
-            // label4
+            // vRCUSTOMERINFOBindingSource
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(867, 835);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 20);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Category ID";
+            this.vRCUSTOMERINFOBindingSource.DataMember = "VR_CUSTOMERINFO";
+            this.vRCUSTOMERINFOBindingSource.DataSource = this.vR_Dataset;
             // 
-            // txt_category_id_to_remove
+            // vR_CUSTOMERINFOTableAdapter
             // 
-            this.txt_category_id_to_remove.Location = new System.Drawing.Point(867, 861);
-            this.txt_category_id_to_remove.Name = "txt_category_id_to_remove";
-            this.txt_category_id_to_remove.Size = new System.Drawing.Size(200, 26);
-            this.txt_category_id_to_remove.TabIndex = 23;
-            this.txt_category_id_to_remove.TextChanged += new System.EventHandler(this.txt_category_id_to_remove_TextChanged);
+            this.vR_CUSTOMERINFOTableAdapter.ClearBeforeFill = true;
             // 
-            // label5
+            // cUSTOMERIDDataGridViewTextBoxColumn
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(863, 795);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 20);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Remove Category";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.cUSTOMERIDDataGridViewTextBoxColumn.DataPropertyName = "CUSTOMER_ID";
+            this.cUSTOMERIDDataGridViewTextBoxColumn.HeaderText = "CUSTOMER_ID";
+            this.cUSTOMERIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.cUSTOMERIDDataGridViewTextBoxColumn.Name = "cUSTOMERIDDataGridViewTextBoxColumn";
+            this.cUSTOMERIDDataGridViewTextBoxColumn.Width = 150;
             // 
-            // btn_RemoveCatategory
+            // lASTNAMEDataGridViewTextBoxColumn
             // 
-            this.btn_RemoveCatategory.Location = new System.Drawing.Point(867, 903);
-            this.btn_RemoveCatategory.Name = "btn_RemoveCatategory";
-            this.btn_RemoveCatategory.Size = new System.Drawing.Size(200, 35);
-            this.btn_RemoveCatategory.TabIndex = 16;
-            this.btn_RemoveCatategory.Text = "Remove Category";
-            this.btn_RemoveCatategory.UseVisualStyleBackColor = true;
-            this.btn_RemoveCatategory.Click += new System.EventHandler(this.btn_RemoveCatategory_Click);
+            this.lASTNAMEDataGridViewTextBoxColumn.DataPropertyName = "LAST_NAME";
+            this.lASTNAMEDataGridViewTextBoxColumn.HeaderText = "LAST_NAME";
+            this.lASTNAMEDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.lASTNAMEDataGridViewTextBoxColumn.Name = "lASTNAMEDataGridViewTextBoxColumn";
+            this.lASTNAMEDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // fIRSTNAMEDataGridViewTextBoxColumn
+            // 
+            this.fIRSTNAMEDataGridViewTextBoxColumn.DataPropertyName = "FIRST_NAME";
+            this.fIRSTNAMEDataGridViewTextBoxColumn.HeaderText = "FIRST_NAME";
+            this.fIRSTNAMEDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.fIRSTNAMEDataGridViewTextBoxColumn.Name = "fIRSTNAMEDataGridViewTextBoxColumn";
+            this.fIRSTNAMEDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // cONTACTPHONEDataGridViewTextBoxColumn
+            // 
+            this.cONTACTPHONEDataGridViewTextBoxColumn.DataPropertyName = "CONTACT_PHONE";
+            this.cONTACTPHONEDataGridViewTextBoxColumn.HeaderText = "CONTACT_PHONE";
+            this.cONTACTPHONEDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.cONTACTPHONEDataGridViewTextBoxColumn.Name = "cONTACTPHONEDataGridViewTextBoxColumn";
+            this.cONTACTPHONEDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // eMAILDataGridViewTextBoxColumn
+            // 
+            this.eMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL";
+            this.eMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL";
+            this.eMAILDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.eMAILDataGridViewTextBoxColumn.Name = "eMAILDataGridViewTextBoxColumn";
+            this.eMAILDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nOTEDataGridViewTextBoxColumn
+            // 
+            this.nOTEDataGridViewTextBoxColumn.DataPropertyName = "NOTE";
+            this.nOTEDataGridViewTextBoxColumn.HeaderText = "NOTE";
+            this.nOTEDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nOTEDataGridViewTextBoxColumn.Name = "nOTEDataGridViewTextBoxColumn";
+            this.nOTEDataGridViewTextBoxColumn.Width = 150;
             // 
             // Form1
             // 
@@ -1084,6 +1161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1115,13 +1193,13 @@
         private System.Windows.Forms.Label lblAddCustomer;
         private System.Windows.Forms.Label lblCNote;
         private System.Windows.Forms.Label lblCEmailAddress;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_AddCustomer_Email;
         private System.Windows.Forms.Label lblCPhoneNumber;
-        private System.Windows.Forms.TextBox txtbxCPhoneNumber;
+        private System.Windows.Forms.TextBox txt_AddCustomer_PhoneNumber;
         private System.Windows.Forms.Label lblCFirstName;
-        private System.Windows.Forms.TextBox txtbxCFirstName;
+        private System.Windows.Forms.TextBox txt_AddCustomer_FirstName;
         private System.Windows.Forms.Label lblCLastName;
-        private System.Windows.Forms.TextBox txtbxCLastName;
+        private System.Windows.Forms.TextBox txt_AddCustomer_LastName;
         private System.Windows.Forms.Label lblCustID;
         private System.Windows.Forms.ComboBox cmbxCustIDEdit;
         private System.Windows.Forms.Button btnEditCustomer;
@@ -1137,7 +1215,7 @@
         private System.Windows.Forms.TextBox txtbxCLastNameEdit;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btbAddCustomer;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_AddCustomer_Note;
         private System.Windows.Forms.Label lblCustList;
         private System.Windows.Forms.DataGridView datagridCustomers;
         private System.Windows.Forms.Label lblEquipIDRent;
@@ -1186,6 +1264,14 @@
         private System.Windows.Forms.TextBox txt_category_id_to_remove;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_RemoveCatategory;
+        private System.Windows.Forms.BindingSource vRCUSTOMERINFOBindingSource;
+        private VR_DatasetTableAdapters.VR_CUSTOMERINFOTableAdapter vR_CUSTOMERINFOTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTOMERIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lASTNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fIRSTNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cONTACTPHONEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eMAILDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nOTEDataGridViewTextBoxColumn;
     }
 }
 

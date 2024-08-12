@@ -15,26 +15,7 @@ namespace VillageRentalsMS.Domain.Managers
 {
     internal class InventoryManager
     {
-        // =====================================  INSTANCE FIELDS ======================================
-
-
-        // ========================================  PROPERTIES ========================================
-
-
-        // =======================================  CONSTRUCTORS =======================================
-
-
         // ==========================================  METHODS =========================================
-
-        /// <summary>
-        /// Blob.
-        /// </summary>
-        /// <param name="value">Blob.</param>
-        /// <returns>Blob.</returns>
-        //public EquipmentToRent DeleteEquipment(int equipment_id)
-        //{
-        //    return;
-        //}
 
         /// <summary>
         /// Blob.

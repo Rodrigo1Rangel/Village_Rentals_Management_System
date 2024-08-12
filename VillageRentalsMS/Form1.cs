@@ -21,6 +21,8 @@ namespace VillageRentalsMS
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vR_Dataset.VR_CUSTOMERINFO' table. You can move, or remove it, as needed.
+            this.vR_CUSTOMERINFOTableAdapter.Fill(this.vR_Dataset.VR_CUSTOMERINFO);
             // TODO: This line of code loads data into the 'vR_Dataset.VR_CATEGORIES' table. You can move, or remove it, as needed.
             this.vR_CATEGORIESTableAdapter.Fill(this.vR_Dataset.VR_CATEGORIES);
             // TODO: This line of code loads data into the 'vR_Dataset.VR_RENTALEQUIPMENT' table. You can move, or remove it, as needed.
@@ -86,6 +88,24 @@ namespace VillageRentalsMS
         {
             string category_id_to_remove = txt_category_id_to_remove.Text;
             InventoryManager.RemoveCategory(category_id_to_remove);
+            Form1_Load(null, null);
+        }
+
+        // ========================================== ADD CUSTOMER ==========================================
+        private void txtbxCFirstName_TextChanged(object sender, EventArgs e) {}
+
+        private void btbAddCustomer_Click(object sender, EventArgs e)
+        {
+            string last_name = txt_AddCustomer_LastName.Text;
+            string first_name = txt_AddCustomer_FirstName.Text;
+            string contact_phone = txt_AddCustomer_PhoneNumber.Text;
+            string email = txt_AddCustomer_Email.Text;
+            string note = txt_AddCustomer_Note.Text;
+
+            CustomerManager.AddCustomer(last_name, first_name, contact_phone, email, note);
+
+            MessageBox.Show($"Customer update:\n\n{first_name} {last_name} was registered!");
+
             Form1_Load(null, null);
         }
     }
