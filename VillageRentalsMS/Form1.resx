@@ -171,6 +171,12 @@
   <metadata name="vRCUSTOMERINFOBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>679, 109</value>
   </metadata>
+  <metadata name="vREQUIPMENTBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1035, 201</value>
+  </metadata>
+  <metadata name="vRCUSTOMERINFOBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>692, 201</value>
+  </metadata>
   <metadata name="vRRENTALEQUIPMENTINFOBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1125, 155</value>
   </metadata>
@@ -203,12 +209,6 @@
   </metadata>
   <metadata name="vR_RENTALINFOTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>393, 201</value>
-  </metadata>
-  <metadata name="vRCUSTOMERINFOBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>692, 201</value>
-  </metadata>
-  <metadata name="vREQUIPMENTBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1035, 201</value>
   </metadata>
   <metadata name="vRRENTALEQUIPMENTINFOBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 247</value>

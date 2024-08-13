@@ -62,7 +62,7 @@ namespace VillageRentalsMS.Domain.Managers
                     $"rentequip.item_quantity \"Quantity\", " +
                     $"rentequip.rent_date \"Rental Date\", " +
                     $"rentequip.return_date \"Return Date\", " +
-                    $"rentequip.rental_cost \"Return Cost\" " +
+                    $"rentequip.rental_cost \"Rental Cost\" " +
                     $"FROM VR_RENTALEQUIPMENTINFO rentequip " +
                     $"JOIN VR_RENTALINFO rentinfo ON rentinfo.equipment_id = rentequip.equipment_id " +
                     $"AND rentinfo.rental_id = rentequip.rental_id " +
@@ -75,6 +75,26 @@ namespace VillageRentalsMS.Domain.Managers
             adapter.Fill(dataTable);
             return dataTable;
         }
+
+        public static DataTable EquipmentGridView()
+        {
+            OracleConnection conn = DatabaseSingleton.Connection;
+            string sql_all_equipment =
+                    $"SELECT equip.equipment_id \"Equipment ID\", " +
+                    $"equip.name \"Name\", " +
+                    $"equip.description \"Description\", " +
+                    $"cat.description \"Category\", " +
+                    $"rentequip.daily_rental_cost \"Daily Rental Cost\" " +
+                    $"FROM VR_EQUIPMENT equip " +
+                    $"JOIN VR_CATEGORIES cat ON cat.category_id = equip.category_id " +
+                    $"JOIN VR_RENTALEQUIPMENT rentequip ON rentequip.equipment_id = equip.equipment_id";
+
+            OracleDataAdapter adapter = new OracleDataAdapter(sql_all_equipment, conn);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            return dataTable;
+        }
+
 
         public static void CreateReservation(string customer_id_to_rent, string equipment_id_to_rent, string DateRented, string DateToReturn, int durationInDays)
         {
@@ -127,6 +147,29 @@ namespace VillageRentalsMS.Domain.Managers
             command2.Parameters.Add(new OracleParameter("param3", OracleDbType.Varchar2)).Value = customer_id_to_rent;
 
             command2.ExecuteNonQuery();
+        }
+
+        public static DataTable SalesGridView()
+        {
+            OracleConnection conn = DatabaseSingleton.Connection;
+            string sql_every_rental =
+                    $"SELECT rentequip.rental_id \"Rental ID\", " +
+                    $"cust.first_name || ' ' || cust.last_name \"Customer Name\", " +
+                    $"rentequip.equipment_id \"Equipment ID\", " +
+                    $"rentequip.item_quantity \"Quantity\", " +
+                    $"rentequip.rent_date \"Rental Date\", " +
+                    $"rentequip.return_date \"Return Date\", " +
+                    $"rentequip.rental_cost \"Rental Cost\" " +
+                    $"FROM VR_RENTALEQUIPMENTINFO rentequip " +
+                    $"JOIN VR_RENTALINFO rentinfo ON rentinfo.equipment_id = rentequip.equipment_id " +
+                    $"AND rentinfo.rental_id = rentequip.rental_id " +
+                    $"JOIN VR_CUSTOMERINFO cust ON rentinfo.customer_id = cust.customer_id " +
+                    $"JOIN VR_EQUIPMENT equipment ON rentequip.equipment_id = equipment.equipment_id";
+
+            OracleDataAdapter adapter = new OracleDataAdapter(sql_every_rental, conn);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            return dataTable;
         }
     }
 }

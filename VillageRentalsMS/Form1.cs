@@ -21,8 +21,7 @@ namespace VillageRentalsMS
         public Form1()
         {
             InitializeComponent();
-            Load_dataGridView_AvailableEquipment();
-            Load_dataGridView_CurrentRentals();
+            UpdateDatabase();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -56,8 +55,7 @@ namespace VillageRentalsMS
             Form1_Load(null, null);
 
             MessageBox.Show($"Equipment update:\n\n{equipment_name} equipment was added!");
-            Load_dataGridView_AvailableEquipment();
-            Load_dataGridView_CurrentRentals();
+            UpdateDatabase();
         }
 
 
@@ -302,10 +300,7 @@ namespace VillageRentalsMS
         private void Load_dataGridView_AvailableEquipment()
         {
             DataTable table_AvailableEquipment = RentalManager.PopulateAvailableEquipmentGridView();
-            //dataGridView_AvailableEquipment.DataSource = null;
             dataGridView_AvailableEquipment.DataSource = table_AvailableEquipment;
-            //dataGridView_AvailableEquipment.Refresh();
-            
         }
 
 
@@ -354,11 +349,44 @@ namespace VillageRentalsMS
             {
                 MessageBox.Show(InvalidRentalDate.Error_message);
             }
-            Load_dataGridView_AvailableEquipment();
-            Load_dataGridView_CurrentRentals();
+            UpdateDatabase();
         }
+
+
 
         //                this.vR_EQUIPMENTTableAdapter.FillBy(this.vR_Dataset.VR_EQUIPMENT);
 
+
+
+        // ====================================== LOAD SALES REPORT =======================================
+        private void Load_datagridSalesReport()
+        {
+            DataTable table_Sales = RentalManager.SalesGridView();
+            datagridSalesReport.DataSource = table_Sales;
+        }
+
+        private void datagridSalesReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        // ====================================== LOAD SALES REPORT =======================================
+        private void Load_datagridEquipmentReport()
+        {
+            DataTable table_Equipment = RentalManager.EquipmentGridView();
+            datagridEquipmentReport.DataSource = table_Equipment;
+        }
+        private void datagridEquipmentReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+
+
+        private void UpdateDatabase()
+        {
+            Load_datagridEquipmentReport();
+            Load_dataGridView_AvailableEquipment();
+            Load_dataGridView_CurrentRentals();
+            Load_datagridSalesReport();
+        }
     }
 }
