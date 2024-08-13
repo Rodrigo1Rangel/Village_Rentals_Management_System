@@ -133,9 +133,20 @@ namespace VillageRentalsMS.Domain.Managers
             string equipment_name = reader.GetString(0);
 
 
-            // Delete equipment
+            // Delete equipment from VR_RENTALEQUIPMENT
 
             OracleDataAdapter adapter = new OracleDataAdapter();
+
+            string sql_remove_rentalequipment = "DELETE FROM vr_rentalequipment WHERE equipment_id = (:param1)";
+
+            OracleCommand command3 = new OracleCommand(sql_remove_rentalequipment, conn);
+
+            command3.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = equipment_id;
+
+            adapter.DeleteCommand = command3;
+            adapter.DeleteCommand.ExecuteNonQuery();
+
+            // Delete equipment from VR_EQUIPMENT
 
             string sql_remove_equipment = "DELETE FROM vr_equipment WHERE equipment_id = (:param1)";
 

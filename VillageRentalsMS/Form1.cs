@@ -378,9 +378,6 @@ namespace VillageRentalsMS
         private void datagridEquipmentReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
-
-
-
         private void UpdateDatabase()
         {
             Load_datagridEquipmentReport();
