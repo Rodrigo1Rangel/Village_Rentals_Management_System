@@ -117,6 +117,7 @@
     <Compile Include="SystemException\InvalidNote.cs" />
     <Compile Include="SystemException\InvalidPhoneNumber.cs" />
     <Compile Include="SystemException\InvalidPhoneNumberNN.cs" />
+    <Compile Include="SystemException\InvalidRentalDate.cs" />
     <Compile Include="Utilities\DatabaseSingleton.cs" />
     <Compile Include="VR_Dataset.Designer.cs">
       <AutoGen>True</AutoGen>

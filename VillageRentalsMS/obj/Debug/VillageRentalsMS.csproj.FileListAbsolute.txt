@@ -3,11 +3,6 @@ C:\Users\howie\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\D
 C:\Users\howie\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.Properties.Resources.resources
 C:\Users\howie\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.GenerateResource.cache
 C:\Users\howie\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.CoreCompileInputs.cache
-C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.AssemblyReference.cache
-C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.Form1.resources
-C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.Properties.Resources.resources
-C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.GenerateResource.cache
-C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.CoreCompileInputs.cache
 C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\bin\Debug\VillageRentalsMS.exe.config
 C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\bin\Debug\VillageRentalsMS.exe
 C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\bin\Debug\VillageRentalsMS.pdb
@@ -34,6 +29,11 @@ C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRental
 C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\bin\Debug\System.Text.Json.xml
 C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\bin\Debug\System.ValueTuple.xml
+C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.AssemblyReference.cache
+C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.Form1.resources
+C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.Properties.Resources.resources
+C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.GenerateResource.cache
+C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.csproj.CoreCompileInputs.cache
 C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageR.07604819.Up2Date
 C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.exe
 C:\Users\rodri\OneDrive\Documents\GitHub\SAIT_CPSY200_FinalProject\VillageRentalsMS\obj\Debug\VillageRentalsMS.pdb

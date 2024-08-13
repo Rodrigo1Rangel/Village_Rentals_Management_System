@@ -177,7 +177,37 @@
               <Mapping SourceColumn="DESCRIPTION" DataSetColumn="DESCRIPTION" />
               <Mapping SourceColumn="NAME" DataSetColumn="NAME" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="VILLAGERENTALS.VR_EQUIPMENT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EQUIPMENT_ID, CATEGORY_ID, DESCRIPTION, NAME FROM VILLAGERENTALS.VR_EQUIPMENT
+ORDER BY EQUIPMENT_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="VILLAGERENTALS.VR_EQUIPMENT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EQUIPMENT_ID, CATEGORY_ID, DESCRIPTION, NAME
+FROM   VILLAGERENTALS.VR_EQUIPMENT
+ORDER BY EQUIPMENT_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="VILLAGERENTALS.VR_EQUIPMENT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EQUIPMENT_ID, CATEGORY_ID, DESCRIPTION, NAME
+FROM   VILLAGERENTALS.VR_EQUIPMENT
+ORDER BY EQUIPMENT_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VR_EQUIPMENTFORSALETableAdapter" GeneratorDataComponentClassName="VR_EQUIPMENTFORSALETableAdapter" Name="VR_EQUIPMENTFORSALE" UserDataComponentName="VR_EQUIPMENTFORSALETableAdapter">
             <MainSource>
@@ -395,14 +425,14 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="VR_Dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="VR_Dataset" msprop:Generator_DataSetName="VR_Dataset">
+  <xs:element name="VR_Dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="VR_Dataset" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="VR_Dataset">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="VR_CATEGORIES" msprop:Generator_RowEvHandlerName="VR_CATEGORIESRowChangeEventHandler" msprop:Generator_RowDeletedName="VR_CATEGORIESRowDeleted" msprop:Generator_RowDeletingName="VR_CATEGORIESRowDeleting" msprop:Generator_RowEvArgName="VR_CATEGORIESRowChangeEvent" msprop:Generator_TablePropName="VR_CATEGORIES" msprop:Generator_RowChangedName="VR_CATEGORIESRowChanged" msprop:Generator_RowChangingName="VR_CATEGORIESRowChanging" msprop:Generator_TableClassName="VR_CATEGORIESDataTable" msprop:Generator_RowClassName="VR_CATEGORIESRow" msprop:Generator_TableVarName="tableVR_CATEGORIES" msprop:Generator_UserTableName="VR_CATEGORIES">
+        <xs:element name="VR_CATEGORIES" msprop:Generator_RowClassName="VR_CATEGORIESRow" msprop:Generator_RowEvHandlerName="VR_CATEGORIESRowChangeEventHandler" msprop:Generator_RowDeletedName="VR_CATEGORIESRowDeleted" msprop:Generator_RowDeletingName="VR_CATEGORIESRowDeleting" msprop:Generator_RowEvArgName="VR_CATEGORIESRowChangeEvent" msprop:Generator_TablePropName="VR_CATEGORIES" msprop:Generator_RowChangedName="VR_CATEGORIESRowChanged" msprop:Generator_UserTableName="VR_CATEGORIES" msprop:Generator_RowChangingName="VR_CATEGORIESRowChanging" msprop:Generator_TableClassName="VR_CATEGORIESDataTable" msprop:Generator_TableVarName="tableVR_CATEGORIES">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CATEGORY_ID" msprop:Generator_ColumnPropNameInRow="CATEGORY_ID" msprop:Generator_ColumnPropNameInTable="CATEGORY_IDColumn" msprop:Generator_ColumnVarNameInTable="columnCATEGORY_ID" msprop:Generator_UserColumnName="CATEGORY_ID" type="xs:decimal" />
-              <xs:element name="DESCRIPTION" msprop:Generator_ColumnPropNameInRow="DESCRIPTION" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION" msprop:Generator_UserColumnName="DESCRIPTION">
+              <xs:element name="CATEGORY_ID" msprop:Generator_UserColumnName="CATEGORY_ID" msprop:Generator_ColumnPropNameInTable="CATEGORY_IDColumn" msprop:Generator_ColumnPropNameInRow="CATEGORY_ID" msprop:Generator_ColumnVarNameInTable="columnCATEGORY_ID" type="xs:decimal" />
+              <xs:element name="DESCRIPTION" msprop:Generator_UserColumnName="DESCRIPTION" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPTION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -412,39 +442,39 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VR_CUSTOMERINFO" msprop:Generator_RowEvHandlerName="VR_CUSTOMERINFORowChangeEventHandler" msprop:Generator_RowDeletedName="VR_CUSTOMERINFORowDeleted" msprop:Generator_RowDeletingName="VR_CUSTOMERINFORowDeleting" msprop:Generator_RowEvArgName="VR_CUSTOMERINFORowChangeEvent" msprop:Generator_TablePropName="VR_CUSTOMERINFO" msprop:Generator_RowChangedName="VR_CUSTOMERINFORowChanged" msprop:Generator_RowChangingName="VR_CUSTOMERINFORowChanging" msprop:Generator_TableClassName="VR_CUSTOMERINFODataTable" msprop:Generator_RowClassName="VR_CUSTOMERINFORow" msprop:Generator_TableVarName="tableVR_CUSTOMERINFO" msprop:Generator_UserTableName="VR_CUSTOMERINFO">
+        <xs:element name="VR_CUSTOMERINFO" msprop:Generator_RowClassName="VR_CUSTOMERINFORow" msprop:Generator_RowEvHandlerName="VR_CUSTOMERINFORowChangeEventHandler" msprop:Generator_RowDeletedName="VR_CUSTOMERINFORowDeleted" msprop:Generator_RowDeletingName="VR_CUSTOMERINFORowDeleting" msprop:Generator_RowEvArgName="VR_CUSTOMERINFORowChangeEvent" msprop:Generator_TablePropName="VR_CUSTOMERINFO" msprop:Generator_RowChangedName="VR_CUSTOMERINFORowChanged" msprop:Generator_UserTableName="VR_CUSTOMERINFO" msprop:Generator_RowChangingName="VR_CUSTOMERINFORowChanging" msprop:Generator_TableClassName="VR_CUSTOMERINFODataTable" msprop:Generator_TableVarName="tableVR_CUSTOMERINFO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CUSTOMER_ID" msprop:Generator_ColumnPropNameInRow="CUSTOMER_ID" msprop:Generator_ColumnPropNameInTable="CUSTOMER_IDColumn" msprop:Generator_ColumnVarNameInTable="columnCUSTOMER_ID" msprop:Generator_UserColumnName="CUSTOMER_ID" type="xs:decimal" />
-              <xs:element name="LAST_NAME" msprop:Generator_ColumnPropNameInRow="LAST_NAME" msprop:Generator_ColumnPropNameInTable="LAST_NAMEColumn" msprop:Generator_ColumnVarNameInTable="columnLAST_NAME" msprop:Generator_UserColumnName="LAST_NAME">
+              <xs:element name="CUSTOMER_ID" msprop:Generator_UserColumnName="CUSTOMER_ID" msprop:Generator_ColumnPropNameInTable="CUSTOMER_IDColumn" msprop:Generator_ColumnPropNameInRow="CUSTOMER_ID" msprop:Generator_ColumnVarNameInTable="columnCUSTOMER_ID" type="xs:decimal" />
+              <xs:element name="LAST_NAME" msprop:Generator_UserColumnName="LAST_NAME" msprop:Generator_ColumnPropNameInTable="LAST_NAMEColumn" msprop:Generator_ColumnPropNameInRow="LAST_NAME" msprop:Generator_ColumnVarNameInTable="columnLAST_NAME">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FIRST_NAME" msprop:Generator_ColumnPropNameInRow="FIRST_NAME" msprop:Generator_ColumnPropNameInTable="FIRST_NAMEColumn" msprop:Generator_ColumnVarNameInTable="columnFIRST_NAME" msprop:Generator_UserColumnName="FIRST_NAME">
+              <xs:element name="FIRST_NAME" msprop:Generator_UserColumnName="FIRST_NAME" msprop:Generator_ColumnPropNameInTable="FIRST_NAMEColumn" msprop:Generator_ColumnPropNameInRow="FIRST_NAME" msprop:Generator_ColumnVarNameInTable="columnFIRST_NAME">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CONTACT_PHONE" msprop:Generator_ColumnPropNameInRow="CONTACT_PHONE" msprop:Generator_ColumnPropNameInTable="CONTACT_PHONEColumn" msprop:Generator_ColumnVarNameInTable="columnCONTACT_PHONE" msprop:Generator_UserColumnName="CONTACT_PHONE">
+              <xs:element name="CONTACT_PHONE" msprop:Generator_UserColumnName="CONTACT_PHONE" msprop:Generator_ColumnPropNameInTable="CONTACT_PHONEColumn" msprop:Generator_ColumnPropNameInRow="CONTACT_PHONE" msprop:Generator_ColumnVarNameInTable="columnCONTACT_PHONE">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="12" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="EMAIL" msprop:Generator_ColumnPropNameInRow="EMAIL" msprop:Generator_ColumnPropNameInTable="EMAILColumn" msprop:Generator_ColumnVarNameInTable="columnEMAIL" msprop:Generator_UserColumnName="EMAIL">
+              <xs:element name="EMAIL" msprop:Generator_UserColumnName="EMAIL" msprop:Generator_ColumnPropNameInTable="EMAILColumn" msprop:Generator_ColumnPropNameInRow="EMAIL" msprop:Generator_ColumnVarNameInTable="columnEMAIL">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NOTE" msprop:Generator_ColumnPropNameInRow="NOTE" msprop:Generator_ColumnPropNameInTable="NOTEColumn" msprop:Generator_ColumnVarNameInTable="columnNOTE" msprop:Generator_UserColumnName="NOTE" minOccurs="0">
+              <xs:element name="NOTE" msprop:Generator_UserColumnName="NOTE" msprop:Generator_ColumnPropNameInTable="NOTEColumn" msprop:Generator_ColumnPropNameInRow="NOTE" msprop:Generator_ColumnVarNameInTable="columnNOTE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="500" />
@@ -454,19 +484,19 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VR_EQUIPMENT" msprop:Generator_RowEvHandlerName="VR_EQUIPMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="VR_EQUIPMENTRowDeleted" msprop:Generator_RowDeletingName="VR_EQUIPMENTRowDeleting" msprop:Generator_RowEvArgName="VR_EQUIPMENTRowChangeEvent" msprop:Generator_TablePropName="VR_EQUIPMENT" msprop:Generator_RowChangedName="VR_EQUIPMENTRowChanged" msprop:Generator_RowChangingName="VR_EQUIPMENTRowChanging" msprop:Generator_TableClassName="VR_EQUIPMENTDataTable" msprop:Generator_RowClassName="VR_EQUIPMENTRow" msprop:Generator_TableVarName="tableVR_EQUIPMENT" msprop:Generator_UserTableName="VR_EQUIPMENT">
+        <xs:element name="VR_EQUIPMENT" msprop:Generator_RowClassName="VR_EQUIPMENTRow" msprop:Generator_RowEvHandlerName="VR_EQUIPMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="VR_EQUIPMENTRowDeleted" msprop:Generator_RowDeletingName="VR_EQUIPMENTRowDeleting" msprop:Generator_RowEvArgName="VR_EQUIPMENTRowChangeEvent" msprop:Generator_TablePropName="VR_EQUIPMENT" msprop:Generator_RowChangedName="VR_EQUIPMENTRowChanged" msprop:Generator_UserTableName="VR_EQUIPMENT" msprop:Generator_RowChangingName="VR_EQUIPMENTRowChanging" msprop:Generator_TableClassName="VR_EQUIPMENTDataTable" msprop:Generator_TableVarName="tableVR_EQUIPMENT">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInRow="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInTable="EQUIPMENT_IDColumn" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENT_ID" msprop:Generator_UserColumnName="EQUIPMENT_ID" type="xs:decimal" />
-              <xs:element name="CATEGORY_ID" msprop:Generator_ColumnPropNameInRow="CATEGORY_ID" msprop:Generator_ColumnPropNameInTable="CATEGORY_IDColumn" msprop:Generator_ColumnVarNameInTable="columnCATEGORY_ID" msprop:Generator_UserColumnName="CATEGORY_ID" type="xs:decimal" />
-              <xs:element name="DESCRIPTION" msprop:Generator_ColumnPropNameInRow="DESCRIPTION" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION" msprop:Generator_UserColumnName="DESCRIPTION" minOccurs="0">
+              <xs:element name="EQUIPMENT_ID" msprop:Generator_UserColumnName="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInTable="EQUIPMENT_IDColumn" msprop:Generator_ColumnPropNameInRow="EQUIPMENT_ID" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENT_ID" type="xs:decimal" />
+              <xs:element name="CATEGORY_ID" msprop:Generator_UserColumnName="CATEGORY_ID" msprop:Generator_ColumnPropNameInTable="CATEGORY_IDColumn" msprop:Generator_ColumnPropNameInRow="CATEGORY_ID" msprop:Generator_ColumnVarNameInTable="columnCATEGORY_ID" type="xs:decimal" />
+              <xs:element name="DESCRIPTION" msprop:Generator_UserColumnName="DESCRIPTION" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPTION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_UserColumnName="NAME">
+              <xs:element name="NAME" msprop:Generator_UserColumnName="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -476,40 +506,40 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VR_EQUIPMENTFORSALE" msprop:Generator_RowEvHandlerName="VR_EQUIPMENTFORSALERowChangeEventHandler" msprop:Generator_RowDeletedName="VR_EQUIPMENTFORSALERowDeleted" msprop:Generator_RowDeletingName="VR_EQUIPMENTFORSALERowDeleting" msprop:Generator_RowEvArgName="VR_EQUIPMENTFORSALERowChangeEvent" msprop:Generator_TablePropName="VR_EQUIPMENTFORSALE" msprop:Generator_RowChangedName="VR_EQUIPMENTFORSALERowChanged" msprop:Generator_RowChangingName="VR_EQUIPMENTFORSALERowChanging" msprop:Generator_TableClassName="VR_EQUIPMENTFORSALEDataTable" msprop:Generator_RowClassName="VR_EQUIPMENTFORSALERow" msprop:Generator_TableVarName="tableVR_EQUIPMENTFORSALE" msprop:Generator_UserTableName="VR_EQUIPMENTFORSALE">
+        <xs:element name="VR_EQUIPMENTFORSALE" msprop:Generator_RowClassName="VR_EQUIPMENTFORSALERow" msprop:Generator_RowEvHandlerName="VR_EQUIPMENTFORSALERowChangeEventHandler" msprop:Generator_RowDeletedName="VR_EQUIPMENTFORSALERowDeleted" msprop:Generator_RowDeletingName="VR_EQUIPMENTFORSALERowDeleting" msprop:Generator_RowEvArgName="VR_EQUIPMENTFORSALERowChangeEvent" msprop:Generator_TablePropName="VR_EQUIPMENTFORSALE" msprop:Generator_RowChangedName="VR_EQUIPMENTFORSALERowChanged" msprop:Generator_UserTableName="VR_EQUIPMENTFORSALE" msprop:Generator_RowChangingName="VR_EQUIPMENTFORSALERowChanging" msprop:Generator_TableClassName="VR_EQUIPMENTFORSALEDataTable" msprop:Generator_TableVarName="tableVR_EQUIPMENTFORSALE">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInRow="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInTable="EQUIPMENT_IDColumn" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENT_ID" msprop:Generator_UserColumnName="EQUIPMENT_ID" type="xs:decimal" />
-              <xs:element name="PRICE" msprop:Generator_ColumnPropNameInRow="PRICE" msprop:Generator_ColumnPropNameInTable="PRICEColumn" msprop:Generator_ColumnVarNameInTable="columnPRICE" msprop:Generator_UserColumnName="PRICE" type="xs:decimal" />
+              <xs:element name="EQUIPMENT_ID" msprop:Generator_UserColumnName="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInTable="EQUIPMENT_IDColumn" msprop:Generator_ColumnPropNameInRow="EQUIPMENT_ID" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENT_ID" type="xs:decimal" />
+              <xs:element name="PRICE" msprop:Generator_UserColumnName="PRICE" msprop:Generator_ColumnPropNameInTable="PRICEColumn" msprop:Generator_ColumnPropNameInRow="PRICE" msprop:Generator_ColumnVarNameInTable="columnPRICE" type="xs:decimal" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VR_RENTALEQUIPMENT" msprop:Generator_RowEvHandlerName="VR_RENTALEQUIPMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="VR_RENTALEQUIPMENTRowDeleted" msprop:Generator_RowDeletingName="VR_RENTALEQUIPMENTRowDeleting" msprop:Generator_RowEvArgName="VR_RENTALEQUIPMENTRowChangeEvent" msprop:Generator_TablePropName="VR_RENTALEQUIPMENT" msprop:Generator_RowChangedName="VR_RENTALEQUIPMENTRowChanged" msprop:Generator_RowChangingName="VR_RENTALEQUIPMENTRowChanging" msprop:Generator_TableClassName="VR_RENTALEQUIPMENTDataTable" msprop:Generator_RowClassName="VR_RENTALEQUIPMENTRow" msprop:Generator_TableVarName="tableVR_RENTALEQUIPMENT" msprop:Generator_UserTableName="VR_RENTALEQUIPMENT">
+        <xs:element name="VR_RENTALEQUIPMENT" msprop:Generator_RowClassName="VR_RENTALEQUIPMENTRow" msprop:Generator_RowEvHandlerName="VR_RENTALEQUIPMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="VR_RENTALEQUIPMENTRowDeleted" msprop:Generator_RowDeletingName="VR_RENTALEQUIPMENTRowDeleting" msprop:Generator_RowEvArgName="VR_RENTALEQUIPMENTRowChangeEvent" msprop:Generator_TablePropName="VR_RENTALEQUIPMENT" msprop:Generator_RowChangedName="VR_RENTALEQUIPMENTRowChanged" msprop:Generator_UserTableName="VR_RENTALEQUIPMENT" msprop:Generator_RowChangingName="VR_RENTALEQUIPMENTRowChanging" msprop:Generator_TableClassName="VR_RENTALEQUIPMENTDataTable" msprop:Generator_TableVarName="tableVR_RENTALEQUIPMENT">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInRow="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInTable="EQUIPMENT_IDColumn" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENT_ID" msprop:Generator_UserColumnName="EQUIPMENT_ID" type="xs:decimal" />
-              <xs:element name="DAILY_RENTAL_COST" msprop:Generator_ColumnPropNameInRow="DAILY_RENTAL_COST" msprop:Generator_ColumnPropNameInTable="DAILY_RENTAL_COSTColumn" msprop:Generator_ColumnVarNameInTable="columnDAILY_RENTAL_COST" msprop:Generator_UserColumnName="DAILY_RENTAL_COST" type="xs:decimal" />
+              <xs:element name="EQUIPMENT_ID" msprop:Generator_UserColumnName="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInTable="EQUIPMENT_IDColumn" msprop:Generator_ColumnPropNameInRow="EQUIPMENT_ID" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENT_ID" type="xs:decimal" />
+              <xs:element name="DAILY_RENTAL_COST" msprop:Generator_UserColumnName="DAILY_RENTAL_COST" msprop:Generator_ColumnPropNameInTable="DAILY_RENTAL_COSTColumn" msprop:Generator_ColumnPropNameInRow="DAILY_RENTAL_COST" msprop:Generator_ColumnVarNameInTable="columnDAILY_RENTAL_COST" type="xs:decimal" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VR_RENTALEQUIPMENTINFO" msprop:Generator_RowEvHandlerName="VR_RENTALEQUIPMENTINFORowChangeEventHandler" msprop:Generator_RowDeletedName="VR_RENTALEQUIPMENTINFORowDeleted" msprop:Generator_RowDeletingName="VR_RENTALEQUIPMENTINFORowDeleting" msprop:Generator_RowEvArgName="VR_RENTALEQUIPMENTINFORowChangeEvent" msprop:Generator_TablePropName="VR_RENTALEQUIPMENTINFO" msprop:Generator_RowChangedName="VR_RENTALEQUIPMENTINFORowChanged" msprop:Generator_RowChangingName="VR_RENTALEQUIPMENTINFORowChanging" msprop:Generator_TableClassName="VR_RENTALEQUIPMENTINFODataTable" msprop:Generator_RowClassName="VR_RENTALEQUIPMENTINFORow" msprop:Generator_TableVarName="tableVR_RENTALEQUIPMENTINFO" msprop:Generator_UserTableName="VR_RENTALEQUIPMENTINFO">
+        <xs:element name="VR_RENTALEQUIPMENTINFO" msprop:Generator_RowClassName="VR_RENTALEQUIPMENTINFORow" msprop:Generator_RowEvHandlerName="VR_RENTALEQUIPMENTINFORowChangeEventHandler" msprop:Generator_RowDeletedName="VR_RENTALEQUIPMENTINFORowDeleted" msprop:Generator_RowDeletingName="VR_RENTALEQUIPMENTINFORowDeleting" msprop:Generator_RowEvArgName="VR_RENTALEQUIPMENTINFORowChangeEvent" msprop:Generator_TablePropName="VR_RENTALEQUIPMENTINFO" msprop:Generator_RowChangedName="VR_RENTALEQUIPMENTINFORowChanged" msprop:Generator_UserTableName="VR_RENTALEQUIPMENTINFO" msprop:Generator_RowChangingName="VR_RENTALEQUIPMENTINFORowChanging" msprop:Generator_TableClassName="VR_RENTALEQUIPMENTINFODataTable" msprop:Generator_TableVarName="tableVR_RENTALEQUIPMENTINFO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInRow="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInTable="EQUIPMENT_IDColumn" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENT_ID" msprop:Generator_UserColumnName="EQUIPMENT_ID" type="xs:decimal" />
-              <xs:element name="RENTAL_ID" msprop:Generator_ColumnPropNameInRow="RENTAL_ID" msprop:Generator_ColumnPropNameInTable="RENTAL_IDColumn" msprop:Generator_ColumnVarNameInTable="columnRENTAL_ID" msprop:Generator_UserColumnName="RENTAL_ID" type="xs:decimal" />
-              <xs:element name="ITEM_QUANTITY" msprop:Generator_ColumnPropNameInRow="ITEM_QUANTITY" msprop:Generator_ColumnPropNameInTable="ITEM_QUANTITYColumn" msprop:Generator_ColumnVarNameInTable="columnITEM_QUANTITY" msprop:Generator_UserColumnName="ITEM_QUANTITY" type="xs:decimal" minOccurs="0" />
-              <xs:element name="RENT_DATE" msprop:Generator_ColumnPropNameInRow="RENT_DATE" msprop:Generator_ColumnPropNameInTable="RENT_DATEColumn" msprop:Generator_ColumnVarNameInTable="columnRENT_DATE" msprop:Generator_UserColumnName="RENT_DATE" type="xs:dateTime" />
-              <xs:element name="RETURN_DATE" msprop:Generator_ColumnPropNameInRow="RETURN_DATE" msprop:Generator_ColumnPropNameInTable="RETURN_DATEColumn" msprop:Generator_ColumnVarNameInTable="columnRETURN_DATE" msprop:Generator_UserColumnName="RETURN_DATE" type="xs:dateTime" />
-              <xs:element name="RENTAL_COST" msprop:Generator_ColumnPropNameInRow="RENTAL_COST" msprop:Generator_ColumnPropNameInTable="RENTAL_COSTColumn" msprop:Generator_ColumnVarNameInTable="columnRENTAL_COST" msprop:Generator_UserColumnName="RENTAL_COST" type="xs:decimal" />
+              <xs:element name="EQUIPMENT_ID" msprop:Generator_UserColumnName="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInTable="EQUIPMENT_IDColumn" msprop:Generator_ColumnPropNameInRow="EQUIPMENT_ID" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENT_ID" type="xs:decimal" />
+              <xs:element name="RENTAL_ID" msprop:Generator_UserColumnName="RENTAL_ID" msprop:Generator_ColumnPropNameInTable="RENTAL_IDColumn" msprop:Generator_ColumnPropNameInRow="RENTAL_ID" msprop:Generator_ColumnVarNameInTable="columnRENTAL_ID" type="xs:decimal" />
+              <xs:element name="ITEM_QUANTITY" msprop:Generator_UserColumnName="ITEM_QUANTITY" msprop:Generator_ColumnPropNameInTable="ITEM_QUANTITYColumn" msprop:Generator_ColumnPropNameInRow="ITEM_QUANTITY" msprop:Generator_ColumnVarNameInTable="columnITEM_QUANTITY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RENT_DATE" msprop:Generator_UserColumnName="RENT_DATE" msprop:Generator_ColumnPropNameInTable="RENT_DATEColumn" msprop:Generator_ColumnPropNameInRow="RENT_DATE" msprop:Generator_ColumnVarNameInTable="columnRENT_DATE" type="xs:dateTime" />
+              <xs:element name="RETURN_DATE" msprop:Generator_UserColumnName="RETURN_DATE" msprop:Generator_ColumnPropNameInTable="RETURN_DATEColumn" msprop:Generator_ColumnPropNameInRow="RETURN_DATE" msprop:Generator_ColumnVarNameInTable="columnRETURN_DATE" type="xs:dateTime" />
+              <xs:element name="RENTAL_COST" msprop:Generator_UserColumnName="RENTAL_COST" msprop:Generator_ColumnPropNameInTable="RENTAL_COSTColumn" msprop:Generator_ColumnPropNameInRow="RENTAL_COST" msprop:Generator_ColumnVarNameInTable="columnRENTAL_COST" type="xs:decimal" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VR_RENTALINFO" msprop:Generator_RowEvHandlerName="VR_RENTALINFORowChangeEventHandler" msprop:Generator_RowDeletedName="VR_RENTALINFORowDeleted" msprop:Generator_RowDeletingName="VR_RENTALINFORowDeleting" msprop:Generator_RowEvArgName="VR_RENTALINFORowChangeEvent" msprop:Generator_TablePropName="VR_RENTALINFO" msprop:Generator_RowChangedName="VR_RENTALINFORowChanged" msprop:Generator_RowChangingName="VR_RENTALINFORowChanging" msprop:Generator_TableClassName="VR_RENTALINFODataTable" msprop:Generator_RowClassName="VR_RENTALINFORow" msprop:Generator_TableVarName="tableVR_RENTALINFO" msprop:Generator_UserTableName="VR_RENTALINFO">
+        <xs:element name="VR_RENTALINFO" msprop:Generator_RowClassName="VR_RENTALINFORow" msprop:Generator_RowEvHandlerName="VR_RENTALINFORowChangeEventHandler" msprop:Generator_RowDeletedName="VR_RENTALINFORowDeleted" msprop:Generator_RowDeletingName="VR_RENTALINFORowDeleting" msprop:Generator_RowEvArgName="VR_RENTALINFORowChangeEvent" msprop:Generator_TablePropName="VR_RENTALINFO" msprop:Generator_RowChangedName="VR_RENTALINFORowChanged" msprop:Generator_UserTableName="VR_RENTALINFO" msprop:Generator_RowChangingName="VR_RENTALINFORowChanging" msprop:Generator_TableClassName="VR_RENTALINFODataTable" msprop:Generator_TableVarName="tableVR_RENTALINFO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="RENTAL_ID" msprop:Generator_ColumnPropNameInRow="RENTAL_ID" msprop:Generator_ColumnPropNameInTable="RENTAL_IDColumn" msprop:Generator_ColumnVarNameInTable="columnRENTAL_ID" msprop:Generator_UserColumnName="RENTAL_ID" type="xs:decimal" />
-              <xs:element name="CUSTOMER_ID" msprop:Generator_ColumnPropNameInRow="CUSTOMER_ID" msprop:Generator_ColumnPropNameInTable="CUSTOMER_IDColumn" msprop:Generator_ColumnVarNameInTable="columnCUSTOMER_ID" msprop:Generator_UserColumnName="CUSTOMER_ID" type="xs:decimal" />
-              <xs:element name="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInRow="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInTable="EQUIPMENT_IDColumn" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENT_ID" msprop:Generator_UserColumnName="EQUIPMENT_ID" type="xs:decimal" />
+              <xs:element name="RENTAL_ID" msprop:Generator_UserColumnName="RENTAL_ID" msprop:Generator_ColumnPropNameInTable="RENTAL_IDColumn" msprop:Generator_ColumnPropNameInRow="RENTAL_ID" msprop:Generator_ColumnVarNameInTable="columnRENTAL_ID" type="xs:decimal" />
+              <xs:element name="CUSTOMER_ID" msprop:Generator_UserColumnName="CUSTOMER_ID" msprop:Generator_ColumnPropNameInTable="CUSTOMER_IDColumn" msprop:Generator_ColumnPropNameInRow="CUSTOMER_ID" msprop:Generator_ColumnVarNameInTable="columnCUSTOMER_ID" type="xs:decimal" />
+              <xs:element name="EQUIPMENT_ID" msprop:Generator_UserColumnName="EQUIPMENT_ID" msprop:Generator_ColumnPropNameInTable="EQUIPMENT_IDColumn" msprop:Generator_ColumnPropNameInRow="EQUIPMENT_ID" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENT_ID" type="xs:decimal" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -549,12 +579,12 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="EQUIPMENT_CATEGORY_ID_FK" msdata:parent="VR_CATEGORIES" msdata:child="VR_EQUIPMENT" msdata:parentkey="CATEGORY_ID" msdata:childkey="CATEGORY_ID" msprop:Generator_UserParentTable="VR_CATEGORIES" msprop:Generator_UserChildTable="VR_EQUIPMENT" msprop:Generator_RelationVarName="relationEQUIPMENT_CATEGORY_ID_FK" msprop:Generator_ChildPropName="GetVR_EQUIPMENTRows" msprop:Generator_ParentPropName="VR_CATEGORIESRow" msprop:Generator_UserRelationName="EQUIPMENT_CATEGORY_ID_FK" />
-      <msdata:Relationship name="EQUIPFORSALE_EQUIPMENT_ID" msdata:parent="VR_EQUIPMENT" msdata:child="VR_EQUIPMENTFORSALE" msdata:parentkey="EQUIPMENT_ID" msdata:childkey="EQUIPMENT_ID" msprop:Generator_UserParentTable="VR_EQUIPMENT" msprop:Generator_UserChildTable="VR_EQUIPMENTFORSALE" msprop:Generator_RelationVarName="relationEQUIPFORSALE_EQUIPMENT_ID" msprop:Generator_ChildPropName="GetVR_EQUIPMENTFORSALERows" msprop:Generator_ParentPropName="VR_EQUIPMENTRow" msprop:Generator_UserRelationName="EQUIPFORSALE_EQUIPMENT_ID" />
-      <msdata:Relationship name="RENTEQUIP_EQUIPMENT_ID" msdata:parent="VR_EQUIPMENT" msdata:child="VR_RENTALEQUIPMENT" msdata:parentkey="EQUIPMENT_ID" msdata:childkey="EQUIPMENT_ID" msprop:Generator_UserParentTable="VR_EQUIPMENT" msprop:Generator_UserChildTable="VR_RENTALEQUIPMENT" msprop:Generator_RelationVarName="relationRENTEQUIP_EQUIPMENT_ID" msprop:Generator_ChildPropName="GetVR_RENTALEQUIPMENTRows" msprop:Generator_ParentPropName="VR_EQUIPMENTRow" msprop:Generator_UserRelationName="RENTEQUIP_EQUIPMENT_ID" />
-      <msdata:Relationship name="RENTEQUIPINFO_EQUIP_ID_FK" msdata:parent="VR_RENTALEQUIPMENT" msdata:child="VR_RENTALEQUIPMENTINFO" msdata:parentkey="EQUIPMENT_ID" msdata:childkey="EQUIPMENT_ID" msprop:Generator_UserParentTable="VR_RENTALEQUIPMENT" msprop:Generator_UserChildTable="VR_RENTALEQUIPMENTINFO" msprop:Generator_RelationVarName="relationRENTEQUIPINFO_EQUIP_ID_FK" msprop:Generator_ChildPropName="GetVR_RENTALEQUIPMENTINFORows" msprop:Generator_ParentPropName="VR_RENTALEQUIPMENTRow" msprop:Generator_UserRelationName="RENTEQUIPINFO_EQUIP_ID_FK" />
-      <msdata:Relationship name="RENTALINFO_CUSTOMER_ID_FK" msdata:parent="VR_CUSTOMERINFO" msdata:child="VR_RENTALINFO" msdata:parentkey="CUSTOMER_ID" msdata:childkey="CUSTOMER_ID" msprop:Generator_UserParentTable="VR_CUSTOMERINFO" msprop:Generator_UserChildTable="VR_RENTALINFO" msprop:Generator_RelationVarName="relationRENTALINFO_CUSTOMER_ID_FK" msprop:Generator_ChildPropName="GetVR_RENTALINFORows" msprop:Generator_ParentPropName="VR_CUSTOMERINFORow" msprop:Generator_UserRelationName="RENTALINFO_CUSTOMER_ID_FK" />
-      <msdata:Relationship name="RENTALINFO_RENTAL_ID_FK" msdata:parent="VR_RENTALEQUIPMENTINFO" msdata:child="VR_RENTALINFO" msdata:parentkey="EQUIPMENT_ID RENTAL_ID" msdata:childkey="EQUIPMENT_ID RENTAL_ID" msprop:Generator_UserParentTable="VR_RENTALEQUIPMENTINFO" msprop:Generator_UserChildTable="VR_RENTALINFO" msprop:Generator_RelationVarName="relationRENTALINFO_RENTAL_ID_FK" msprop:Generator_ChildPropName="GetVR_RENTALINFORows" msprop:Generator_ParentPropName="VR_RENTALEQUIPMENTINFORowParent" msprop:Generator_UserRelationName="RENTALINFO_RENTAL_ID_FK" />
+      <msdata:Relationship name="EQUIPMENT_CATEGORY_ID_FK" msdata:parent="VR_CATEGORIES" msdata:child="VR_EQUIPMENT" msdata:parentkey="CATEGORY_ID" msdata:childkey="CATEGORY_ID" msprop:Generator_UserParentTable="VR_CATEGORIES" msprop:Generator_UserChildTable="VR_EQUIPMENT" msprop:Generator_RelationVarName="relationEQUIPMENT_CATEGORY_ID_FK" msprop:Generator_ChildPropName="GetVR_EQUIPMENTRows" msprop:Generator_UserRelationName="EQUIPMENT_CATEGORY_ID_FK" msprop:Generator_ParentPropName="VR_CATEGORIESRow" />
+      <msdata:Relationship name="EQUIPFORSALE_EQUIPMENT_ID" msdata:parent="VR_EQUIPMENT" msdata:child="VR_EQUIPMENTFORSALE" msdata:parentkey="EQUIPMENT_ID" msdata:childkey="EQUIPMENT_ID" msprop:Generator_UserParentTable="VR_EQUIPMENT" msprop:Generator_UserChildTable="VR_EQUIPMENTFORSALE" msprop:Generator_RelationVarName="relationEQUIPFORSALE_EQUIPMENT_ID" msprop:Generator_ChildPropName="GetVR_EQUIPMENTFORSALERows" msprop:Generator_UserRelationName="EQUIPFORSALE_EQUIPMENT_ID" msprop:Generator_ParentPropName="VR_EQUIPMENTRow" />
+      <msdata:Relationship name="RENTEQUIP_EQUIPMENT_ID" msdata:parent="VR_EQUIPMENT" msdata:child="VR_RENTALEQUIPMENT" msdata:parentkey="EQUIPMENT_ID" msdata:childkey="EQUIPMENT_ID" msprop:Generator_UserParentTable="VR_EQUIPMENT" msprop:Generator_UserChildTable="VR_RENTALEQUIPMENT" msprop:Generator_RelationVarName="relationRENTEQUIP_EQUIPMENT_ID" msprop:Generator_ChildPropName="GetVR_RENTALEQUIPMENTRows" msprop:Generator_UserRelationName="RENTEQUIP_EQUIPMENT_ID" msprop:Generator_ParentPropName="VR_EQUIPMENTRow" />
+      <msdata:Relationship name="RENTEQUIPINFO_EQUIP_ID_FK" msdata:parent="VR_RENTALEQUIPMENT" msdata:child="VR_RENTALEQUIPMENTINFO" msdata:parentkey="EQUIPMENT_ID" msdata:childkey="EQUIPMENT_ID" msprop:Generator_UserParentTable="VR_RENTALEQUIPMENT" msprop:Generator_UserChildTable="VR_RENTALEQUIPMENTINFO" msprop:Generator_RelationVarName="relationRENTEQUIPINFO_EQUIP_ID_FK" msprop:Generator_ChildPropName="GetVR_RENTALEQUIPMENTINFORows" msprop:Generator_UserRelationName="RENTEQUIPINFO_EQUIP_ID_FK" msprop:Generator_ParentPropName="VR_RENTALEQUIPMENTRow" />
+      <msdata:Relationship name="RENTALINFO_CUSTOMER_ID_FK" msdata:parent="VR_CUSTOMERINFO" msdata:child="VR_RENTALINFO" msdata:parentkey="CUSTOMER_ID" msdata:childkey="CUSTOMER_ID" msprop:Generator_UserParentTable="VR_CUSTOMERINFO" msprop:Generator_UserChildTable="VR_RENTALINFO" msprop:Generator_RelationVarName="relationRENTALINFO_CUSTOMER_ID_FK" msprop:Generator_ChildPropName="GetVR_RENTALINFORows" msprop:Generator_UserRelationName="RENTALINFO_CUSTOMER_ID_FK" msprop:Generator_ParentPropName="VR_CUSTOMERINFORow" />
+      <msdata:Relationship name="RENTALINFO_RENTAL_ID_FK" msdata:parent="VR_RENTALEQUIPMENTINFO" msdata:child="VR_RENTALINFO" msdata:parentkey="EQUIPMENT_ID RENTAL_ID" msdata:childkey="EQUIPMENT_ID RENTAL_ID" msprop:Generator_UserParentTable="VR_RENTALEQUIPMENTINFO" msprop:Generator_UserChildTable="VR_RENTALINFO" msprop:Generator_RelationVarName="relationRENTALINFO_RENTAL_ID_FK" msprop:Generator_ChildPropName="GetVR_RENTALINFORows" msprop:Generator_UserRelationName="RENTALINFO_RENTAL_ID_FK" msprop:Generator_ParentPropName="VR_RENTALEQUIPMENTINFORowParent" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

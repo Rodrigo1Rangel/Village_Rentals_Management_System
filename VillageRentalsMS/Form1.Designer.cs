@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cmb_category_id_to_remove = new System.Windows.Forms.ComboBox();
+            this.vRCATEGORIESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.vR_Dataset = new VillageRentalsMS.VR_Dataset();
+            this.cmb_RemoveEquipmentID = new System.Windows.Forms.ComboBox();
+            this.vREQUIPMENTBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,7 +47,6 @@
             this.cATEGORYIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dESCRIPTIONDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vRCATEGORIESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.vR_Dataset = new VillageRentalsMS.VR_Dataset();
             this.btnRemoveItem = new System.Windows.Forms.Button();
             this.btnAddEquipment = new System.Windows.Forms.Button();
             this.lblEquipGrid = new System.Windows.Forms.Label();
@@ -103,17 +107,18 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.lblCurrentRentals = new System.Windows.Forms.Label();
             this.lblAvailEquip = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_CurrentRentals = new System.Windows.Forms.DataGridView();
+            this.vRRENTALEQUIPMENTINFOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView_AvailableEquipment = new System.Windows.Forms.DataGridView();
             this.dtpEquipDateReturn = new System.Windows.Forms.DateTimePicker();
             this.dtpEquipDateRented = new System.Windows.Forms.DateTimePicker();
             this.lblEquipIDRent = new System.Windows.Forms.Label();
-            this.cmbxEquipIDRent = new System.Windows.Forms.ComboBox();
+            this.cmb_Equipment_id_to_Rent = new System.Windows.Forms.ComboBox();
             this.btnRentEquip = new System.Windows.Forms.Button();
             this.lblEquipDateReturn = new System.Windows.Forms.Label();
             this.lblEquipDateRented = new System.Windows.Forms.Label();
             this.lblCustIDRent = new System.Windows.Forms.Label();
-            this.cmbxCustIDRent = new System.Windows.Forms.ComboBox();
+            this.cmb_Customer_id_to_Rent = new System.Windows.Forms.ComboBox();
             this.lblRentEquip = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnExportEquipment = new System.Windows.Forms.Button();
@@ -126,21 +131,26 @@
             this.datagridSalesReport = new System.Windows.Forms.DataGridView();
             this.cmbxSortSalesBy = new System.Windows.Forms.ComboBox();
             this.lblSortSales = new System.Windows.Forms.Label();
+            this.vRRENTALEQUIPMENTINFOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vREQUIPMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vR_EQUIPMENTTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_EQUIPMENTTableAdapter();
             this.rENTEQUIPEQUIPMENTIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vR_RENTALEQUIPMENTTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALEQUIPMENTTableAdapter();
             this.vR_CATEGORIESTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_CATEGORIESTableAdapter();
             this.vR_CUSTOMERINFOTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_CUSTOMERINFOTableAdapter();
-            this.cmb_RemoveEquipmentID = new System.Windows.Forms.ComboBox();
-            this.vREQUIPMENTBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.cmb_category_id_to_remove = new System.Windows.Forms.ComboBox();
-            this.vRCATEGORIESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.vR_RENTALEQUIPMENTINFOTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALEQUIPMENTINFOTableAdapter();
+            this.rENTALINFORENTALIDFKBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vR_RENTALINFOTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALINFOTableAdapter();
+            this.vRCUSTOMERINFOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.vREQUIPMENTBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.vRRENTALEQUIPMENTINFOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource)).BeginInit();
@@ -149,15 +159,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource1)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CurrentRentals)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AvailableEquipment)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipmentReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rENTALINFORENTALIDFKBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -174,6 +188,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.cmb_category_id_to_remove);
             this.tabPage1.Controls.Add(this.cmb_RemoveEquipmentID);
             this.tabPage1.Controls.Add(this.label4);
@@ -206,6 +221,44 @@
             this.tabPage1.Text = "Inventory";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // cmb_category_id_to_remove
+            // 
+            this.cmb_category_id_to_remove.DataSource = this.vRCATEGORIESBindingSource2;
+            this.cmb_category_id_to_remove.DisplayMember = "CATEGORY_ID";
+            this.cmb_category_id_to_remove.FormattingEnabled = true;
+            this.cmb_category_id_to_remove.Location = new System.Drawing.Point(867, 861);
+            this.cmb_category_id_to_remove.Name = "cmb_category_id_to_remove";
+            this.cmb_category_id_to_remove.Size = new System.Drawing.Size(200, 28);
+            this.cmb_category_id_to_remove.TabIndex = 26;
+            this.cmb_category_id_to_remove.ValueMember = "CATEGORY_ID";
+            // 
+            // vRCATEGORIESBindingSource2
+            // 
+            this.vRCATEGORIESBindingSource2.DataMember = "VR_CATEGORIES";
+            this.vRCATEGORIESBindingSource2.DataSource = this.vR_Dataset;
+            // 
+            // vR_Dataset
+            // 
+            this.vR_Dataset.DataSetName = "VR_Dataset";
+            this.vR_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cmb_RemoveEquipmentID
+            // 
+            this.cmb_RemoveEquipmentID.DataSource = this.vREQUIPMENTBindingSource2;
+            this.cmb_RemoveEquipmentID.DisplayMember = "EQUIPMENT_ID";
+            this.cmb_RemoveEquipmentID.FormattingEnabled = true;
+            this.cmb_RemoveEquipmentID.Location = new System.Drawing.Point(30, 861);
+            this.cmb_RemoveEquipmentID.Name = "cmb_RemoveEquipmentID";
+            this.cmb_RemoveEquipmentID.Size = new System.Drawing.Size(200, 28);
+            this.cmb_RemoveEquipmentID.TabIndex = 25;
+            this.cmb_RemoveEquipmentID.ValueMember = "EQUIPMENT_ID";
+            this.cmb_RemoveEquipmentID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // vREQUIPMENTBindingSource2
+            // 
+            this.vREQUIPMENTBindingSource2.DataMember = "VR_EQUIPMENT";
+            this.vREQUIPMENTBindingSource2.DataSource = this.vR_Dataset;
             // 
             // label4
             // 
@@ -312,11 +365,6 @@
             // 
             this.vRCATEGORIESBindingSource1.DataMember = "VR_CATEGORIES";
             this.vRCATEGORIESBindingSource1.DataSource = this.vR_Dataset;
-            // 
-            // vR_Dataset
-            // 
-            this.vR_Dataset.DataSetName = "VR_Dataset";
-            this.vR_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnRemoveItem
             // 
@@ -562,7 +610,7 @@
             this.datagridCustomers.Name = "datagridCustomers";
             this.datagridCustomers.RowHeadersWidth = 62;
             this.datagridCustomers.RowTemplate.Height = 28;
-            this.datagridCustomers.Size = new System.Drawing.Size(1218, 461);
+            this.datagridCustomers.Size = new System.Drawing.Size(1218, 551);
             this.datagridCustomers.TabIndex = 26;
             // 
             // cUSTOMERIDDataGridViewTextBoxColumn
@@ -848,17 +896,17 @@
             // 
             this.tabPage3.Controls.Add(this.lblCurrentRentals);
             this.tabPage3.Controls.Add(this.lblAvailEquip);
-            this.tabPage3.Controls.Add(this.dataGridView2);
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.dataGridView_CurrentRentals);
+            this.tabPage3.Controls.Add(this.dataGridView_AvailableEquipment);
             this.tabPage3.Controls.Add(this.dtpEquipDateReturn);
             this.tabPage3.Controls.Add(this.dtpEquipDateRented);
             this.tabPage3.Controls.Add(this.lblEquipIDRent);
-            this.tabPage3.Controls.Add(this.cmbxEquipIDRent);
+            this.tabPage3.Controls.Add(this.cmb_Equipment_id_to_Rent);
             this.tabPage3.Controls.Add(this.btnRentEquip);
             this.tabPage3.Controls.Add(this.lblEquipDateReturn);
             this.tabPage3.Controls.Add(this.lblEquipDateRented);
             this.tabPage3.Controls.Add(this.lblCustIDRent);
-            this.tabPage3.Controls.Add(this.cmbxCustIDRent);
+            this.tabPage3.Controls.Add(this.cmb_Customer_id_to_Rent);
             this.tabPage3.Controls.Add(this.lblRentEquip);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
@@ -871,7 +919,7 @@
             // lblCurrentRentals
             // 
             this.lblCurrentRentals.AutoSize = true;
-            this.lblCurrentRentals.Location = new System.Drawing.Point(376, 210);
+            this.lblCurrentRentals.Location = new System.Drawing.Point(30, 477);
             this.lblCurrentRentals.Name = "lblCurrentRentals";
             this.lblCurrentRentals.Size = new System.Drawing.Size(121, 20);
             this.lblCurrentRentals.TabIndex = 28;
@@ -886,25 +934,31 @@
             this.lblAvailEquip.TabIndex = 27;
             this.lblAvailEquip.Text = "Available Equipment";
             // 
-            // dataGridView2
+            // dataGridView_CurrentRentals
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(380, 233);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(871, 589);
-            this.dataGridView2.TabIndex = 26;
+            this.dataGridView_CurrentRentals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_CurrentRentals.Location = new System.Drawing.Point(30, 500);
+            this.dataGridView_CurrentRentals.Name = "dataGridView_CurrentRentals";
+            this.dataGridView_CurrentRentals.RowHeadersWidth = 62;
+            this.dataGridView_CurrentRentals.RowTemplate.Height = 28;
+            this.dataGridView_CurrentRentals.Size = new System.Drawing.Size(1221, 420);
+            this.dataGridView_CurrentRentals.TabIndex = 26;
             // 
-            // dataGridView1
+            // vRRENTALEQUIPMENTINFOBindingSource1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 233);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(295, 589);
-            this.dataGridView1.TabIndex = 25;
+            this.vRRENTALEQUIPMENTINFOBindingSource1.DataMember = "VR_RENTALEQUIPMENTINFO";
+            this.vRRENTALEQUIPMENTINFOBindingSource1.DataSource = this.vR_Dataset;
+            // 
+            // dataGridView_AvailableEquipment
+            // 
+            this.dataGridView_AvailableEquipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_AvailableEquipment.Location = new System.Drawing.Point(30, 233);
+            this.dataGridView_AvailableEquipment.Name = "dataGridView_AvailableEquipment";
+            this.dataGridView_AvailableEquipment.RowHeadersWidth = 62;
+            this.dataGridView_AvailableEquipment.RowTemplate.Height = 28;
+            this.dataGridView_AvailableEquipment.Size = new System.Drawing.Size(1221, 224);
+            this.dataGridView_AvailableEquipment.TabIndex = 25;
+            this.dataGridView_AvailableEquipment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_AvailableEquipments_Click);
             // 
             // dtpEquipDateReturn
             // 
@@ -929,13 +983,16 @@
             this.lblEquipIDRent.TabIndex = 22;
             this.lblEquipIDRent.Text = "Equipment ID";
             // 
-            // cmbxEquipIDRent
+            // cmb_Equipment_id_to_Rent
             // 
-            this.cmbxEquipIDRent.FormattingEnabled = true;
-            this.cmbxEquipIDRent.Location = new System.Drawing.Point(263, 100);
-            this.cmbxEquipIDRent.Name = "cmbxEquipIDRent";
-            this.cmbxEquipIDRent.Size = new System.Drawing.Size(200, 28);
-            this.cmbxEquipIDRent.TabIndex = 21;
+            this.cmb_Equipment_id_to_Rent.DataSource = this.vREQUIPMENTBindingSource3;
+            this.cmb_Equipment_id_to_Rent.DisplayMember = "EQUIPMENT_ID";
+            this.cmb_Equipment_id_to_Rent.FormattingEnabled = true;
+            this.cmb_Equipment_id_to_Rent.Location = new System.Drawing.Point(263, 100);
+            this.cmb_Equipment_id_to_Rent.Name = "cmb_Equipment_id_to_Rent";
+            this.cmb_Equipment_id_to_Rent.Size = new System.Drawing.Size(200, 28);
+            this.cmb_Equipment_id_to_Rent.TabIndex = 21;
+            this.cmb_Equipment_id_to_Rent.ValueMember = "EQUIPMENT_ID";
             // 
             // btnRentEquip
             // 
@@ -945,6 +1002,7 @@
             this.btnRentEquip.TabIndex = 20;
             this.btnRentEquip.Text = "Rent Equipment";
             this.btnRentEquip.UseVisualStyleBackColor = true;
+            this.btnRentEquip.Click += new System.EventHandler(this.btnRentEquip_Click);
             // 
             // lblEquipDateReturn
             // 
@@ -973,13 +1031,16 @@
             this.lblCustIDRent.TabIndex = 17;
             this.lblCustIDRent.Text = "Customer ID";
             // 
-            // cmbxCustIDRent
+            // cmb_Customer_id_to_Rent
             // 
-            this.cmbxCustIDRent.FormattingEnabled = true;
-            this.cmbxCustIDRent.Location = new System.Drawing.Point(30, 100);
-            this.cmbxCustIDRent.Name = "cmbxCustIDRent";
-            this.cmbxCustIDRent.Size = new System.Drawing.Size(200, 28);
-            this.cmbxCustIDRent.TabIndex = 14;
+            this.cmb_Customer_id_to_Rent.DataSource = this.vRCUSTOMERINFOBindingSource2;
+            this.cmb_Customer_id_to_Rent.DisplayMember = "CUSTOMER_ID";
+            this.cmb_Customer_id_to_Rent.FormattingEnabled = true;
+            this.cmb_Customer_id_to_Rent.Location = new System.Drawing.Point(30, 100);
+            this.cmb_Customer_id_to_Rent.Name = "cmb_Customer_id_to_Rent";
+            this.cmb_Customer_id_to_Rent.Size = new System.Drawing.Size(200, 28);
+            this.cmb_Customer_id_to_Rent.TabIndex = 14;
+            this.cmb_Customer_id_to_Rent.ValueMember = "CUSTOMER_ID";
             // 
             // lblRentEquip
             // 
@@ -1103,6 +1164,11 @@
             this.lblSortSales.TabIndex = 1;
             this.lblSortSales.Text = "Sort Sales By";
             // 
+            // vRRENTALEQUIPMENTINFOBindingSource
+            // 
+            this.vRRENTALEQUIPMENTINFOBindingSource.DataMember = "VR_RENTALEQUIPMENTINFO";
+            this.vRRENTALEQUIPMENTINFOBindingSource.DataSource = this.vR_Dataset;
+            // 
             // vREQUIPMENTBindingSource
             // 
             this.vREQUIPMENTBindingSource.DataMember = "VR_EQUIPMENT";
@@ -1129,38 +1195,33 @@
             // 
             this.vR_CUSTOMERINFOTableAdapter.ClearBeforeFill = true;
             // 
-            // cmb_RemoveEquipmentID
+            // vR_RENTALEQUIPMENTINFOTableAdapter
             // 
-            this.cmb_RemoveEquipmentID.DataSource = this.vREQUIPMENTBindingSource2;
-            this.cmb_RemoveEquipmentID.DisplayMember = "EQUIPMENT_ID";
-            this.cmb_RemoveEquipmentID.FormattingEnabled = true;
-            this.cmb_RemoveEquipmentID.Location = new System.Drawing.Point(30, 861);
-            this.cmb_RemoveEquipmentID.Name = "cmb_RemoveEquipmentID";
-            this.cmb_RemoveEquipmentID.Size = new System.Drawing.Size(200, 28);
-            this.cmb_RemoveEquipmentID.TabIndex = 25;
-            this.cmb_RemoveEquipmentID.ValueMember = "EQUIPMENT_ID";
-            this.cmb_RemoveEquipmentID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.vR_RENTALEQUIPMENTINFOTableAdapter.ClearBeforeFill = true;
             // 
-            // vREQUIPMENTBindingSource2
+            // rENTALINFORENTALIDFKBindingSource
             // 
-            this.vREQUIPMENTBindingSource2.DataMember = "VR_EQUIPMENT";
-            this.vREQUIPMENTBindingSource2.DataSource = this.vR_Dataset;
+            this.rENTALINFORENTALIDFKBindingSource.DataMember = "RENTALINFO_RENTAL_ID_FK";
+            this.rENTALINFORENTALIDFKBindingSource.DataSource = this.vRRENTALEQUIPMENTINFOBindingSource1;
             // 
-            // cmb_category_id_to_remove
+            // vR_RENTALINFOTableAdapter
             // 
-            this.cmb_category_id_to_remove.DataSource = this.vRCATEGORIESBindingSource2;
-            this.cmb_category_id_to_remove.DisplayMember = "CATEGORY_ID";
-            this.cmb_category_id_to_remove.FormattingEnabled = true;
-            this.cmb_category_id_to_remove.Location = new System.Drawing.Point(867, 861);
-            this.cmb_category_id_to_remove.Name = "cmb_category_id_to_remove";
-            this.cmb_category_id_to_remove.Size = new System.Drawing.Size(200, 28);
-            this.cmb_category_id_to_remove.TabIndex = 26;
-            this.cmb_category_id_to_remove.ValueMember = "CATEGORY_ID";
+            this.vR_RENTALINFOTableAdapter.ClearBeforeFill = true;
             // 
-            // vRCATEGORIESBindingSource2
+            // vRCUSTOMERINFOBindingSource2
             // 
-            this.vRCATEGORIESBindingSource2.DataMember = "VR_CATEGORIES";
-            this.vRCATEGORIESBindingSource2.DataSource = this.vR_Dataset;
+            this.vRCUSTOMERINFOBindingSource2.DataMember = "VR_CUSTOMERINFO";
+            this.vRCUSTOMERINFOBindingSource2.DataSource = this.vR_Dataset;
+            // 
+            // vREQUIPMENTBindingSource3
+            // 
+            this.vREQUIPMENTBindingSource3.DataMember = "VR_EQUIPMENT";
+            this.vREQUIPMENTBindingSource3.DataSource = this.vR_Dataset;
+            // 
+            // vRRENTALEQUIPMENTINFOBindingSource2
+            // 
+            this.vRRENTALEQUIPMENTINFOBindingSource2.DataMember = "VR_RENTALEQUIPMENTINFO";
+            this.vRRENTALEQUIPMENTINFOBindingSource2.DataSource = this.vR_Dataset;
             // 
             // Form1
             // 
@@ -1174,9 +1235,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource)).EndInit();
@@ -1187,16 +1250,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CurrentRentals)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AvailableEquipment)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipmentReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rENTALINFORENTALIDFKBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1254,17 +1321,17 @@
         private System.Windows.Forms.Label lblCustList;
         private System.Windows.Forms.DataGridView datagridCustomers;
         private System.Windows.Forms.Label lblEquipIDRent;
-        private System.Windows.Forms.ComboBox cmbxEquipIDRent;
+        private System.Windows.Forms.ComboBox cmb_Equipment_id_to_Rent;
         private System.Windows.Forms.Button btnRentEquip;
         private System.Windows.Forms.Label lblEquipDateReturn;
         private System.Windows.Forms.Label lblEquipDateRented;
         private System.Windows.Forms.Label lblCustIDRent;
-        private System.Windows.Forms.ComboBox cmbxCustIDRent;
+        private System.Windows.Forms.ComboBox cmb_Customer_id_to_Rent;
         private System.Windows.Forms.Label lblRentEquip;
         private System.Windows.Forms.DateTimePicker dtpEquipDateReturn;
         private System.Windows.Forms.DateTimePicker dtpEquipDateRented;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_CurrentRentals;
+        private System.Windows.Forms.DataGridView dataGridView_AvailableEquipment;
         private System.Windows.Forms.Label lblCurrentRentals;
         private System.Windows.Forms.Label lblAvailEquip;
         private System.Windows.Forms.Label lblSortSales;
@@ -1310,6 +1377,14 @@
         private System.Windows.Forms.BindingSource vREQUIPMENTBindingSource2;
         private System.Windows.Forms.ComboBox cmb_category_id_to_remove;
         private System.Windows.Forms.BindingSource vRCATEGORIESBindingSource2;
+        private System.Windows.Forms.BindingSource vRRENTALEQUIPMENTINFOBindingSource;
+        private VR_DatasetTableAdapters.VR_RENTALEQUIPMENTINFOTableAdapter vR_RENTALEQUIPMENTINFOTableAdapter;
+        private System.Windows.Forms.BindingSource vRRENTALEQUIPMENTINFOBindingSource1;
+        private System.Windows.Forms.BindingSource rENTALINFORENTALIDFKBindingSource;
+        private VR_DatasetTableAdapters.VR_RENTALINFOTableAdapter vR_RENTALINFOTableAdapter;
+        private System.Windows.Forms.BindingSource vRCUSTOMERINFOBindingSource2;
+        private System.Windows.Forms.BindingSource vREQUIPMENTBindingSource3;
+        private System.Windows.Forms.BindingSource vRRENTALEQUIPMENTINFOBindingSource2;
     }
 }
 

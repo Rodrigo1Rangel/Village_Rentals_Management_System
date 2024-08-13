@@ -11,6 +11,7 @@ using VillageRentalsMS.Domain.Managers;
 using VillageRentalsMS.Domain;
 using System.Data.OracleClient;
 using VillageRentalsMS.SystemException;
+using VillageRentalsMS.Utilities;
 
 
 namespace VillageRentalsMS
@@ -20,9 +21,15 @@ namespace VillageRentalsMS
         public Form1()
         {
             InitializeComponent();
+            Load_dataGridView_AvailableEquipment();
+            Load_dataGridView_CurrentRentals();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vR_Dataset.VR_RENTALINFO' table. You can move, or remove it, as needed.
+            this.vR_RENTALINFOTableAdapter.Fill(this.vR_Dataset.VR_RENTALINFO);
+            // TODO: This line of code loads data into the 'vR_Dataset.VR_RENTALEQUIPMENTINFO' table. You can move, or remove it, as needed.
+            this.vR_RENTALEQUIPMENTINFOTableAdapter.Fill(this.vR_Dataset.VR_RENTALEQUIPMENTINFO);
             // TODO: This line of code loads data into the 'vR_Dataset.VR_CUSTOMERINFO' table. You can move, or remove it, as needed.
             this.vR_CUSTOMERINFOTableAdapter.Fill(this.vR_Dataset.VR_CUSTOMERINFO);
             // TODO: This line of code loads data into the 'vR_Dataset.VR_CATEGORIES' table. You can move, or remove it, as needed.
@@ -31,7 +38,6 @@ namespace VillageRentalsMS
             this.vR_RENTALEQUIPMENTTableAdapter.Fill(this.vR_Dataset.VR_RENTALEQUIPMENT);
             // TODO: This line of code loads data into the 'vR_Dataset.VR_EQUIPMENT' table. You can move, or remove it, as needed.
             this.vR_EQUIPMENTTableAdapter.Fill(this.vR_Dataset.VR_EQUIPMENT);
-
         }
 
         // ======================================== ADD NEW EQUIPMENT ========================================
@@ -50,6 +56,8 @@ namespace VillageRentalsMS
             Form1_Load(null, null);
 
             MessageBox.Show($"Equipment update:\n\n{equipment_name} equipment was added!");
+            Load_dataGridView_AvailableEquipment();
+            Load_dataGridView_CurrentRentals();
         }
 
 
@@ -284,5 +292,73 @@ namespace VillageRentalsMS
         {
 
         }
+
+        private void dataGridView_AvailableEquipments_Click(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        // ==================================== LOAD AVAILABLE EQUIPMENT LIST ======================================
+
+        private void Load_dataGridView_AvailableEquipment()
+        {
+            DataTable table_AvailableEquipment = RentalManager.PopulateAvailableEquipmentGridView();
+            //dataGridView_AvailableEquipment.DataSource = null;
+            dataGridView_AvailableEquipment.DataSource = table_AvailableEquipment;
+            //dataGridView_AvailableEquipment.Refresh();
+            
+        }
+
+
+        // ==================================== LOAD CURRENT RENTALS ======================================
+
+        private void Load_dataGridView_CurrentRentals()
+        {
+            DataTable table_CurrentRentals = RentalManager.PopulateCurrentRentalsGridView();
+            //dataGridView_AvailableEquipment.DataSource = null;
+            dataGridView_CurrentRentals.DataSource = table_CurrentRentals;
+            //dataGridView_AvailableEquipment.Refresh();
+        }
+
+
+        // ========================================== RENT EQUIPMENT ==========================================
+
+        private void btnRentEquip_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string customer_id_to_rent = this.cmb_Customer_id_to_Rent.SelectedValue.ToString();
+
+                string equipment_id_to_rent = this.cmb_Equipment_id_to_Rent.SelectedValue.ToString();
+
+                DateTime dtpDateRented = dtpEquipDateRented.Value;
+                string SQLDateRented = dtpDateRented.ToString("dd-MMM-yyyy");
+
+                DateTime dtpDateToReturn = dtpEquipDateReturn.Value;
+                string SQLDateToReturn = dtpDateToReturn.ToString("dd-MMM-yyyy");
+
+                // Validation: selection of dates
+                if (dtpDateRented > dtpDateToReturn)
+                {
+                    throw new InvalidRentalDate();
+                }
+
+                // Calculate duration
+                TimeSpan duration = dtpDateToReturn - dtpDateRented;
+                /// +1 as the retrieving day counts as a renting day
+                int durationInDays = duration.Days + 1;
+
+                // Create a new reservation
+                RentalManager.CreateReservation(customer_id_to_rent, equipment_id_to_rent, SQLDateRented, SQLDateToReturn, durationInDays);
+            }
+            catch(InvalidRentalDate error_message)
+            {
+                MessageBox.Show(InvalidRentalDate.Error_message);
+            }
+            Load_dataGridView_AvailableEquipment();
+            Load_dataGridView_CurrentRentals();
+        }
+
+        //                this.vR_EQUIPMENTTableAdapter.FillBy(this.vR_Dataset.VR_EQUIPMENT);
+
     }
 }

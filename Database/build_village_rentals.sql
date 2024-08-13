@@ -48,7 +48,7 @@ CONSTRAINT category_category_id_pk PRIMARY KEY (category_id));
 CREATE TABLE VR_EQUIPMENT
 (equipment_id NUMBER CONSTRAINT equipment_equipment_id_nn NOT NULL,
 category_id NUMBER CONSTRAINT equipment_category_id_nn NOT NULL,
-description VARCHAR2(100), -- NN?
+description VARCHAR2(100),
 name VARCHAR2(50) CONSTRAINT category_name_nn NOT NULL,
 CONSTRAINT equipment_category_id_fk FOREIGN KEY (category_id)
 REFERENCES VR_CATEGORIES(category_id),
@@ -99,9 +99,6 @@ REFERENCES VR_RENTALEQUIPMENTINFO (rental_id, equipment_id),
 CONSTRAINT rentalinfo_customer_id_fk FOREIGN KEY (customer_id)
 REFERENCES VR_CUSTOMERINFO (customer_id),
 CONSTRAINT rentalinfo_rentcustequip_id_pk PRIMARY KEY (rental_id, customer_id, equipment_id));
--- should all three be PK or just rental_id and equipment_id?
 
 
 spool off
-
--- BINARY_DOUBLE: https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Data-Types.html
