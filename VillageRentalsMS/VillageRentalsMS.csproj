@@ -115,6 +115,8 @@
     <Compile Include="SystemException\CustomersTab\InvalidNote.cs" />
     <Compile Include="SystemException\CustomersTab\InvalidPhoneContact.cs" />
     <Compile Include="SystemException\CustomersTab\InvalidPhoneContactNN.cs" />
+    <Compile Include="SystemException\InventoryManager\ForbiddenRentalEquipmentDeletionDueToActiveRental.cs" />
+    <Compile Include="SystemException\InventoryManager\WrongEquipmentAndRentalRelationship.cs" />
     <Compile Include="SystemException\RentalsTab\InvalidRentalDate.cs" />
     <Compile Include="Utilities\DatabaseSingleton.cs" />
     <Compile Include="VR_Dataset.Designer.cs">

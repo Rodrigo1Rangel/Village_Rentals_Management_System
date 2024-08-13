@@ -396,6 +396,8 @@ namespace VillageRentalsMS
         private void datagridEquipmentReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+
+        // ========================================== UPDATE DATABASE ================================
         private void UpdateDatabase()
         {
             Load_datagridEquipmentReport();
@@ -405,6 +407,18 @@ namespace VillageRentalsMS
             PopulateAvailableEquipIdToRent();
         }
 
+        // =========================================== SET EQUIPMENT TO SALE ==================================
+        private void label9_Click(object sender, EventArgs e) {}
 
+        private void label10_Click(object sender, EventArgs e) {}
+
+        private void btn_SetForSale_Click(object sender, EventArgs e)
+        {
+            string sale_equip_id = cmb_equipidForSale.SelectedValue.ToString();
+            string sale_price = txt_SetForSale_Price.Text;
+
+            InventoryManager.SetEquipmentToSale(sale_equip_id, sale_price);
+            UpdateDatabase();
+        }
     }
 }

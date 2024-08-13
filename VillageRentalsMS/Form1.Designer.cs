@@ -31,13 +31,19 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_SetForSale_Price = new System.Windows.Forms.TextBox();
+            this.cmb_equipidForSale = new System.Windows.Forms.ComboBox();
+            this.vREQUIPMENTBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.vR_Dataset = new VillageRentalsMS.VR_Dataset();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btn_SetForSale = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.newEquip_daily_rental_cost = new System.Windows.Forms.TextBox();
             this.cmb_category_id_to_remove = new System.Windows.Forms.ComboBox();
             this.vRCATEGORIESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.vR_Dataset = new VillageRentalsMS.VR_Dataset();
             this.cmb_RemoveEquipmentID = new System.Windows.Forms.ComboBox();
-            this.vREQUIPMENTBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -142,11 +148,13 @@
             this.rENTALINFORENTALIDFKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vR_RENTALINFOTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALINFOTableAdapter();
             this.vRRENTALEQUIPMENTINFOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.vRRENTALEQUIPMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vREQUIPMENTBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipment)).BeginInit();
@@ -170,6 +178,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rENTALINFORENTALIDFKBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -187,6 +197,12 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.txt_SetForSale_Price);
+            this.tabPage1.Controls.Add(this.cmb_equipidForSale);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.btn_SetForSale);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.newEquip_daily_rental_cost);
             this.tabPage1.Controls.Add(this.cmb_category_id_to_remove);
@@ -222,6 +238,74 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(336, 881);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 20);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Price";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // txt_SetForSale_Price
+            // 
+            this.txt_SetForSale_Price.Location = new System.Drawing.Point(336, 905);
+            this.txt_SetForSale_Price.Name = "txt_SetForSale_Price";
+            this.txt_SetForSale_Price.Size = new System.Drawing.Size(200, 26);
+            this.txt_SetForSale_Price.TabIndex = 33;
+            // 
+            // cmb_equipidForSale
+            // 
+            this.cmb_equipidForSale.DataSource = this.vREQUIPMENTBindingSource4;
+            this.cmb_equipidForSale.DisplayMember = "EQUIPMENT_ID";
+            this.cmb_equipidForSale.FormattingEnabled = true;
+            this.cmb_equipidForSale.Location = new System.Drawing.Point(336, 844);
+            this.cmb_equipidForSale.Name = "cmb_equipidForSale";
+            this.cmb_equipidForSale.Size = new System.Drawing.Size(200, 28);
+            this.cmb_equipidForSale.TabIndex = 32;
+            this.cmb_equipidForSale.ValueMember = "EQUIPMENT_ID";
+            // 
+            // vREQUIPMENTBindingSource2
+            // 
+            this.vREQUIPMENTBindingSource2.DataMember = "VR_EQUIPMENT";
+            this.vREQUIPMENTBindingSource2.DataSource = this.vR_Dataset;
+            // 
+            // vR_Dataset
+            // 
+            this.vR_Dataset.DataSetName = "VR_Dataset";
+            this.vR_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(336, 818);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 20);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Equipment ID";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(332, 786);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(283, 20);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Set Equipment For Sale / Update Price";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // btn_SetForSale
+            // 
+            this.btn_SetForSale.Location = new System.Drawing.Point(559, 905);
+            this.btn_SetForSale.Name = "btn_SetForSale";
+            this.btn_SetForSale.Size = new System.Drawing.Size(137, 30);
+            this.btn_SetForSale.TabIndex = 29;
+            this.btn_SetForSale.Text = "Set For Sale";
+            this.btn_SetForSale.UseVisualStyleBackColor = true;
+            this.btn_SetForSale.Click += new System.EventHandler(this.btn_SetForSale_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -254,27 +338,17 @@
             this.vRCATEGORIESBindingSource2.DataMember = "VR_CATEGORIES";
             this.vRCATEGORIESBindingSource2.DataSource = this.vR_Dataset;
             // 
-            // vR_Dataset
-            // 
-            this.vR_Dataset.DataSetName = "VR_Dataset";
-            this.vR_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cmb_RemoveEquipmentID
             // 
             this.cmb_RemoveEquipmentID.DataSource = this.vREQUIPMENTBindingSource2;
             this.cmb_RemoveEquipmentID.DisplayMember = "EQUIPMENT_ID";
             this.cmb_RemoveEquipmentID.FormattingEnabled = true;
-            this.cmb_RemoveEquipmentID.Location = new System.Drawing.Point(30, 861);
+            this.cmb_RemoveEquipmentID.Location = new System.Drawing.Point(30, 844);
             this.cmb_RemoveEquipmentID.Name = "cmb_RemoveEquipmentID";
             this.cmb_RemoveEquipmentID.Size = new System.Drawing.Size(200, 28);
             this.cmb_RemoveEquipmentID.TabIndex = 25;
             this.cmb_RemoveEquipmentID.ValueMember = "EQUIPMENT_ID";
             this.cmb_RemoveEquipmentID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // vREQUIPMENTBindingSource2
-            // 
-            this.vREQUIPMENTBindingSource2.DataMember = "VR_EQUIPMENT";
-            this.vREQUIPMENTBindingSource2.DataSource = this.vR_Dataset;
             // 
             // label4
             // 
@@ -299,7 +373,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 835);
+            this.label3.Location = new System.Drawing.Point(30, 818);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 20);
             this.label3.TabIndex = 20;
@@ -309,7 +383,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 795);
+            this.label2.Location = new System.Drawing.Point(26, 786);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 20);
             this.label2.TabIndex = 18;
@@ -384,7 +458,7 @@
             // 
             // btnRemoveItem
             // 
-            this.btnRemoveItem.Location = new System.Drawing.Point(30, 903);
+            this.btnRemoveItem.Location = new System.Drawing.Point(30, 886);
             this.btnRemoveItem.Name = "btnRemoveItem";
             this.btnRemoveItem.Size = new System.Drawing.Size(200, 35);
             this.btnRemoveItem.TabIndex = 13;
@@ -1199,6 +1273,16 @@
             this.vRRENTALEQUIPMENTINFOBindingSource2.DataMember = "VR_RENTALEQUIPMENTINFO";
             this.vRRENTALEQUIPMENTINFOBindingSource2.DataSource = this.vR_Dataset;
             // 
+            // vRRENTALEQUIPMENTBindingSource
+            // 
+            this.vRRENTALEQUIPMENTBindingSource.DataMember = "VR_RENTALEQUIPMENT";
+            this.vRRENTALEQUIPMENTBindingSource.DataSource = this.vR_Dataset;
+            // 
+            // vREQUIPMENTBindingSource4
+            // 
+            this.vREQUIPMENTBindingSource4.DataMember = "VR_EQUIPMENT";
+            this.vREQUIPMENTBindingSource4.DataSource = this.vR_Dataset;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1211,9 +1295,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vR_Dataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridCategories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipment)).EndInit();
@@ -1240,6 +1324,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rENTEQUIPEQUIPMENTIDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rENTALINFORENTALIDFKBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1359,6 +1445,14 @@
         private System.Windows.Forms.Button btnExportSales;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox newEquip_daily_rental_cost;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txt_SetForSale_Price;
+        private System.Windows.Forms.ComboBox cmb_equipidForSale;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btn_SetForSale;
+        private System.Windows.Forms.BindingSource vRRENTALEQUIPMENTBindingSource;
+        private System.Windows.Forms.BindingSource vREQUIPMENTBindingSource4;
     }
 }
 

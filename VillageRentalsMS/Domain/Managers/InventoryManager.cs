@@ -10,6 +10,7 @@ using System.Xml.Linq;
 using Oracle.ManagedDataAccess.Client;
 using VillageRentalsMS.SystemException;
 using VillageRentalsMS.Utilities;
+using VillageRentalsMS.SystemException.InventoryManager;
 
 namespace VillageRentalsMS.Domain.Managers
 {
@@ -229,6 +230,131 @@ namespace VillageRentalsMS.Domain.Managers
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             return dataTable;
+        }
+
+        /// <summary>
+        /// Sets an equipment for sale or updates its sale price if it was already for sale.
+        /// </summary>
+        /// <param name="equipment_id">Equipment id referred to the equipment that will be removed.</param>
+        /// <param name="sale_price">Sale price of the equipment.</param>
+        public static void SetEquipmentToSale(string equipment_id, string sale_price)
+        {
+            // Confirmation request
+            DialogResult res = MessageBox.Show(
+            "Are you sure?",
+            "Confirm",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (res == DialogResult.No)
+                return;
+
+            OracleConnection conn = DatabaseSingleton.Connection;
+
+            try
+            {
+                // Checks if there is an active rental associated 
+                string sql_check_associatedRental = 
+                    $"SELECT COUNT(*) " +
+                    $"FROM vr_rentalequipmentinfo " +
+                    $"WHERE equipment_id = {equipment_id}" +
+                    $"AND return_date > SYSDATE";
+
+                OracleCommand command_activeRental = new OracleCommand(sql_check_associatedRental, conn);
+                int count = Convert.ToInt32(command_activeRental.ExecuteScalar());
+
+                // If it does not exist, creates a category placeholder named Uncategorized
+                if (count != 0)
+                    throw new ForbiddenRentalEquipmentDeletionDueToActiveRental();
+            }
+            catch(ForbiddenRentalEquipmentDeletionDueToActiveRental error_message)
+            {
+                MessageBox.Show(ForbiddenRentalEquipmentDeletionDueToActiveRental.Error_message);
+                return;
+            }
+
+
+
+            // We may not delete them instead... It will imply an interpretation that equipment that
+            // are for sale are still rentable. (Please, read bellow to understand it)
+
+            //// Delete equipment from the VR_RENTALEQUIPMENT table
+            ///// FATAL ERROR:
+            ///// Due to a wrong entity relationship interpretation, this action will
+            ///// not be performed. VR_RENTALEQUIPMENTINFO should be connected to VR_EQUIPMENT, instead
+            ///// of with VR_RENTALEQUIPMENT, because items from VR_RENTALEQUIPMENT cannot be switched
+            ///// between VR_RENTALEQUIPMENT and VR_EQUIPMENTFORSALE if the equipment was ever rented,
+            ///// due to PK/FK constraint relationships.
+            ///// Therefore, an exception will be thrown summarizing this error, which will not be addressed
+            ///// before the project submission.
+            //try
+            //{
+            //    OracleDataAdapter adapter = new OracleDataAdapter();
+
+            //    string sql_remove_rentalequipment = "DELETE FROM vr_rentalequipment WHERE equipment_id = (:param1)";
+
+            //    OracleCommand command_rem = new OracleCommand(sql_remove_rentalequipment, conn);
+
+            //    command_rem.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = equipment_id;
+
+            //    adapter.DeleteCommand = command_rem;
+            //    adapter.DeleteCommand.ExecuteNonQuery();
+            //}
+            //catch (OracleException exception)
+            //{
+            //    if (exception.Number == 2292)
+            //    {
+            //        /// Throwing an "internal" exception still made the Oracle client window
+            //        /// to pop up, so a MessageBox was showed instead.
+            //        //throw new WrongEquipmentAndRentalRelationship();
+            //        MessageBox.Show(WrongEquipmentAndRentalRelationship.Error_message);
+            //    }
+            //}
+            ////catch (WrongEquipmentAndRentalRelationship error_message)
+            ////{
+            ////    MessageBox.Show(WrongEquipmentAndRentalRelationship.Error_message);
+            ////}
+
+
+            // Checks if there is an active rental associated 
+            string sql_check_existence_EquipmentForSale =
+                $"SELECT COUNT(*) " +
+                $"FROM vr_equipmentforsale " +
+                $"WHERE equipment_id = {equipment_id}";
+
+            OracleCommand command_EquipAlreadyForSale = new OracleCommand(sql_check_existence_EquipmentForSale, conn);
+            int count2 = Convert.ToInt32(command_EquipAlreadyForSale.ExecuteScalar());
+
+            if (count2 == 0)
+            {
+                // Create an equipment for sale at the VR_EQUIPMENTFORSALE
+                string sql_add_equipmentForSale = "INSERT INTO vr_equipmentforsale(equipment_id, price) VALUES(:param1, :param2)";
+
+                OracleCommand command_addForSale = new OracleCommand(sql_add_equipmentForSale, conn);
+                command_addForSale.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = equipment_id;
+                command_addForSale.Parameters.Add(new OracleParameter("param2", OracleDbType.Double)).Value = sale_price;
+
+                command_addForSale.ExecuteNonQuery();
+
+                MessageBox.Show($"Equipment update:\n\nEquipment has been set for sale!");
+            }
+            else
+            {
+                // Updates the price if it already was for sale.
+                string sql_update_VR_EQUIPMENT =
+                    $"UPDATE vr_equipmentforsale " +
+                    $"SET PRICE = {sale_price} " +
+                    $"WHERE EQUIPMENT_ID = {equipment_id}";
+
+                OracleDataAdapter adapter4 = new OracleDataAdapter(sql_update_VR_EQUIPMENT, conn);
+
+                OracleCommand command = new OracleCommand(sql_update_VR_EQUIPMENT, conn);
+
+                adapter4.UpdateCommand = command;
+                adapter4.UpdateCommand.ExecuteNonQuery();
+
+                MessageBox.Show($"Equipment update:\n\nEquipment's price updated to ${sale_price}!");
+            }
         }
     }
 }
