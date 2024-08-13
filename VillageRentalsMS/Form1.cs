@@ -49,8 +49,12 @@ namespace VillageRentalsMS
             string category_id = this.addEquipment_category_id.SelectedValue.ToString();
             string equipment_description = txt_AddEquipDescription.Text;
             string equipment_name = txtAddEquip_Name.Text;
+            string string_daily_rental_cost = newEquip_daily_rental_cost.Text;
+            
+            double daily_rental_cost;
+            double.TryParse(string_daily_rental_cost, out daily_rental_cost);
 
-            InventoryManager.AddEquipment(category_id, equipment_description, equipment_name);
+            InventoryManager.AddEquipment(category_id, equipment_description, equipment_name, daily_rental_cost);
             
             Form1_Load(null, null);
 
@@ -351,10 +355,6 @@ namespace VillageRentalsMS
             }
             UpdateDatabase();
         }
-
-
-
-        //                this.vR_EQUIPMENTTableAdapter.FillBy(this.vR_Dataset.VR_EQUIPMENT);
 
 
 

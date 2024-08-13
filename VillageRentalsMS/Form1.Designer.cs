@@ -122,6 +122,8 @@
             this.vRCUSTOMERINFOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.lblRentEquip = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnExportEquipment = new System.Windows.Forms.Button();
+            this.btnExportSales = new System.Windows.Forms.Button();
             this.lblEquipListSort = new System.Windows.Forms.Label();
             this.lblSalesListSort = new System.Windows.Forms.Label();
             this.datagridEquipmentReport = new System.Windows.Forms.DataGridView();
@@ -138,8 +140,8 @@
             this.rENTALINFORENTALIDFKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vR_RENTALINFOTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALINFOTableAdapter();
             this.vRRENTALEQUIPMENTINFOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.btnExportSales = new System.Windows.Forms.Button();
-            this.btnExportEquipment = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.newEquip_daily_rental_cost = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).BeginInit();
@@ -185,6 +187,8 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.newEquip_daily_rental_cost);
             this.tabPage1.Controls.Add(this.cmb_category_id_to_remove);
             this.tabPage1.Controls.Add(this.cmb_RemoveEquipmentID);
             this.tabPage1.Controls.Add(this.label4);
@@ -374,7 +378,7 @@
             // 
             // btnAddEquipment
             // 
-            this.btnAddEquipment.Location = new System.Drawing.Point(30, 150);
+            this.btnAddEquipment.Location = new System.Drawing.Point(496, 150);
             this.btnAddEquipment.Name = "btnAddEquipment";
             this.btnAddEquipment.Size = new System.Drawing.Size(200, 35);
             this.btnAddEquipment.TabIndex = 12;
@@ -1069,6 +1073,24 @@
             this.tabPage4.Text = "Reports";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // btnExportEquipment
+            // 
+            this.btnExportEquipment.Location = new System.Drawing.Point(1064, 907);
+            this.btnExportEquipment.Name = "btnExportEquipment";
+            this.btnExportEquipment.Size = new System.Drawing.Size(200, 35);
+            this.btnExportEquipment.TabIndex = 10;
+            this.btnExportEquipment.Text = "Export";
+            this.btnExportEquipment.UseVisualStyleBackColor = true;
+            // 
+            // btnExportSales
+            // 
+            this.btnExportSales.Location = new System.Drawing.Point(1064, 437);
+            this.btnExportSales.Name = "btnExportSales";
+            this.btnExportSales.Size = new System.Drawing.Size(200, 35);
+            this.btnExportSales.TabIndex = 9;
+            this.btnExportSales.Text = "Export";
+            this.btnExportSales.UseVisualStyleBackColor = true;
+            // 
             // lblEquipListSort
             // 
             this.lblEquipListSort.AutoSize = true;
@@ -1163,23 +1185,21 @@
             this.vRRENTALEQUIPMENTINFOBindingSource2.DataMember = "VR_RENTALEQUIPMENTINFO";
             this.vRRENTALEQUIPMENTINFOBindingSource2.DataSource = this.vR_Dataset;
             // 
-            // btnExportSales
+            // label6
             // 
-            this.btnExportSales.Location = new System.Drawing.Point(1064, 437);
-            this.btnExportSales.Name = "btnExportSales";
-            this.btnExportSales.Size = new System.Drawing.Size(200, 35);
-            this.btnExportSales.TabIndex = 9;
-            this.btnExportSales.Text = "Export";
-            this.btnExportSales.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 133);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 20);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Daily Rental Cost";
             // 
-            // btnExportEquipment
+            // newEquip_daily_rental_cost
             // 
-            this.btnExportEquipment.Location = new System.Drawing.Point(1064, 907);
-            this.btnExportEquipment.Name = "btnExportEquipment";
-            this.btnExportEquipment.Size = new System.Drawing.Size(200, 35);
-            this.btnExportEquipment.TabIndex = 10;
-            this.btnExportEquipment.Text = "Export";
-            this.btnExportEquipment.UseVisualStyleBackColor = true;
+            this.newEquip_daily_rental_cost.Location = new System.Drawing.Point(30, 159);
+            this.newEquip_daily_rental_cost.Name = "newEquip_daily_rental_cost";
+            this.newEquip_daily_rental_cost.Size = new System.Drawing.Size(200, 26);
+            this.newEquip_daily_rental_cost.TabIndex = 27;
             // 
             // Form1
             // 
@@ -1339,6 +1359,8 @@
         private System.Windows.Forms.BindingSource vRRENTALEQUIPMENTINFOBindingSource2;
         private System.Windows.Forms.Button btnExportEquipment;
         private System.Windows.Forms.Button btnExportSales;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox newEquip_daily_rental_cost;
     }
 }
 

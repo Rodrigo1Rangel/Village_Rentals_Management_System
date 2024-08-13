@@ -81,7 +81,7 @@ namespace VillageRentalsMS.Domain.Managers
             cmd.Dispose();
         }
 
-        public static void AddEquipment(string category_id, string description, string name)
+        public static void AddEquipment(string category_id, string description, string name, double daily_rental_cost)
         {
             OracleConnection conn = DatabaseSingleton.Connection;
             OracleCommand cmd = conn.CreateCommand();
@@ -89,20 +89,31 @@ namespace VillageRentalsMS.Domain.Managers
 
             OracleDataReader reader = cmd.ExecuteReader();
 
-            // A single value will be returned, from which we will read the highest equipment_id number
-            // that was added into the system. We will automatically create a new id based on that one.
+            /// A single value will be returned, from which we will read the highest equipment_id number
+            /// that was added into the system. We will automatically create a new id based on that one.
             reader.Read();
             int new_equipment_id = reader.GetInt32(0) + 1;
 
-            string sql = "INSERT INTO vr_equipment(equipment_id, category_id, description, name) VALUES(:param1, :param2, :param3, :param4)";
+            // Insert new equipment into VR_EQUIPMENT
+            string sql_equipment = "INSERT INTO vr_equipment(equipment_id, category_id, description, name) VALUES(:param1, :param2, :param3, :param4)";
 
-            OracleCommand command = new OracleCommand(sql, conn);
-            command.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = new_equipment_id;
-            command.Parameters.Add(new OracleParameter("param2", OracleDbType.Varchar2)).Value = category_id;
-            command.Parameters.Add(new OracleParameter("param3", OracleDbType.Varchar2)).Value = description;
-            command.Parameters.Add(new OracleParameter("param4", OracleDbType.Varchar2)).Value = name;
+            OracleCommand command1 = new OracleCommand(sql_equipment, conn);
+            command1.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = new_equipment_id;
+            command1.Parameters.Add(new OracleParameter("param2", OracleDbType.Varchar2)).Value = category_id;
+            command1.Parameters.Add(new OracleParameter("param3", OracleDbType.Varchar2)).Value = description;
+            command1.Parameters.Add(new OracleParameter("param4", OracleDbType.Varchar2)).Value = name;
 
-            command.ExecuteNonQuery();   
+            command1.ExecuteNonQuery();
+
+            // Insert new equipment into VR_RENTALEQUIPMENT
+            string sql = "INSERT INTO vr_rentalequipment(equipment_id, daily_rental_cost) VALUES(:param1, :param2)";
+
+            OracleCommand command2 = new OracleCommand(sql, conn);
+            command2.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = new_equipment_id;
+            command2.Parameters.Add(new OracleParameter("param2", OracleDbType.Double)).Value = daily_rental_cost;
+
+            command2.ExecuteNonQuery();
+            cmd.Dispose();
         }
 
         public static void RemoveEquipment(string equipment_id)
