@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\domain\\managers\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\onedrive\\documents\\github\\sait_cpsy200_finalproject\\villagerentalsms\\domain\\managers\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\managers\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -61,7 +61,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAAAFsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHUBAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T21:21:47.772Z",
               "IsPinned": true,
@@ -75,7 +75,7 @@
               "RelativeDocumentMoniker": "Domain\\Managers\\InventoryManager.cs",
               "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Managers\\InventoryManager.cs",
               "RelativeToolTip": "Domain\\Managers\\InventoryManager.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAAAJEAAAAtAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAuwDUAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T01:45:12.153Z",
               "EditorCaption": ""
@@ -88,7 +88,7 @@
               "RelativeDocumentMoniker": "Domain\\Managers\\RentalManager.cs",
               "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\Managers\\RentalManager.cs",
               "RelativeToolTip": "Domain\\Managers\\RentalManager.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAAAFIAAAA8AAAA",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAcwJYAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T22:22:11.129Z",
               "EditorCaption": ""
@@ -116,7 +116,8 @@
               "RelativeToolTip": "DataEntryValidators\\CustomerTabValidator.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T14:15:33.71Z"
+              "WhenOpened": "2024-08-12T14:15:33.71Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -126,9 +127,10 @@
               "RelativeDocumentMoniker": "Domain\\ReportGenerator.cs",
               "ToolTip": "C:\\Users\\rodri\\OneDrive\\Documents\\GitHub\\SAIT_CPSY200_FinalProject\\VillageRentalsMS\\Domain\\ReportGenerator.cs",
               "RelativeToolTip": "Domain\\ReportGenerator.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAABRwBwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T16:56:20.156Z"
+              "WhenOpened": "2024-08-11T16:56:20.156Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -17,41 +17,41 @@ namespace VillageRentalsMS.Domain.Managers
     {
         // ==========================================  METHODS =========================================
 
-        /// <summary>
-        /// Blob.
-        /// </summary>
-        /// <param name="value">Blob.</param>
-        /// <returns>Blob.</returns>
-        public Category GetCategoryFromDataset(int category_id)
-        {
-            OracleConnection conn = DatabaseSingleton.Connection;
-            OracleCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT * FROM vr_categories";
-            OracleDataReader reader = cmd.ExecuteReader();
+        ///// <summary>
+        ///// Blob.
+        ///// </summary>
+        ///// <param name="value">Blob.</param>
+        ///// <returns>Blob.</returns>
+        //public Category GetCategoryFromDataset(int category_id)
+        //{
+        //    OracleConnection conn = DatabaseSingleton.Connection;
+        //    OracleCommand cmd = conn.CreateCommand();
+        //    cmd.CommandText = "SELECT * FROM vr_categories";
+        //    OracleDataReader reader = cmd.ExecuteReader();
 
-            Category category = null;
+        //    Category category = null;
 
-            while (reader.Read())
-            {
-                int CATEGORY_ID = reader.GetInt32(0);
-                string NOTE = reader.IsDBNull(1) ? "" : reader.GetString(1);
+        //    while (reader.Read())
+        //    {
+        //        int CATEGORY_ID = reader.GetInt32(0);
+        //        string NOTE = reader.IsDBNull(1) ? "" : reader.GetString(1);
 
-                if (CATEGORY_ID == category_id)
-                {
-                    category = new Category(CATEGORY_ID, NOTE);
-                }
-            }
+        //        if (CATEGORY_ID == category_id)
+        //        {
+        //            category = new Category(CATEGORY_ID, NOTE);
+        //        }
+        //    }
 
-            if (category == null)
-            {
-                throw new CategoryNotFound(category_id);
-            }
+        //    if (category == null)
+        //    {
+        //        throw new CategoryNotFound(category_id);
+        //    }
 
-            cmd.Dispose();
+        //    cmd.Dispose();
 
-            return category;
-        }
-
+        //    return category;
+        //}
+        ///////////////////////////////////////////////////////////////////////////////
         /// <summary>
         /// Blob.
         /// </summary>
@@ -195,6 +195,26 @@ namespace VillageRentalsMS.Domain.Managers
             MessageBox.Show($"Category update:\n\n{category_description} was deleted!");
 
             adapter.Dispose();
+        }
+
+        public static DataTable GetAvailableEquipToRent()
+        {
+            OracleConnection conn = DatabaseSingleton.Connection;
+
+            string sql_AvailableEquipToRent =
+                    $"SELECT equip.equipment_id " +
+                    $"FROM VR_RENTALEQUIPMENT re " +
+                    $"JOIN VR_EQUIPMENT equip ON re.equipment_id = equip.equipment_id " +
+                    $"JOIN VR_CATEGORIES cat ON equip.category_id = cat.category_id " +
+                    $"WHERE equip.equipment_id NOT IN(" +
+                        $"SELECT equipment_id " +
+                        $"FROM VR_RENTALEQUIPMENTINFO " +
+                        $"WHERE SYSDATE <= return_date)";
+
+            OracleDataAdapter adapter = new OracleDataAdapter(sql_AvailableEquipToRent, conn);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            return dataTable;
         }
     }
 }

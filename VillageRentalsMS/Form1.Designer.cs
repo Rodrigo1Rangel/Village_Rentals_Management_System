@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.newEquip_daily_rental_cost = new System.Windows.Forms.TextBox();
             this.cmb_category_id_to_remove = new System.Windows.Forms.ComboBox();
             this.vRCATEGORIESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.vR_Dataset = new VillageRentalsMS.VR_Dataset();
@@ -140,8 +142,6 @@
             this.rENTALINFORENTALIDFKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vR_RENTALINFOTableAdapter = new VillageRentalsMS.VR_DatasetTableAdapters.VR_RENTALINFOTableAdapter();
             this.vRRENTALEQUIPMENTINFOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.newEquip_daily_rental_cost = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vRCATEGORIESBindingSource2)).BeginInit();
@@ -221,6 +221,22 @@
             this.tabPage1.Text = "Inventory";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 133);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 20);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Daily Rental Cost";
+            // 
+            // newEquip_daily_rental_cost
+            // 
+            this.newEquip_daily_rental_cost.Location = new System.Drawing.Point(30, 159);
+            this.newEquip_daily_rental_cost.Name = "newEquip_daily_rental_cost";
+            this.newEquip_daily_rental_cost.Size = new System.Drawing.Size(200, 26);
+            this.newEquip_daily_rental_cost.TabIndex = 27;
             // 
             // cmb_category_id_to_remove
             // 
@@ -980,14 +996,12 @@
             // 
             // cmb_Equipment_id_to_Rent
             // 
-            this.cmb_Equipment_id_to_Rent.DataSource = this.vREQUIPMENTBindingSource3;
-            this.cmb_Equipment_id_to_Rent.DisplayMember = "EQUIPMENT_ID";
             this.cmb_Equipment_id_to_Rent.FormattingEnabled = true;
             this.cmb_Equipment_id_to_Rent.Location = new System.Drawing.Point(263, 100);
             this.cmb_Equipment_id_to_Rent.Name = "cmb_Equipment_id_to_Rent";
             this.cmb_Equipment_id_to_Rent.Size = new System.Drawing.Size(200, 28);
             this.cmb_Equipment_id_to_Rent.TabIndex = 21;
-            this.cmb_Equipment_id_to_Rent.ValueMember = "EQUIPMENT_ID";
+            this.cmb_Equipment_id_to_Rent.SelectedIndexChanged += new System.EventHandler(this.cmb_Equipment_id_to_Rent_SelectedIndexChanged);
             // 
             // vREQUIPMENTBindingSource3
             // 
@@ -1184,22 +1198,6 @@
             // 
             this.vRRENTALEQUIPMENTINFOBindingSource2.DataMember = "VR_RENTALEQUIPMENTINFO";
             this.vRRENTALEQUIPMENTINFOBindingSource2.DataSource = this.vR_Dataset;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 133);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 20);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Daily Rental Cost";
-            // 
-            // newEquip_daily_rental_cost
-            // 
-            this.newEquip_daily_rental_cost.Location = new System.Drawing.Point(30, 159);
-            this.newEquip_daily_rental_cost.Name = "newEquip_daily_rental_cost";
-            this.newEquip_daily_rental_cost.Size = new System.Drawing.Size(200, 26);
-            this.newEquip_daily_rental_cost.TabIndex = 27;
             // 
             // Form1
             // 

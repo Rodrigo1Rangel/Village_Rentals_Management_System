@@ -321,6 +321,15 @@ namespace VillageRentalsMS
 
         // ========================================== RENT EQUIPMENT ==========================================
 
+        private void PopulateAvailableEquipIdToRent()
+        {
+            DataTable table_AvailableEquipToRent = InventoryManager.GetAvailableEquipToRent();
+            cmb_Equipment_id_to_Rent.DataSource = table_AvailableEquipToRent;
+            cmb_Equipment_id_to_Rent.DisplayMember = "equipment_id";
+            cmb_Equipment_id_to_Rent.ValueMember = "equipment_id";
+        }
+        private void cmb_Equipment_id_to_Rent_SelectedIndexChanged(object sender, EventArgs e) {}
+
         private void btnRentEquip_Click(object sender, EventArgs e)
         {
             try
@@ -336,15 +345,24 @@ namespace VillageRentalsMS
                 string SQLDateToReturn = dtpDateToReturn.ToString("dd-MMM-yyyy");
 
                 // Validation: selection of dates
-                if (dtpDateRented > dtpDateToReturn)
+                if (dtpDateRented.Day > dtpDateToReturn.Day)
                 {
                     throw new InvalidRentalDate();
                 }
 
                 // Calculate duration
-                TimeSpan duration = dtpDateToReturn - dtpDateRented;
-                /// +1 as the retrieving day counts as a renting day
-                int durationInDays = duration.Days + 1;
+                int durationInDays;
+                /// Unsuccessful attempt to make a rental to be returned in the same day to work
+                if (dtpDateRented.Day == dtpDateToReturn.Day)
+                {
+                    durationInDays = 1;
+                }
+                else
+                {
+                    TimeSpan duration = dtpDateToReturn - dtpDateRented;
+                    /// +1 as the retrieving day counts as a renting day
+                    durationInDays = duration.Days + 1;
+                }
 
                 // Create a new reservation
                 RentalManager.CreateReservation(customer_id_to_rent, equipment_id_to_rent, SQLDateRented, SQLDateToReturn, durationInDays);
@@ -384,6 +402,9 @@ namespace VillageRentalsMS
             Load_dataGridView_AvailableEquipment();
             Load_dataGridView_CurrentRentals();
             Load_datagridSalesReport();
+            PopulateAvailableEquipIdToRent();
         }
+
+
     }
 }
