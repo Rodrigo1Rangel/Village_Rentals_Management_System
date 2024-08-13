@@ -158,9 +158,9 @@ namespace VillageRentalsMS
                 MessageBox.Show($"Customer update:\n\n{first_name} {last_name} was registered!");
             
             }
-            catch (InvalidPhoneNumber error_message)
+            catch (InvalidPhoneContact error_message)
             {
-                MessageBox.Show($"{InvalidPhoneNumber.Error_message}");
+                MessageBox.Show($"{InvalidPhoneContact.Error_message}");
             }
             catch (InvalidFirstName error_message)
             {
@@ -194,9 +194,9 @@ namespace VillageRentalsMS
             {
                 MessageBox.Show($"{InvalidLastNameNN.Error_message}");
             }
-            catch (InvalidPhoneNumberNN error_message)
+            catch (InvalidPhoneContactNN error_message)
             {
-                MessageBox.Show($"{InvalidPhoneNumberNN.Error_message}");
+                MessageBox.Show($"{InvalidPhoneContactNN.Error_message}");
             }
 
 
@@ -248,9 +248,9 @@ namespace VillageRentalsMS
                 MessageBox.Show($"Customer update:\n\n{first_name} {last_name}'s information were updated!");
 
             }
-            catch (InvalidPhoneNumber error_message)
+            catch (InvalidPhoneContact error_message)
             {
-                MessageBox.Show($"{InvalidPhoneNumber.Error_message}");
+                MessageBox.Show($"{InvalidPhoneContact.Error_message}");
             }
             catch (InvalidFirstName error_message)
             {
@@ -284,9 +284,9 @@ namespace VillageRentalsMS
             {
                 MessageBox.Show($"{InvalidLastNameNN.Error_message}");
             }
-            catch (InvalidPhoneNumberNN error_message)
+            catch (InvalidPhoneContactNN error_message)
             {
-                MessageBox.Show($"{InvalidPhoneNumberNN.Error_message}");
+                MessageBox.Show($"{InvalidPhoneContactNN.Error_message}");
             }
         }
 

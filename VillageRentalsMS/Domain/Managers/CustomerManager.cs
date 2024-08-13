@@ -15,10 +15,13 @@ namespace VillageRentalsMS.Domain.Managers
         // ==========================================  METHODS =========================================
 
         /// <summary>
-        /// Blob.
+        /// Creates a new customer profile and insert it into the database.
         /// </summary>
-        /// <param name="value">Blob.</param>
-        /// <returns>Blob.</returns>
+        /// <param name="new_last_name">New customer's last name.</param>
+        /// <param name="new_first_name">New customer's first name.</param>
+        /// <param name="new_contact_phone">New customer's contact name.</param>
+        /// <param name="new_email">New customer's email.</param>
+        /// <param name="new_note">New customer's email.</param>
         public static void AddCustomer(string new_last_name, string new_first_name, string new_contact_phone, string new_email, string new_note)
         {
             OracleConnection conn = DatabaseSingleton.Connection;
@@ -27,8 +30,8 @@ namespace VillageRentalsMS.Domain.Managers
 
             OracleDataReader reader = cmd.ExecuteReader();
 
-            // A single value will be returned, from which we will read the highest customer_id number
-            // that was added into the system. We will automatically create a new id based on that one.
+            /// A single value will be returned, from which we will read the highest customer_id number
+            /// that was added into the system. We will automatically create a new id based on that one.
             reader.Read();
             int new_customer_id = reader.GetInt32(0) + 1;
 
@@ -48,10 +51,14 @@ namespace VillageRentalsMS.Domain.Managers
         }
 
         /// <summary>
-        /// Blob.
+        /// Edits an existing customer profile and insert it into the database.
         /// </summary>
-        /// <param name="value">Blob.</param>
-        /// <returns>Blob.</returns>
+        /// <param name="customer_id">Customer ID to identify the customer that will receive the changes.</param>
+        /// <param name="new_last_name">Customer's last name to be updated with.</param>
+        /// <param name="new_first_name">Customer's first name to be updated with.</param>
+        /// <param name="new_contact_phone">Customer's contact phone to be updated with.</param>
+        /// <param name="new_email">Customer's email to be updated with.</param>
+        /// <param name="new_note">Customer's note to be updated with.</param>
         public static void EditCustomer(int customer_id, string new_last_name, string new_first_name, string new_contact_phone, string new_email, string new_note)
         {
             OracleConnection conn = DatabaseSingleton.Connection;
@@ -65,6 +72,7 @@ namespace VillageRentalsMS.Domain.Managers
                 $"NOTE = '{new_note}' " +
                 $"WHERE CUSTOMER_ID = {customer_id}";
 
+            /// Unsuccessful attempt to use parameters and prevent SQL injection
             //$"UPDATE vr_customerinfo " +
             //$"SET LAST_NAME = ':param1', " +
             //$"FIRST_NAME = ':param2', " +
@@ -77,6 +85,7 @@ namespace VillageRentalsMS.Domain.Managers
 
             OracleCommand command = new OracleCommand(sql_to_update, conn);
 
+            /// Unsuccessful attempt to use parameters and prevent SQL injection
             //command.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = new_last_name;
             //command.Parameters.Add(new OracleParameter("param2", OracleDbType.Varchar2)).Value = new_first_name;
             //command.Parameters.Add(new OracleParameter("param3", OracleDbType.Varchar2)).Value = new_contact_phone;

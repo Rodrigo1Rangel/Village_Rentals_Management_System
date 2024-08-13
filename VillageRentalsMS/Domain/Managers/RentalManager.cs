@@ -15,11 +15,10 @@ namespace VillageRentalsMS.Domain.Managers
         // ==========================================  METHODS =========================================
 
         /// <summary>
-        /// Blob.
+        /// Selects the equipment that are available to be rented and create a table with information
+        /// related to them.
         /// </summary>
-        /// <param name="value">Blob.</param>
-        /// <returns>Blob.</returns>
-
+        /// <returns>DataTable containing information related to available equipment.</returns>
         public static DataTable PopulateAvailableEquipmentGridView()
         {
             OracleConnection conn = DatabaseSingleton.Connection;
@@ -43,6 +42,12 @@ namespace VillageRentalsMS.Domain.Managers
             return dataTable;
         }
 
+        /// <summary>
+        /// Selects the active rentals and create a table with information related to them, which
+        /// includes the customer's ID and name, equipment ID, dates and total cost.
+        /// Rentals are considered active until the following day of the return date.
+        /// </summary>
+        /// <returns>DataTable containing information related to active rentals.</returns>
         public static DataTable PopulateCurrentRentalsGridView()
         {
             OracleConnection conn = DatabaseSingleton.Connection;
@@ -67,6 +72,10 @@ namespace VillageRentalsMS.Domain.Managers
             return dataTable;
         }
 
+        /// <summary>
+        /// Generates a table with information related to equipment.
+        /// </summary>
+        /// <returns>DataTable of equipment data.</returns>
         public static DataTable EquipmentGridView()
         {
             OracleConnection conn = DatabaseSingleton.Connection;
@@ -86,7 +95,14 @@ namespace VillageRentalsMS.Domain.Managers
             return dataTable;
         }
 
-
+        /// <summary>
+        /// Creates a new reservation based on existing customer's profile and available equipment.
+        /// </summary>
+        /// <param name="customer_id_to_rent">Customer ID that is renting.</param>
+        /// <param name="equipment_id_to_rent">Equipment ID from the equipment that will be rented.</param>
+        /// <param name="DateRented">Date when the rental starts.</param>
+        /// <param name="DateToReturn">Date when the rental ends and the equipment must be returned.</param>
+        /// <param name="durationInDays">Rental duration.</param>
         public static void CreateReservation(string customer_id_to_rent, string equipment_id_to_rent, string DateRented, string DateToReturn, int durationInDays)
         {
             OracleConnection conn = DatabaseSingleton.Connection;
@@ -140,6 +156,10 @@ namespace VillageRentalsMS.Domain.Managers
             command2.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Generates a table of every rental registered in the database.
+        /// </summary>
+        /// <returns>DataTable of every rental ever made.</returns>
         public static DataTable SalesGridView()
         {
             OracleConnection conn = DatabaseSingleton.Connection;

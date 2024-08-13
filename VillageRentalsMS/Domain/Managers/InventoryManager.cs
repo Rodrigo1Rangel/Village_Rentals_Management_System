@@ -17,46 +17,10 @@ namespace VillageRentalsMS.Domain.Managers
     {
         // ==========================================  METHODS =========================================
 
-        ///// <summary>
-        ///// Blob.
-        ///// </summary>
-        ///// <param name="value">Blob.</param>
-        ///// <returns>Blob.</returns>
-        //public Category GetCategoryFromDataset(int category_id)
-        //{
-        //    OracleConnection conn = DatabaseSingleton.Connection;
-        //    OracleCommand cmd = conn.CreateCommand();
-        //    cmd.CommandText = "SELECT * FROM vr_categories";
-        //    OracleDataReader reader = cmd.ExecuteReader();
-
-        //    Category category = null;
-
-        //    while (reader.Read())
-        //    {
-        //        int CATEGORY_ID = reader.GetInt32(0);
-        //        string NOTE = reader.IsDBNull(1) ? "" : reader.GetString(1);
-
-        //        if (CATEGORY_ID == category_id)
-        //        {
-        //            category = new Category(CATEGORY_ID, NOTE);
-        //        }
-        //    }
-
-        //    if (category == null)
-        //    {
-        //        throw new CategoryNotFound(category_id);
-        //    }
-
-        //    cmd.Dispose();
-
-        //    return category;
-        //}
-        ///////////////////////////////////////////////////////////////////////////////
         /// <summary>
-        /// Blob.
+        /// Creates a new category and insert it into the database.
         /// </summary>
-        /// <param name="value">Blob.</param>
-        /// <returns>Blob.</returns>
+        /// <param name="new_description">Description to be added into the new category.</param>
         public static void AddCategory(string new_description)
         {
             OracleConnection conn = DatabaseSingleton.Connection;
@@ -65,8 +29,8 @@ namespace VillageRentalsMS.Domain.Managers
 
             OracleDataReader reader = cmd.ExecuteReader();
 
-            // A single value will be returned, from which we will read the highest category_id number
-            // that was added into the system. We will automatically create a new id based on that one.
+            /// A single value will be returned, from which we will read the highest category_id number
+            /// that was added into the system. We will automatically create a new id based on that one.
             reader.Read();
             int new_category = reader.GetInt32(0) + 10;
             
@@ -81,6 +45,13 @@ namespace VillageRentalsMS.Domain.Managers
             cmd.Dispose();
         }
 
+        /// <summary>
+        /// Creates a new equipment and add it into the database.
+        /// </summary>
+        /// <param name="category_id">Category ID to which the new equipment belongs to.</param>
+        /// <param name="description">Description from the new equipment.</param>
+        /// <param name="name">Name of the new equipment.</param>
+        /// <param name="daily_rental_cost">Daily rental cost from the new equipment.</param>
         public static void AddEquipment(string category_id, string description, string name, double daily_rental_cost)
         {
             OracleConnection conn = DatabaseSingleton.Connection;
@@ -116,6 +87,10 @@ namespace VillageRentalsMS.Domain.Managers
             cmd.Dispose();
         }
 
+        /// <summary>
+        /// Removes the equipment with the corresponding Equipment ID from the database.
+        /// </summary>
+        /// <param name="equipment_id">Equipment ID referred to the equipment that will be removed.</param>
         public static void RemoveEquipment(string equipment_id)
         {
             OracleConnection conn = DatabaseSingleton.Connection;
@@ -162,7 +137,11 @@ namespace VillageRentalsMS.Domain.Managers
             adapter.Dispose();
         }
 
-        public static void RemoveCategory(string equipment_id)
+        /// <summary>
+        /// Removes the category with the corresponding Category ID from the database.
+        /// </summary>
+        /// <param name="category_id">The category referred to the category_id will be removed.</param>
+        public static void RemoveCategory(string category_id)
         {
             OracleConnection conn = DatabaseSingleton.Connection;
 
@@ -172,7 +151,7 @@ namespace VillageRentalsMS.Domain.Managers
 
             OracleCommand command1 = new OracleCommand(sql_select_name, conn);
 
-            command1.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = equipment_id;
+            command1.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = category_id;
 
             OracleDataReader reader = command1.ExecuteReader();
             reader.Read();
@@ -187,7 +166,7 @@ namespace VillageRentalsMS.Domain.Managers
 
             OracleCommand command2 = new OracleCommand(sql_remove_equipment, conn);
 
-            command2.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = equipment_id;
+            command2.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = category_id;
 
             adapter.DeleteCommand = command2;
             adapter.DeleteCommand.ExecuteNonQuery();
@@ -197,6 +176,10 @@ namespace VillageRentalsMS.Domain.Managers
             adapter.Dispose();
         }
 
+        /// <summary>
+        /// Select the equipment ID from the equipments that are available to be rented. In other words, it selects the equipment_id from the equipments that do not have an active rental associated to them.
+        /// </summary>
+        /// <returns>DataTable containing an equipment_id column.</returns>
         public static DataTable GetAvailableEquipToRent()
         {
             OracleConnection conn = DatabaseSingleton.Connection;
