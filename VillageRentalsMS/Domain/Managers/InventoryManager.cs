@@ -146,6 +146,11 @@ namespace VillageRentalsMS.Domain.Managers
         /// <param name="category_id">The category referred to the category_id will be removed.</param>
         public static void RemoveCategory(string category_id)
         {
+            /// The category id dropdown in the GUI should be populated from a selection that does not consider
+            /// the 'Uncategorized' category. However, it takes every category. This should be addressed later.
+            if (category_id == "0")
+                return;
+
             OracleConnection conn = DatabaseSingleton.Connection;
 
             // Get category name to use at MessageBox.Show()

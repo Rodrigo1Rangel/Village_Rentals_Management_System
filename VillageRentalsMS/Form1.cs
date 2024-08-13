@@ -12,6 +12,7 @@ using VillageRentalsMS.Domain;
 using System.Data.OracleClient;
 using VillageRentalsMS.SystemException;
 using VillageRentalsMS.Utilities;
+using VillageRentalsMS.SystemException.InventoryManager;
 
 
 namespace VillageRentalsMS
@@ -45,34 +46,110 @@ namespace VillageRentalsMS
         private void tabPage1_Click(object sender, EventArgs e) {}
         private void btn_AddEquipment(object sender, EventArgs e)
         {
-            string category_description = this.addEquipment_category_id.Text;
-            string category_id = this.addEquipment_category_id.SelectedValue.ToString();
-            string equipment_description = txt_AddEquipDescription.Text;
-            string equipment_name = txtAddEquip_Name.Text;
-            string string_daily_rental_cost = newEquip_daily_rental_cost.Text;
-            
-            double daily_rental_cost;
-            double.TryParse(string_daily_rental_cost, out daily_rental_cost);
+            try
+            {
+                string category_description = this.addEquipment_category_id.Text;
+                string category_id = this.addEquipment_category_id.SelectedValue.ToString();
 
-            InventoryManager.AddEquipment(category_id, equipment_description, equipment_name, daily_rental_cost);
-            
-            Form1_Load(null, null);
+                string equipment_description = txt_AddEquipDescription.Text.Replace("'", "''");
+                InventoryTabValidator.CheckAddEquipmentDescriptionNN(equipment_description);
+                InventoryTabValidator.CheckAddEquipmentDescriptionMaxLength(equipment_description);
 
-            MessageBox.Show($"Equipment update:\n\n{equipment_name} equipment was added!");
-            UpdateDatabase();
+                string equipment_name = txtAddEquip_Name.Text.Replace("'", "''");
+                InventoryTabValidator.CheckAddEquipmentNameNN(equipment_name);
+                InventoryTabValidator.CheckAddEquipmentNameMaxLength(equipment_name);
+
+                string string_daily_rental_cost = newEquip_daily_rental_cost.Text.Replace("'", "''");
+                InventoryTabValidator.CheckAddEquipmentDailyRentalCostNN(string_daily_rental_cost);
+                InventoryTabValidator.CheckAddEquipmentDailyRentalCostRegex(string_daily_rental_cost);
+
+                double daily_rental_cost;
+                double.TryParse(string_daily_rental_cost, out daily_rental_cost);
+
+                InventoryManager.AddEquipment(category_id, equipment_description, equipment_name, daily_rental_cost);
+
+                Form1_Load(null, null);
+
+                MessageBox.Show($"Equipment update:\n\n{equipment_name} equipment was added!");
+                UpdateDatabase();
+            }
+            catch (InvalidAddEquipmentDescriptionNN error_message)
+            {
+                MessageBox.Show($"{InvalidAddEquipmentDescriptionNN.Error_message}");
+            }
+            catch (InvalidAddEquipmentDescriptionMaxLength error_message)
+            {
+                MessageBox.Show($"{InvalidAddEquipmentDescriptionMaxLength.Error_message}");
+            }
+            catch (InvalidAddEquipmentNameNN error_message)
+            {
+                MessageBox.Show($"{InvalidAddEquipmentNameNN.Error_message}");
+            }
+            catch (InvalidAddEquipmentNameMaxLength error_message)
+            {
+                MessageBox.Show($"{InvalidAddEquipmentNameMaxLength.Error_message}");
+            }
+            catch (InvalidAddEquipmentDailyRentalCostNN error_message)
+            {
+                MessageBox.Show($"{InvalidAddEquipmentDailyRentalCostNN.Error_message}");
+            }
+            catch (InvalidAddEquipmentDailyRentalCostRegex error_message)
+            {
+                MessageBox.Show($"{InvalidAddEquipmentDailyRentalCostRegex.Error_message}");
+            }
         }
 
+        // =========================================== SET EQUIPMENT TO SALE ==================================
+        private void label9_Click(object sender, EventArgs e) { }
+
+        private void label10_Click(object sender, EventArgs e) { }
+
+        private void btn_SetForSale_Click(object sender, EventArgs e)
+        {
+            try
+            {
+           string sale_equip_id = cmb_equipidForSale.SelectedValue.ToString();
+            
+            string sale_price = txt_SetForSale_Price.Text.Replace("'", "''");
+            InventoryTabValidator.CheckSetToSalePriceNN(sale_price);
+            InventoryTabValidator.CheckSetToSaleIPriceRegex(sale_price);
+
+            InventoryManager.SetEquipmentToSale(sale_equip_id, sale_price);
+            UpdateDatabase();
+            }
+            catch (InvalidSetToSalePriceNN error_message)
+            {
+                MessageBox.Show($"{InvalidSetToSalePriceNN.Error_message}");
+            }
+            catch (InvalidSetToSalePriceRegex error_message)
+            {
+                MessageBox.Show($"{InvalidSetToSalePriceRegex.Error_message}");
+            }
+        }
 
         // ========================================= ADD NEW CATEGORY =========================================
         private void btnAddCat_Click(object sender, EventArgs e)
         {
-            string new_category_description = txt_AddCategory.Text;
+            try
+            {
+                string new_category_description = txt_AddCategory.Text.Replace("'", "''");
+                InventoryTabValidator.CheckAddCategoryDescriptionNN(new_category_description);
+                InventoryTabValidator.CheckAddCategoryDescriptionMaxLength(new_category_description);
 
-            InventoryManager.AddCategory(new_category_description);
+                InventoryManager.AddCategory(new_category_description);
 
-            Form1_Load(null, null);
+                Form1_Load(null, null);
 
-            MessageBox.Show($"Category update:\n\n{new_category_description} category was added!");
+                MessageBox.Show($"Category update:\n\n{new_category_description} category was added!");
+            }
+            catch (InvalidAddCategoryDescriptionNN error_message)
+            {
+                MessageBox.Show($"{InvalidAddCategoryDescriptionNN.Error_message}");
+            }
+            catch (InvalidAddCategoryDescriptionMaxLength error_message)
+            {
+                MessageBox.Show($"{InvalidAddCategoryDescriptionMaxLength.Error_message}");
+            }
         }
         private void txt_AddCategory_TextChanged(object sender, EventArgs e) {}
 
@@ -290,14 +367,9 @@ namespace VillageRentalsMS
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {}
 
-        }
-
-        private void dataGridView_AvailableEquipments_Click(object sender, DataGridViewCellEventArgs e)
-        {
-        }
+        private void dataGridView_AvailableEquipments_Click(object sender, DataGridViewCellEventArgs e) {}
 
         // ==================================== LOAD AVAILABLE EQUIPMENT LIST ======================================
 
@@ -383,9 +455,7 @@ namespace VillageRentalsMS
             datagridSalesReport.DataSource = table_Sales;
         }
 
-        private void datagridSalesReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
+        private void datagridSalesReport_CellContentClick(object sender, DataGridViewCellEventArgs e) {}
 
         // ====================================== LOAD SALES REPORT =======================================
         private void Load_datagridEquipmentReport()
@@ -393,9 +463,7 @@ namespace VillageRentalsMS
             DataTable table_Equipment = RentalManager.EquipmentGridView();
             datagridEquipmentReport.DataSource = table_Equipment;
         }
-        private void datagridEquipmentReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
+        private void datagridEquipmentReport_CellContentClick(object sender, DataGridViewCellEventArgs e) {}
 
         // ========================================== UPDATE DATABASE ================================
         private void UpdateDatabase()
@@ -407,18 +475,6 @@ namespace VillageRentalsMS
             PopulateAvailableEquipIdToRent();
         }
 
-        // =========================================== SET EQUIPMENT TO SALE ==================================
-        private void label9_Click(object sender, EventArgs e) {}
 
-        private void label10_Click(object sender, EventArgs e) {}
-
-        private void btn_SetForSale_Click(object sender, EventArgs e)
-        {
-            string sale_equip_id = cmb_equipidForSale.SelectedValue.ToString();
-            string sale_price = txt_SetForSale_Price.Text;
-
-            InventoryManager.SetEquipmentToSale(sale_equip_id, sale_price);
-            UpdateDatabase();
-        }
     }
 }

@@ -85,6 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataEntryValidators\InventoryTabValidator.cs" />
     <Compile Include="Domain\Category.cs" />
     <Compile Include="Domain\Customer.cs" />
     <Compile Include="Domain\Equipment.cs" />
@@ -116,6 +117,16 @@
     <Compile Include="SystemException\CustomersTab\InvalidPhoneContact.cs" />
     <Compile Include="SystemException\CustomersTab\InvalidPhoneContactNN.cs" />
     <Compile Include="SystemException\InventoryManager\ForbiddenRentalEquipmentDeletionDueToActiveRental.cs" />
+    <Compile Include="SystemException\InventoryManager\InvalidAddCategoryDescriptionMaxLength.cs" />
+    <Compile Include="SystemException\InventoryManager\InvalidSetToSalePriceRegex.cs" />
+    <Compile Include="SystemException\InventoryManager\InvalidAddEquipmentDailyRentalCostRegex.cs" />
+    <Compile Include="SystemException\InventoryManager\InvalidAddEquipmentDailyRentalCostNN.cs" />
+    <Compile Include="SystemException\InventoryManager\InvalidSetToSalePriceNN.cs" />
+    <Compile Include="SystemException\InventoryManager\InvalidAddEquipmentNameMaxLength.cs" />
+    <Compile Include="SystemException\InventoryManager\InvalidAddCategoryDescriptionNN.cs" />
+    <Compile Include="SystemException\InventoryManager\InvalidAddEquipmentNameNN.cs" />
+    <Compile Include="SystemException\InventoryManager\InvalidAddEquipmentDescriptionNN.cs" />
+    <Compile Include="SystemException\InventoryManager\InvalidAddEquipmentDescriptionMaxLength.cs" />
     <Compile Include="SystemException\InventoryManager\WrongEquipmentAndRentalRelationship.cs" />
     <Compile Include="SystemException\RentalsTab\InvalidRentalDate.cs" />
     <Compile Include="Utilities\DatabaseSingleton.cs" />
