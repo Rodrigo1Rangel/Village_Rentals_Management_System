@@ -68,7 +68,7 @@ namespace VillageRentalsMS.SystemException
         {
             string regex_pattern = @"^(\d+.\d+)||\d+$";
 
-            bool isMatch = Regex.IsMatch(daily_rental_cost, regex_pattern, RegexOptions.IgnoreCase);
+            bool isMatch = Regex.IsMatch(daily_rental_cost, regex_pattern);
 
             if (!isMatch)
             {
@@ -103,7 +103,7 @@ namespace VillageRentalsMS.SystemException
                 throw new InvalidSetToSalePriceRegex();
             }
         }
-
+ 
         /// <summary>
         /// Sets the sales price as a mandatory field.
         /// </summary>

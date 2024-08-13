@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VillageRentalsMS.SystemException.InventoryManager
+namespace VillageRentalsMS.SystemException
 {
     internal class InvalidAddEquipmentDailyRentalCostRegex : Exception
     {

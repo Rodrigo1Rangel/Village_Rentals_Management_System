@@ -59,7 +59,7 @@ namespace VillageRentalsMS
                 InventoryTabValidator.CheckAddEquipmentNameNN(equipment_name);
                 InventoryTabValidator.CheckAddEquipmentNameMaxLength(equipment_name);
 
-                string string_daily_rental_cost = newEquip_daily_rental_cost.Text.Replace("'", "''");
+                string string_daily_rental_cost = newEquip_daily_rental_cost.Text;
                 InventoryTabValidator.CheckAddEquipmentDailyRentalCostNN(string_daily_rental_cost);
                 InventoryTabValidator.CheckAddEquipmentDailyRentalCostRegex(string_daily_rental_cost);
 
@@ -108,14 +108,14 @@ namespace VillageRentalsMS
         {
             try
             {
-           string sale_equip_id = cmb_equipidForSale.SelectedValue.ToString();
+                 string sale_equip_id = cmb_equipidForSale.SelectedValue.ToString();
             
-            string sale_price = txt_SetForSale_Price.Text.Replace("'", "''");
-            InventoryTabValidator.CheckSetToSalePriceNN(sale_price);
-            InventoryTabValidator.CheckSetToSaleIPriceRegex(sale_price);
+                string sale_price = txt_SetForSale_Price.Text.Replace("'", "''");
+                InventoryTabValidator.CheckSetToSalePriceNN(sale_price);
+                InventoryTabValidator.CheckSetToSaleIPriceRegex(sale_price);
 
-            InventoryManager.SetEquipmentToSale(sale_equip_id, sale_price);
-            UpdateDatabase();
+                InventoryManager.SetEquipmentToSale(sale_equip_id, sale_price);
+                UpdateDatabase();
             }
             catch (InvalidSetToSalePriceNN error_message)
             {
@@ -275,9 +275,6 @@ namespace VillageRentalsMS
             {
                 MessageBox.Show($"{InvalidPhoneContactNN.Error_message}");
             }
-
-
-
             Form1_Load(null, null);
         }
 
