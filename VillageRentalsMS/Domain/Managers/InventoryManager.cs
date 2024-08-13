@@ -138,7 +138,9 @@ namespace VillageRentalsMS.Domain.Managers
         }
 
         /// <summary>
-        /// Removes the category with the corresponding Category ID from the database.
+        /// Removes the category with the corresponding Category ID from the database. Due to the database
+        /// constraints relationships, a category placeholder will have to be created and addressed to the
+        /// equipment that have are associated to the category that will be deleted.
         /// </summary>
         /// <param name="category_id">The category referred to the category_id will be removed.</param>
         public static void RemoveCategory(string category_id)
@@ -157,11 +159,40 @@ namespace VillageRentalsMS.Domain.Managers
             reader.Read();
             string category_description = reader.GetString(0);
 
+            // Check if the placeholder category already exists
+            string sql_check_placeholder = "SELECT COUNT(*) FROM vr_categories WHERE category_id = 00";
+            OracleCommand command_check_00_exist = new OracleCommand(sql_check_placeholder, conn);
+            int count = Convert.ToInt32(command_check_00_exist.ExecuteScalar());
+
+            // If it does not exist, creates a category placeholder named Uncategorized
+            if (count == 0)
+            { 
+
+                string sql_category_placeholder = "INSERT INTO vr_categories(category_id, description) VALUES(:param1, :param2)";
+
+                OracleCommand command3 = new OracleCommand(sql_category_placeholder, conn);
+                command3.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = 00 ;
+                command3.Parameters.Add(new OracleParameter("param2", OracleDbType.Varchar2)).Value = "Uncategorized";
+
+                command3.ExecuteNonQuery();
+            }
+
+            // Replace the category to be deleted for an uncategorized one.
+            string sql_update_VR_EQUIPMENT =
+                $"UPDATE vr_equipment " +
+                $"SET CATEGORY_ID = '00', " +
+                $"DESCRIPTION = 'Uncategorized' " +
+                $"WHERE CATEGORY_ID = {category_id}";
+
+            OracleDataAdapter adapter = new OracleDataAdapter(sql_update_VR_EQUIPMENT, conn);
+
+            OracleCommand command = new OracleCommand(sql_update_VR_EQUIPMENT, conn);
+
+            adapter.UpdateCommand = command;
+            adapter.UpdateCommand.ExecuteNonQuery();
+
 
             // Delete category
-
-            OracleDataAdapter adapter = new OracleDataAdapter();
-
             string sql_remove_equipment = "DELETE FROM vr_categories WHERE category_id = (:param1)";
 
             OracleCommand command2 = new OracleCommand(sql_remove_equipment, conn);

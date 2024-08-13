@@ -115,7 +115,6 @@
             this.dtpEquipDateRented = new System.Windows.Forms.DateTimePicker();
             this.lblEquipIDRent = new System.Windows.Forms.Label();
             this.cmb_Equipment_id_to_Rent = new System.Windows.Forms.ComboBox();
-            this.vREQUIPMENTBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.btnRentEquip = new System.Windows.Forms.Button();
             this.lblEquipDateReturn = new System.Windows.Forms.Label();
             this.lblEquipDateRented = new System.Windows.Forms.Label();
@@ -130,6 +129,7 @@
             this.lblSalesListSort = new System.Windows.Forms.Label();
             this.datagridEquipmentReport = new System.Windows.Forms.DataGridView();
             this.datagridSalesReport = new System.Windows.Forms.DataGridView();
+            this.vREQUIPMENTBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.vRRENTALEQUIPMENTINFOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.vRRENTALEQUIPMENTINFOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vREQUIPMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -159,11 +159,11 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CurrentRentals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AvailableEquipment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource2)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipmentReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).BeginInit();
@@ -1003,11 +1003,6 @@
             this.cmb_Equipment_id_to_Rent.TabIndex = 21;
             this.cmb_Equipment_id_to_Rent.SelectedIndexChanged += new System.EventHandler(this.cmb_Equipment_id_to_Rent_SelectedIndexChanged);
             // 
-            // vREQUIPMENTBindingSource3
-            // 
-            this.vREQUIPMENTBindingSource3.DataMember = "VR_EQUIPMENT";
-            this.vREQUIPMENTBindingSource3.DataSource = this.vR_Dataset;
-            // 
             // btnRentEquip
             // 
             this.btnRentEquip.Location = new System.Drawing.Point(30, 152);
@@ -1145,6 +1140,11 @@
             this.datagridSalesReport.TabIndex = 3;
             this.datagridSalesReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridSalesReport_CellContentClick);
             // 
+            // vREQUIPMENTBindingSource3
+            // 
+            this.vREQUIPMENTBindingSource3.DataMember = "VR_EQUIPMENT";
+            this.vREQUIPMENTBindingSource3.DataSource = this.vR_Dataset;
+            // 
             // vRRENTALEQUIPMENTINFOBindingSource1
             // 
             this.vRRENTALEQUIPMENTINFOBindingSource1.DataMember = "VR_RENTALEQUIPMENTINFO";
@@ -1228,12 +1228,12 @@
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CurrentRentals)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AvailableEquipment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRCUSTOMERINFOBindingSource2)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridEquipmentReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridSalesReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRRENTALEQUIPMENTINFOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vREQUIPMENTBindingSource)).EndInit();
