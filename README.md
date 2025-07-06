@@ -30,3 +30,6 @@ The system will allow for a selection of reports: sales by date; sales by custom
 
 ## **Exceptions**
 The software contains exceptions to validate data entry, which includes mandatory fields, maximum length, pattern match (phone contact, email, and price), and measures to prevent SQL injection.
+
+## **Presentation**
+Available at [Youtube](https://www.youtube.com/watch?v=IoRQFRCuad0).
