@@ -34,15 +34,15 @@ namespace VillageRentalsMS.Domain.Managers
             /// that was added into the system. We will automatically create a new id based on that one.
             reader.Read();
             int new_category = reader.GetInt32(0) + 10;
-            
+
             string sql = "INSERT INTO vr_categories(category_id, description) VALUES(:param1, :param2)";
 
             OracleCommand command = new OracleCommand(sql, conn);
             command.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = new_category;
             command.Parameters.Add(new OracleParameter("param2", OracleDbType.Varchar2)).Value = new_description;
-            
+
             command.ExecuteNonQuery();
-                       
+
             cmd.Dispose();
         }
 
@@ -131,11 +131,34 @@ namespace VillageRentalsMS.Domain.Managers
             command2.Parameters.Add(new OracleParameter("param1", OracleDbType.Int32)).Value = equipment_id;
 
             adapter.DeleteCommand = command2;
-            adapter.DeleteCommand.ExecuteNonQuery();
+            try
+            {
+                adapter.DeleteCommand.ExecuteNonQuery();            
+                
+                MessageBox.Show($"Equipment update:\n\n{equipment_name} was deleted!");
 
-            MessageBox.Show($"Equipment update:\n\n{equipment_name} was deleted!");
-
-            adapter.Dispose();
+            }
+            catch (OracleException ex)
+            {
+                if (ex.Message != null && ex.Message.Contains("ORA-02292"))
+                {
+                    MessageBox.Show(
+                        "There are related records (rentals, rental items or sales) that reference this equipment. " +
+                        "Remove or archive related records before attempting to delete this equipment.\n\nDetails: " + ex.Message,
+                        "Cannot delete equipment",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "An error was thrown when attempting to delete an item.");
+                }
+            }
+            finally
+            {
+                adapter.Dispose();
+            }
         }
 
         /// <summary>

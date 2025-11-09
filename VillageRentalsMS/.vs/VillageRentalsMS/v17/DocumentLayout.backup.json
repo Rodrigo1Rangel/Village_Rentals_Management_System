@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Domain\\Managers\\InventoryManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:Domain\\Managers\\InventoryManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\documents\\it\\afti watchdog\\village_rentals_management_system\\villagerentalsms\\domain\\managers\\rentalmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\documents\\it\\afti watchdog\\village_rentals_management_system\\villagerentalsms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\domain\\managers\\rentalmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\managers\\rentalmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\documents\\it\\afti watchdog\\village_rentals_management_system\\villagerentalsms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\documents\\it\\afti watchdog\\village_rentals_management_system\\villagerentalsms\\form1.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\form1.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:form1.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\documents\\it\\afti watchdog\\village_rentals_management_system\\villagerentalsms\\domain\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:domain\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|c:\\users\\rodri\\documents\\it\\afti watchdog\\village_rentals_management_system\\villagerentalsms\\utilities\\databasesingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:utilities\\databasesingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\SystemException\\InventoryManager\\InvalidAddEquipmentDailyRentalCostRegex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C1874F-7443-4E14-87A7-C88F0A203A81}|VillageRentalsMS.csproj|solutionrelative:SystemException\\InventoryManager\\InvalidAddEquipmentDailyRentalCostRegex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 210,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAmwCMAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAuwKsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T21:21:47.772Z",
               "IsPinned": true,
@@ -68,12 +52,11 @@
               "RelativeToolTip": "Domain\\Managers\\RentalManager.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAArwFYAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T21:12:55.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T21:12:55.425Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Form1.resx",
               "DocumentMoniker": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Form1.resx",
               "RelativeDocumentMoniker": "Form1.resx",
@@ -81,72 +64,20 @@
               "RelativeToolTip": "Form1.resx",
               "ViewState": "AgIAALUAAAAAAAAAAAAEwMQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-09T21:12:53.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T21:12:53.03Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAA4BAAAAAAAAAADgvzsBAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T21:11:12.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "InventoryManager.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Domain\\Managers\\InventoryManager.cs",
               "RelativeDocumentMoniker": "Domain\\Managers\\InventoryManager.cs",
               "ToolTip": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Domain\\Managers\\InventoryManager.cs",
               "RelativeToolTip": "Domain\\Managers\\InventoryManager.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAADgvzcAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T19:09:03.478Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DatabaseSingleton.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Utilities\\DatabaseSingleton.cs",
-              "RelativeDocumentMoniker": "Utilities\\DatabaseSingleton.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Utilities\\DatabaseSingleton.cs",
-              "RelativeToolTip": "Utilities\\DatabaseSingleton.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T20:12:53.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Equipment.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Domain\\Equipment.cs",
-              "RelativeDocumentMoniker": "Domain\\Equipment.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\Domain\\Equipment.cs",
-              "RelativeToolTip": "Domain\\Equipment.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T21:07:39.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InvalidAddEquipmentDailyRentalCostRegex.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\SystemException\\InventoryManager\\InvalidAddEquipmentDailyRentalCostRegex.cs",
-              "RelativeDocumentMoniker": "SystemException\\InventoryManager\\InvalidAddEquipmentDailyRentalCostRegex.cs",
-              "ToolTip": "C:\\Users\\rodri\\Documents\\IT\\AFTI WatchDog\\Village_Rentals_Management_System\\VillageRentalsMS\\SystemException\\InventoryManager\\InvalidAddEquipmentDailyRentalCostRegex.cs",
-              "RelativeToolTip": "SystemException\\InventoryManager\\InvalidAddEquipmentDailyRentalCostRegex.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T19:31:11.785Z"
             }
           ]
         },
@@ -157,10 +88,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         }
