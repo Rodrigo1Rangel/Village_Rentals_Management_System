@@ -19,7 +19,7 @@ namespace VillageRentalsMS.Utilities
             {
                 if (_conn == null)
                 {
-                    string connString = "User Id=villagerentals;Password=password;Data Source=localhost:1521/XE";
+                    string connString = "User Id=villagerentals;Password=password;Data Source=localhost:1521/XE;";
 
                     _conn = new OracleConnection(connString);
 
